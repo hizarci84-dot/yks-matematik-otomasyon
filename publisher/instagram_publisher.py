@@ -16,8 +16,15 @@ class InstagramPublisher:
         self.state_file = state_file
         self.campaign_file = campaign_file
         
+        # Method 1: Direct Login Credentials (No Meta App / Facebook required)
+        self.ig_username = os.environ.get("IG_USERNAME")
+        self.ig_password = os.environ.get("IG_PASSWORD")
+        self.session_file = "data/ig_session.json"
+        
+        # Method 2: Meta Graph API (Optional)
         self.account_id = os.environ.get("INSTAGRAM_ACCOUNT_ID")
         self.access_token = os.environ.get("INSTAGRAM_ACCESS_TOKEN")
+        
         self.github_repo = os.environ.get("GITHUB_REPOSITORY", "user/repo")
         self.github_ref = os.environ.get("GITHUB_REF_NAME", "main")
         
@@ -40,56 +47,61 @@ class InstagramPublisher:
         day_data = next((d for d in days if d["day"] == day_num), None)
         return day_data
 
-    def get_public_url(self, relative_path):
-        """Constructs the raw GitHub URL for the image/video so Instagram API can fetch it."""
-        # Convert backslashes to slashes
-        clean_rel = relative_path.replace("\\", "/")
-        if clean_rel.startswith("/"):
-            clean_rel = clean_rel[1:]
-        raw_url = f"https://raw.githubusercontent.com/{self.github_repo}/{self.github_ref}/{clean_rel}"
-        return raw_url
+    def publish_via_instagrapi(self, image_path, video_path=None, caption=""):
+        """Direct publishing using Instagram credentials without Meta Developer App."""
+        from instagrapi import Client
+        
+        cl = Client()
+        
+        # Try loading saved session first to avoid repeated logins
+        session_loaded = False
+        if os.path.exists(self.session_file):
+            try:
+                cl.load_settings(self.session_file)
+                cl.login(self.ig_username, self.ig_password)
+                session_loaded = True
+                print("Logged in using existing Instagram session.")
+            except Exception as e:
+                print(f"Session expired or invalid, logging in fresh: {e}")
 
-    def publish_story_to_instagram(self, image_url):
-        """Official Meta Instagram Graph API for Story Publishing."""
-        if not self.account_id or not self.access_token:
-            print("[DRY-RUN / MOCK MODE]: INSTAGRAM_ACCOUNT_ID or INSTAGRAM_ACCESS_TOKEN not configured.")
-            print(f"[DRY-RUN]: Would publish Story from URL: {image_url}")
-            return {"status": "mock_success", "id": "mock_story_id_12345"}
+        if not session_loaded:
+            print(f"Logging in to Instagram as @{self.ig_username}...")
+            cl.login(self.ig_username, self.ig_password)
+            cl.dump_settings(self.session_file)
+            print("Session saved successfully.")
 
-        # Step 1: Create Story Media Container
+        # Upload Story
+        print(f"Uploading Story to @{self.ig_username}...")
+        media = cl.photo_upload_to_story(image_path)
+        print(f"SUCCESS: Story uploaded live! Media ID: {media.pk}")
+
+        # Optionally Upload Video as Reels
+        if video_path and os.path.exists(video_path):
+            print(f"Uploading Reels video to @{self.ig_username}...")
+            clip = cl.clip_upload(video_path, caption=caption)
+            print(f"SUCCESS: Reels uploaded live! Media ID: {clip.pk}")
+
+        return {"status": "success", "story_id": str(media.pk)}
+
+    def publish_via_graph_api(self, image_url):
+        """Official Meta Graph API (fallback)."""
         container_url = f"https://graph.facebook.com/v19.0/{self.account_id}/media"
         params = {
             "image_url": image_url,
             "media_type": "STORIES",
             "access_token": self.access_token
         }
-        
-        print(f"Requesting Instagram Story Container for: {image_url}...")
-        res = requests.post(container_url, data=params)
-        res_data = res.json()
-        
-        if "id" not in res_data:
-            raise Exception(f"Failed to create story container: {res_data}")
+        res = requests.post(container_url, data=params).json()
+        if "id" not in res:
+            raise Exception(f"Failed to create story container: {res}")
             
-        creation_id = res_data["id"]
-        print(f"Container created with ID: {creation_id}. Waiting for processing...")
+        creation_id = res["id"]
         time.sleep(3)
-
-        # Step 2: Publish Container
         publish_url = f"https://graph.facebook.com/v19.0/{self.account_id}/media_publish"
-        publish_params = {
-            "creation_id": creation_id,
-            "access_token": self.access_token
-        }
-        
-        pub_res = requests.post(publish_url, data=publish_params)
-        pub_data = pub_res.json()
-        
-        if "id" not in pub_data:
-            raise Exception(f"Failed to publish story: {pub_data}")
-            
-        print(f"SUCCESS: Story published live on Instagram! Media ID: {pub_data['id']}")
-        return pub_data
+        pub_res = requests.post(publish_url, data={"creation_id": creation_id, "access_token": self.access_token}).json()
+        if "id" not in pub_res:
+            raise Exception(f"Failed to publish story: {pub_res}")
+        return pub_res
 
     def run_daily_publish(self, publish_video=False):
         state = self.load_state()
@@ -111,17 +123,32 @@ class InstagramPublisher:
             return
 
         # 1. Render High-Resolution Story Image
-        story_rel_path = f"dist/stories/day_{curr_day:03d}.jpg"
-        self.story_gen.generate_story(day_data, filename=f"day_{curr_day:03d}.jpg")
+        story_path = self.story_gen.generate_story(day_data, filename=f"day_{curr_day:03d}.jpg")
         
         # 2. Optionally Render Reels Video
+        video_path = None
         if publish_video:
-            video_rel_path = f"dist/videos/reels_day_{curr_day:03d}.mp4"
-            self.video_gen.generate_video(day_data, filename=f"reels_day_{curr_day:03d}.mp4")
+            video_path = self.video_gen.generate_video(day_data, filename=f"reels_day_{curr_day:03d}.mp4")
 
         # 3. Publish to Instagram
-        public_img_url = self.get_public_url(story_rel_path)
-        publish_result = self.publish_story_to_instagram(public_img_url)
+        caption = (
+            f"Gün {curr_day} / 97: {day_data['title']}\n\n"
+            f"{day_data.get('hook', '')}\n\n"
+            f"Müfit Hoca ile Matematik • Kaynak: @riyazihane\n"
+            f"#yks #tyt #ayt #matematik #zihinharitası"
+        )
+        
+        publish_result = None
+        if self.ig_username and self.ig_password:
+            print("Using Direct Instagram Login (instagrapi)...")
+            publish_result = self.publish_via_instagrapi(story_path, video_path=video_path, caption=caption)
+        elif self.account_id and self.access_token:
+            print("Using Meta Graph API...")
+            public_img_url = f"https://raw.githubusercontent.com/{self.github_repo}/{self.github_ref}/dist/stories/day_{curr_day:03d}.jpg"
+            publish_result = self.publish_via_graph_api(public_img_url)
+        else:
+            print("[DRY-RUN / MOCK MODE]: No Instagram credentials configured.")
+            publish_result = {"status": "mock_success", "day": curr_day}
 
         # 4. Update State
         now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")

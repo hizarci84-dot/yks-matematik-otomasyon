@@ -38,10 +38,12 @@ jobs:
       - name: 📦 Gereksinimleri Yükle
         run: |
           python -m pip install --upgrade pip
-          pip install Pillow edge-tts moviepy requests imageio imageio-ffmpeg
+          pip install Pillow edge-tts moviepy requests imageio imageio-ffmpeg instagrapi
 
       - name: 🚀 Günlük Hikayeyi Üret ve Instagram'a Gönder
         env:
+          IG_USERNAME: ${{ secrets.IG_USERNAME }}
+          IG_PASSWORD: ${{ secrets.IG_PASSWORD }}
           INSTAGRAM_ACCOUNT_ID: ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
@@ -60,7 +62,7 @@ jobs:
         run: |
           git config --global user.name "Müfit Hoca Bot"
           git config --global user.email "bot@mufithocailematematik.com"
-          git add data/state.json dist/
+          git add data/ dist/
           if git diff --staged --quiet; then
             echo "Değişiklik yok, commit atlanıyor."
           else
