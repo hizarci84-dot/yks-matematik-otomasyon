@@ -1,6 +1,17 @@
 {
-  "current_day": 1,
+  "current_day": 2,
   "total_days": 97,
-  "last_published_date": null,
-  "published_history": []
+  "last_published_date": "2026-08-15 14:46:43",
+  "published_history": [
+    {
+      "day": 1,
+      "title": "Matematiğin Yolculuğu Başlıyor",
+      "published_at": "2026-08-15 14:46:43",
+      "result": {
+        "status": "success",
+        "story_id": "3964331451583091520",
+        "reels_id": "3964331565755132197"
+      }
+    }
+  ]
 }
