@@ -17,15 +17,13 @@ class InstagramPublisher:
         self.state_file = state_file
         self.campaign_file = campaign_file
         
-        # Method 1: Session-based login (Bypasses 429 DataCenter IP block completely)
+        # Method 1: Direct Session ID / Username & Password
         self.ig_sessionid = os.environ.get("IG_SESSIONID", "").strip()
-        self.session_file = "data/ig_session.json"
-        
-        # Method 2: Username / Password (Fallback)
         self.ig_username = os.environ.get("IG_USERNAME", "").strip()
         self.ig_password = os.environ.get("IG_PASSWORD", "").strip()
+        self.session_file = "data/ig_session.json"
         
-        # Method 3: Meta Graph API (Fallback)
+        # Method 2: Meta Graph API (Fallback)
         self.account_id = os.environ.get("INSTAGRAM_ACCOUNT_ID", "").strip()
         self.access_token = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "").strip()
         
@@ -51,59 +49,101 @@ class InstagramPublisher:
         day_data = next((d for d in days if d["day"] == day_num), None)
         return day_data
 
-    def publish_via_instagrapi(self, image_path, video_path=None, caption=""):
-        """Publish using instagrapi with session authentication."""
+    def setup_instagrapi_client(self):
         from instagrapi import Client
         
         cl = Client()
-        cl.delay_range = [2, 4]
+        cl.delay_range = [2, 5]
+        cl.set_locale("tr_TR")
+        cl.set_country(90)
+        cl.set_timezone_offset(3 * 3600)
         
-        # 1. Try Session ID from GitHub Secrets (Most reliable in Cloud)
-        logged_in = False
-        if self.ig_sessionid:
-            print("🔑 Logging in using IG_SESSIONID cookie...")
-            try:
-                cl.login_by_sessionid(self.ig_sessionid)
-                logged_in = True
-                print("✅ Successfully authenticated via IG_SESSIONID!")
-            except Exception as e:
-                print(f"⚠️ Session ID login failed: {e}")
+        # Configure standard Android mobile device profile to prevent 412 AuthorizationFailedError
+        cl.set_device({
+            "app_version": "315.0.0.38.109",
+            "android_version": 33,
+            "android_release": "13.0",
+            "dpi": "480dpi",
+            "resolution": "1080x2400",
+            "manufacturer": "Samsung",
+            "device": "SM-G998B",
+            "model": "galaxy-s21-ultra",
+            "cpu": "exynos2100",
+            "version_code": "561657871"
+        })
+        cl.set_user_agent(
+            "Instagram 315.0.0.38.109 Android (33/13.0; 480dpi; 1080x2400; Samsung; SM-G998B; galaxy-s21-ultra; exynos2100; tr_TR; 561657871)"
+        )
+        return cl
 
-        # 2. Try Cached Session File
-        if not logged_in and os.path.exists(self.session_file):
+    def publish_via_instagrapi(self, image_path, video_path=None, caption=""):
+        """Publish using instagrapi with mobile device emulation and retry handling."""
+        cl = self.setup_instagrapi_client()
+        
+        logged_in = False
+        
+        # 1. Try Cached Session File first
+        if os.path.exists(self.session_file):
             try:
                 print("📁 Loading session from data/ig_session.json...")
                 cl.load_settings(self.session_file)
                 if self.ig_username and self.ig_password:
                     cl.login(self.ig_username, self.ig_password)
                 logged_in = True
-                print("✅ Successfully authenticated via ig_session.json!")
+                print("✅ Logged in via cached session settings.")
             except Exception as e:
-                print(f"⚠️ Local session file login failed: {e}")
+                print(f"⚠️ Session file login failed: {e}")
 
-        # 3. Fallback to Username & Password
+        # 2. Try Username / Password with Device Profile
         if not logged_in and self.ig_username and self.ig_password:
-            print(f"🔑 Attempting standard login for @{self.ig_username}...")
+            print(f"🔑 Logging in as @{self.ig_username}...")
             cl.login(self.ig_username, self.ig_password)
             cl.dump_settings(self.session_file)
             logged_in = True
-            print("✅ Login successful!")
+            print("✅ Login successful! Device profile attached.")
+
+        # 3. Try Session ID as fallback
+        if not logged_in and self.ig_sessionid:
+            print("🔑 Attempting login via IG_SESSIONID...")
+            cl.login_by_sessionid(self.ig_sessionid)
+            logged_in = True
+            print("✅ Session ID login successful!")
 
         if not logged_in:
-            raise Exception("No valid Instagram authentication method found (IG_SESSIONID or ig_session.json).")
+            raise Exception("Instagram authentication failed. Please verify credentials.")
 
-        # Upload Story
+        # Upload Story with Retries
         print(f"📤 Uploading Story ({image_path})...")
-        media = cl.photo_upload_to_story(image_path)
-        print(f"🎉 SUCCESS: Story published live! Media ID: {media.pk}")
+        media = None
+        max_retries = 3
+        
+        for attempt in range(1, max_retries + 1):
+            try:
+                time.sleep(2)
+                media = cl.photo_upload_to_story(image_path)
+                print(f"🎉 SUCCESS: Story published live! Media ID: {media.pk}")
+                break
+            except Exception as e:
+                print(f"⚠️ Attempt {attempt}/{max_retries} failed ({e}). Retrying in 4s...")
+                time.sleep(4)
+                if attempt == max_retries:
+                    raise e
 
         # Optionally Upload Reels
         if video_path and os.path.exists(video_path):
             print(f"📤 Uploading Reels video ({video_path})...")
-            clip = cl.clip_upload(video_path, caption=caption)
-            print(f"🎉 SUCCESS: Reels published live! Media ID: {clip.pk}")
+            for attempt in range(1, max_retries + 1):
+                try:
+                    time.sleep(3)
+                    clip = cl.clip_upload(video_path, caption=caption)
+                    print(f"🎉 SUCCESS: Reels published live! Media ID: {clip.pk}")
+                    break
+                except Exception as e:
+                    print(f"⚠️ Reels attempt {attempt} failed: {e}")
+                    if attempt == max_retries:
+                        print("Skipping Reels upload after retries.")
 
-        return {"status": "success", "story_id": str(media.pk)}
+        return {"status": "success", "story_id": str(media.pk) if media else "ok"}
 
     def run_daily_publish(self, publish_video=False):
         state = self.load_state()
@@ -141,10 +181,10 @@ class InstagramPublisher:
         )
         
         publish_result = None
-        if self.ig_sessionid or os.path.exists(self.session_file) or (self.ig_username and self.ig_password):
+        if self.ig_username or self.ig_sessionid:
             publish_result = self.publish_via_instagrapi(story_path, video_path=video_path, caption=caption)
         else:
-            print("⚠️ [MOCK / DRY-RUN]: No credentials found in environment variables.")
+            print("⚠️ [MOCK / DRY-RUN]: No credentials found.")
             publish_result = {"status": "mock_success", "day": curr_day}
 
         # 4. Update State
