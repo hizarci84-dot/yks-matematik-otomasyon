@@ -1,0 +1,22 @@
+# Python & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+
+# Scratch and OCR intermediates
+scratch_pages/
+ocr_results.json
+clean_catalog.json
+*.ps1
+process_ocr.py
+analyze_structure.py
+build_campaign_database.py
+build_full_database.py
+download_fonts.py
+
+# PDF source file (large file)
+*.pdf
+
+# Dist outputs can be tracked or generated in CI
+# We keep assets/ and fonts/ so runners have the exact fonts

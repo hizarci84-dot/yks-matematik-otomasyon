@@ -1,0 +1,2384 @@
+[
+  {
+    "day": 1,
+    "title": "Matematiğin Yolculuğu Başlıyor",
+    "era_figure": "Riyazihane Deneyim Merkezi",
+    "hook": "Matematik formüller yığını mıdır, yoksa insanlığın düşünme tarihi mi?",
+    "history": "Sayıların ilk çentiklerinden kalkülüse, geometriden kriptografiye kadar her konu bir ihtiyacın cevabıdır.",
+    "tyt_ayt_links": [
+      "TYT Temel Kavramlar",
+      "Lise Müfredatı Genel Bakış"
+    ],
+    "daily_life": "Market alışverişinden uyduların yörüngesine kadar tüm sistemler.",
+    "connection_note": "Sayma → Ölçme → Modelleme → Soyutlama",
+    "surprising_fact": "Müfredattaki 40'a yakın TYT-AYT konusu tek bir büyük düşünce zincirinin halkalarıdır.",
+    "quiz": {
+      "question": "Sizce matematikte en büyük sıçrama hangi kavramla başladı?",
+      "options": [
+        "Sıfırın Keşfi",
+        "Geometri & İspat",
+        "Cebir (x)",
+        "Kalkülüs"
+      ],
+      "answer": "Sıfırın Keşfi"
+    }
+  },
+  {
+    "day": 2,
+    "title": "Bu Yolculuk Nasıl Okunur?",
+    "era_figure": "Kavramsal Düşünme Modeli",
+    "hook": "Bir matematik konusunu öğrenirken formülü ezberlemek neden tek başına yetmez?",
+    "history": "Formülün ardındaki problem bilinmezse bilginin zihinde kalıcılığı ve yeni nesil sorulardaki yorum gücü düşer.",
+    "tyt_ayt_links": [
+      "Yeni Nesil Problem Çözme",
+      "Matematiksel Akıl Yürütme"
+    ],
+    "daily_life": "Ezber bilgi unutulur; neden-sonuç bağıyla öğrenilen problem çözme yetisi kalıcıdır.",
+    "connection_note": "Tarihsel Neden → Bugünkü Müfredat Karşılığı → Günlük Hayat Modeli",
+    "surprising_fact": "ÖSYM'nin 'Yeni Nesil' soruları aslında matematiğin binlerce yıllık doğuş mantığıyla aynıdır.",
+    "quiz": {
+      "question": "Matematik çalışırken en çok hangi aşamada zorlanıyorsunuz?",
+      "options": [
+        "Formülleri Hatırlama",
+        "Mantığını Kavrama",
+        "Soruyu Modele Çevirme",
+        "İşlem Hızı"
+      ],
+      "answer": "Soruyu Modele Çevirme"
+    }
+  },
+  {
+    "day": 3,
+    "title": "Büyük Kronoloji I: İlk Adımlar",
+    "era_figure": "Tarih Öncesi - Antik Yunan",
+    "hook": "Kemik üzerindeki çentiklerden Öklid'in ispatlı geometrisine nasıl ulaştık?",
+    "history": "İnsanlar önce sürüsündeki koyunları taş ve çentikle saydı, sonra tarlalarını ölçtü, ardından kuralları ispatladı.",
+    "tyt_ayt_links": [
+      "Doğal Sayılar",
+      "Dört İşlem",
+      "Oran-Orantı",
+      "Temel Geometri"
+    ],
+    "daily_life": "Takvim kullanımı, saat okuma, arsa sınırları ve mimari planlama.",
+    "connection_note": "Sayma → İşlem → Ölçme → İspatlı Geometri",
+    "surprising_fact": "Saatimizin 60 dakika olması MÖ 2000 Babil'in 60'lık sisteminden kalmadır.",
+    "quiz": {
+      "question": "60 tabanlı sistemin en büyük avantajı nedir?",
+      "options": [
+        "Büyük sayı olması",
+        "Çok fazla tam bölene sahip olması",
+        "Yazımının kolay olması",
+        "Sıfır içermesi"
+      ],
+      "answer": "Çok fazla tam bölene sahip olması"
+    }
+  },
+  {
+    "day": 4,
+    "title": "Büyük Kronoloji II: Bilinmeyenden Fonksiyona",
+    "era_figure": "İslam Dünyası & Avrupa Rönesansı",
+    "hook": "Sayılarla işlem yapmaktan bilinmeyen 'x'i bulmaya ve değişimi ölçmeye nasıl geçtik?",
+    "history": "800'lerde Hârizmî cebiri sistemleştirdi. 1600'lerde Napier logaritmayı, Descartes analitik geometriyi, Newton ve Leibniz kalkülüsü kurdu.",
+    "tyt_ayt_links": [
+      "Cebir",
+      "Denklemler",
+      "Logaritma",
+      "Analitik Geometri",
+      "Türev-İntegral"
+    ],
+    "daily_life": "GPS navigasyonu, ekonomi tahminleri, yapay zeka algoritmaları.",
+    "connection_note": "Cebir (x) → Koordinat (x,y) → Fonksiyon f(x) → Değişim (Türev)",
+    "surprising_fact": "Lisede 4 yılda öğrendiğimiz dil, insanlığın yaklaşık 1200 yıllık yoğun arayışının ürünüdür.",
+    "quiz": {
+      "question": "f(x) fonksiyon gösterimini matematiğe kazandıran isim kimdir?",
+      "options": [
+        "Descartes",
+        "Newton",
+        "Leonhard Euler",
+        "Pisagor"
+      ],
+      "answer": "Leonhard Euler"
+    }
+  },
+  {
+    "day": 5,
+    "title": "Matematik Neden Doğdu? Sayma İhtiyacı",
+    "era_figure": "Paleolitik Çağ",
+    "hook": "İlk insan '3' sayısını henüz bilmezken sürüsünden koyun eksildiğini nasıl anlıyordu?",
+    "history": "İlk sayma işlemi soyut sayılarla değil, birebir eşlemeyle başladı (Lebombo ve Ishango kemikleri).",
+    "tyt_ayt_links": [
+      "TYT Kümeler (Birebir Eşleme)",
+      "Sayma İlkeleri",
+      "Doğal Sayılar"
+    ],
+    "daily_life": "Bilet kontrolü, envanter sayımı ve barkod sistemleri.",
+    "connection_note": "Somut Nesne → Birebir Eşleme → Soyut Sayı Kavramı",
+    "surprising_fact": "İngilizcedeki 'calculate' (hesaplamak) Latince çakıl taşı anlamına gelen 'calculus'tan gelir.",
+    "quiz": {
+      "question": "Tarihteki en eski matematiksel çentikli kemik hangisidir?",
+      "options": [
+        "Lebombo Kemiği",
+        "Öklid Kemiği",
+        "Babil Tableti",
+        "Rhind Papirüsü"
+      ],
+      "answer": "Lebombo Kemiği"
+    }
+  },
+  {
+    "day": 6,
+    "title": "Doğal Sayılar: Saymak, Sıralamak, Karşılaştırmak",
+    "era_figure": "Neolitik Çağ",
+    "hook": "'Kaç tane var?' sorusu insan zihninde nasıl evrensel bir sayı kümesine dönüştü?",
+    "history": "Yerleşik hayata geçiş ve takas, çokluk kavramının standartlaştırılmasını zorunlu kıldı.",
+    "tyt_ayt_links": [
+      "Doğal Sayılar Kümesi (N)",
+      "Ardışık Sayılar",
+      "Tek-Çift Sayılar"
+    ],
+    "daily_life": "Kimlik numaraları, ürün sıralamaları, nüfus sayımları.",
+    "connection_note": "Sayma Sayıları (N+) → Doğal Sayılar (N) → Tam Sayılar (Z)",
+    "surprising_fact": "Bazı ilkel dillerde '1, 2 ve çok' dışında sayı kelimesi bulunmuyordu.",
+    "quiz": {
+      "question": "0 (sıfır) doğal sayılar kümesine dahil midir?",
+      "options": [
+        "Evet (N = {0,1,2...})",
+        "Hayır (Sadece 1'den başlar)",
+        "Ülkeye göre değişir",
+        "Doğal sayı değildir"
+      ],
+      "answer": "Evet (N = {0,1,2...})"
+    }
+  },
+  {
+    "day": 7,
+    "title": "İlk Sayı Sistemleri: Sembollerin Gücü",
+    "era_figure": "Mısır, Maya ve Roma Sistemleri",
+    "hook": "Roma rakamlarıyla neden büyük bölme ve çarpma işlemleri yapılamıyordu?",
+    "history": "Toplamsal sistemlerde sayılar büyüdükçe sembol sayısı devasa boyutlara ulaşıyordu.",
+    "tyt_ayt_links": [
+      "Sayı Basamakları",
+      "Sayı Sistemleri",
+      "Basamak Analizi"
+    ],
+    "daily_life": "Saat kadranlarındaki Roma rakamları ve dijital ikili sistem.",
+    "connection_note": "Toplamsal Sistemler → Konumsal (Basamak Değerli) Sistemler",
+    "surprising_fact": "Roma rakamlarında sıfır sembolü olmadığı için büyük denklemler kurulamazdı.",
+    "quiz": {
+      "question": "Roma rakamlarında 'M' harfi hangi sayıyı temsil eder?",
+      "options": [
+        "100",
+        "500",
+        "1000",
+        "50"
+      ],
+      "answer": "1000"
+    }
+  },
+  {
+    "day": 8,
+    "title": "Basamak Değeri: Konumsal Sistemin Doğuşu",
+    "era_figure": "Hint & İslam Matematikçileri",
+    "hook": "353 sayısındaki soldaki '3' ile sağdaki '3' neden aynı değeri taşımaz?",
+    "history": "Hint-Arap basamak değeri yalnızca 10 sembolle sonsuz büyüklükte sayıyı yazmayı mümkün kıldı.",
+    "tyt_ayt_links": [
+      "Basamak Değeri & Çözümleme",
+      "10a + b Biçiminde Yazma",
+      "Taban Aritmetiği"
+    ],
+    "daily_life": "Banka hesapları ve bilgisayarların 2'lik tabandaki bellek adreslemesi.",
+    "connection_note": "Rakam → Konum (Basamak) → Sayısal Çözümleme: a.10^2 + b.10^1 + c.10^0",
+    "surprising_fact": "Basamak değeri keşfedilmeden önce kağıt üzerinde uzun çarpma yapmak imkansızdı.",
+    "quiz": {
+      "question": "452 sayısının basamak çözümlemesi hangisidir?",
+      "options": [
+        "4+5+2",
+        "400 + 50 + 2",
+        "4 x 5 x 2",
+        "45 + 2"
+      ],
+      "answer": "400 + 50 + 2"
+    }
+  },
+  {
+    "day": 9,
+    "title": "Babil Matematiği ve 60 Tabanlı Sistem",
+    "era_figure": "Mezopotamya (MÖ 2000)",
+    "hook": "Neden 10 parmağımız varken Babil 60 tabanını seçti?",
+    "history": "Parmak boğumları kullanılarak sayıldı (4 parmak x 3 boğum = 12 x 5 = 60). 60'ın zengin bölenleri hesapları kolaylaştırdı.",
+    "tyt_ayt_links": [
+      "Bölünebilme Kuralları",
+      "Tam Bölen Sayısı",
+      "EBOB - EKOK"
+    ],
+    "daily_life": "60 saniye, 60 dakika, 360 derece açı ölçümü.",
+    "connection_note": "Çok Bölenli Sayı Seçimi → Kesirsiz Hesaplama Kolaylığı",
+    "surprising_fact": "Plimpton 322 tabletinde Pisagor'dan 1000 yıl önce dik üçgen kenarları listelenmiştir.",
+    "quiz": {
+      "question": "60 sayısının pozitif tam bölen sayısı kaçtır?",
+      "options": [
+        "6",
+        "8",
+        "12",
+        "15"
+      ],
+      "answer": "12"
+    }
+  },
+  {
+    "day": 10,
+    "title": "Saat, Dakika ve Açı: Babil Mirası",
+    "era_figure": "Antik Astronomi",
+    "hook": "Kolumuzdaki saat nasıl oldu da 4000 yıl önceki Mezopotamya hesabıyla dönüyor?",
+    "history": "Güneş'in günlük hareketi 1 derece kabul edildi, daire 6 adet 60 derecelik parçaya bölündü.",
+    "tyt_ayt_links": [
+      "Açılar & Trigonometri Giriş",
+      "Esas Ölçü (360k + a)",
+      "Dairede Açı"
+    ],
+    "daily_life": "Saatler, pusulalar, astronomik gözlemler ve açıölçerler.",
+    "connection_note": "Açı (360°) → Esas Ölçü Modülo 360 → Trigonometrik Periyot",
+    "surprising_fact": "360 derece, eşkenar üçgenlerin merkezde birleşmesiyle daireye tam oturur.",
+    "quiz": {
+      "question": "750 derecelik açının esas ölçüsü kaç derecedir?",
+      "options": [
+        "30°",
+        "60°",
+        "90°",
+        "120°"
+      ],
+      "answer": "30°"
+    }
+  },
+  {
+    "day": 11,
+    "title": "Mısır Matematiği ve Nil Taşkınları",
+    "era_figure": "Antik Mısır (Rhind Papirüsü)",
+    "hook": "Nil nehrinin taşması geometri ve kesirleri nasıl başlattı?",
+    "history": "Taşkınlar sonrası tarla sınırlarını belirlemek için ip gericiler (Harpedonaptai) geometriyi başlattı.",
+    "tyt_ayt_links": [
+      "Kesirler",
+      "Alan Hesapları",
+      "Geometriye Giriş"
+    ],
+    "daily_life": "Arazi ölçümü, tapu kadastro, inşaat planlama.",
+    "connection_note": "Taşkın / Sınır Kaybı → Geometrik Alan ve Birim Kesirler",
+    "surprising_fact": "Mısırlılar tüm kesirleri payı 1 olan birim kesirlerin toplamı (2/3 hariç) olarak yazardı.",
+    "quiz": {
+      "question": "Rhind Papirüsü hangi medeniyete aittir?",
+      "options": [
+        "Babil",
+        "Antik Mısır",
+        "Roma",
+        "Sümer"
+      ],
+      "answer": "Antik Mısır"
+    }
+  },
+  {
+    "day": 12,
+    "title": "Kesirler: Bütünü Eşit Parçalara Bölmek",
+    "era_figure": "Mısır & Babil",
+    "hook": "Neden tam sayılar dünyayı tarif etmeye yetmedi?",
+    "history": "Tam bölünemeyen ekmek, un ve arazi paylaşımları rasyonel sayıları zorunlu kıldı.",
+    "tyt_ayt_links": [
+      "Rasyonel Sayılar",
+      "Bileşik-Basit Kesir",
+      "Kesirlerde Sıralama"
+    ],
+    "daily_life": "Yemek tarifleri, hisse paylaşımı, borsa oranları.",
+    "connection_note": "Doğal Sayılar (N) → Kesir İhtiyacı → Rasyonel Sayılar (Q)",
+    "surprising_fact": "Eski Mısır'da 'göz' hiyeroglifi (Horus'un Gözü) kesirli ölçüleri temsil ederdi.",
+    "quiz": {
+      "question": "3/4 kesri hangi iki birim kesrin toplamıdır?",
+      "options": [
+        "1/2 + 1/4",
+        "1/3 + 1/4",
+        "1/2 + 1/3",
+        "1/4 + 1/4"
+      ],
+      "answer": "1/2 + 1/4"
+    }
+  },
+  {
+    "day": 13,
+    "title": "Dört İşlem: Sistemleşen Aritmetik",
+    "era_figure": "Klasik Dönem",
+    "hook": "Toplama, çıkarma, çarpma ve bölme neden kurallara bağlandı?",
+    "history": "Ticaret ve vergilendirme geliştikçe hesapların sarsılmaz standartlara oturması gerekti.",
+    "tyt_ayt_links": [
+      "Dört İşlem Yeteneği",
+      "İşlem Önceliği",
+      "Parantez Kuralları"
+    ],
+    "daily_life": "Kasa hesabı, muhasebe, temel bilgisayar işlemcileri.",
+    "connection_note": "Aritmetik İşlemler → İşlem Önceliği (PEMDAS/Bölme-Çarpma)",
+    "surprising_fact": "Çarpma işareti 'x' sembolü 1631'de William Oughtred tarafından yaygınlaştırılmıştır.",
+    "quiz": {
+      "question": "8 - 2 x 3 işleminin sonucu kaçtır?",
+      "options": [
+        "18",
+        "2",
+        "12",
+        "6"
+      ],
+      "answer": "2"
+    }
+  },
+  {
+    "day": 14,
+    "title": "Bölme İşlemi: Eş Paylaştırma ve Kalan",
+    "era_figure": "Antik Çağ",
+    "hook": "Bölme işlemi neden aslında 'hızlı çıkarma' işlemidir?",
+    "history": "Bir büyüklüğü eşit parçalara ayırma ve geriye kalan artığı anlamlandırma.",
+    "tyt_ayt_links": [
+      "Bölme-Bölünebilme",
+      "Kalan Teoremi",
+      "Modüler Aritmetik"
+    ],
+    "daily_life": "Vardiya planlama, paketleme ve bölüştürme.",
+    "connection_note": "A = B.Q + K (0 ≤ K < B) Temel Bölme Özdeşliği",
+    "surprising_fact": "Bölme işlemi bilgisayar çiplerinde art arda çıkarma döngüleriyle çalışır.",
+    "quiz": {
+      "question": "Bir sayının 6 ile bölünebilmesi için hangi sayılara tam bölünmesi gerekir?",
+      "options": [
+        "2 ve 3",
+        "2 ve 4",
+        "1 ve 5",
+        "3 ve 4"
+      ],
+      "answer": "2 ve 3"
+    }
+  },
+  {
+    "day": 15,
+    "title": "Oran ve Orantı: Karşılaştırmanın Dili",
+    "era_figure": "Tales ve Mısır",
+    "hook": "Gölgenizin boyundan piramidin yüksekliği nasıl ölçülür?",
+    "history": "Tales, boyunun gölgesine eşit olduğu anı bekleyerek piramitlerin yüksekliğini hesapladı.",
+    "tyt_ayt_links": [
+      "Oran-Orantı",
+      "Doğru ve Ters Orantı",
+      "Bileşik Orantı"
+    ],
+    "daily_life": "Harita ölçekleri, yemek tarifleri, kimyasal karışımlar.",
+    "connection_note": "a/b = c/d → İçler-Dışlar Çarpımı → Benzerlik Oranı",
+    "surprising_fact": "Altın Oran (1.618...), insanlık tarihindeki en ünlü geometrik orandır.",
+    "quiz": {
+      "question": "a/b = 2/3 ise (a+b)/b oranı kaçtır?",
+      "options": [
+        "5/3",
+        "3/2",
+        "5/2",
+        "1/3"
+      ],
+      "answer": "5/3"
+    }
+  },
+  {
+    "day": 16,
+    "title": "Geometrinin Doğuşu: Yerin Ölçümü",
+    "era_figure": "Yunan & Mısır",
+    "hook": "Geometri kelimesi neden 'yer ölçümü' (Geo-metria) demektir?",
+    "history": "Fiziksel dünyadaki şekillerin, sınırların ve mesafelerin soyut kurallara dökülmesi.",
+    "tyt_ayt_links": [
+      "Temel Geometri",
+      "Doğruda ve Üçgende Açılar",
+      "Geometrik Çizimler"
+    ],
+    "daily_life": "Mimarlık, inşaat mühendisliği, haritacılık ve oyun motorları.",
+    "connection_note": "Fiziksel Ölçüm → Geometrik Şekiller → Teoremler",
+    "surprising_fact": "Geometri binlerce yıl boyunca sadece cetvel ve pergel yardımıyla kuruldu.",
+    "quiz": {
+      "question": "İki paralel doğruyu kesen bir doğrunun oluşturduğu iç ters açılar nasıldır?",
+      "options": [
+        "Eşittir",
+        "Toplamı 180°dir",
+        "Birbirini 90°ye tamamlar",
+        "Farklıdır"
+      ],
+      "answer": "Eşittir"
+    }
+  },
+  {
+    "day": 17,
+    "title": "Üçgenler: En Temel Rijit Şekil",
+    "era_figure": "Antik Geometri",
+    "hook": "Köprülerde ve vinçlerde neden hep üçgen kirişler kullanılır?",
+    "history": "Dörtgenlerin köşeleri oynatıldığında şekli bozulur; oysa üçgenin kenarları sabitse açısı asla değişmez.",
+    "tyt_ayt_links": [
+      "Üçgen Çeşitleri",
+      "Üçgen Eşitsizliği",
+      "Açı-Kenar Bağıntıları"
+    ],
+    "daily_life": "Köprü makasları, çatılar, vinç kuleleri, 3D poligon modelleme.",
+    "connection_note": "Kenar Sabitliği → Şekil Değişmezliği (Rijitlik) → Trigonometri",
+    "surprising_fact": "Bilgisayar oyunlarındaki tüm 3D karakterler milyonlarca küçük üçgenden oluşur.",
+    "quiz": {
+      "question": "Bir üçgenin kenarları 3 ve 7 ise 3. kenar hangi aralıkta olmalıdır?",
+      "options": [
+        "4 < x < 10",
+        "3 < x < 7",
+        "0 < x < 10",
+        "4 < x < 21"
+      ],
+      "answer": "4 < x < 10"
+    }
+  },
+  {
+    "day": 18,
+    "title": "Pisagor Bağıntısı ve İrrasyonel Kriz",
+    "era_figure": "Pisagor ve Okulu (MÖ 500)",
+    "hook": "Kenarı 1 birim olan karenin köşegeni Pisagorcuları neden dehşete düşürdü?",
+    "history": "a² + b² = c² formülü bulundu ama √2 kesirle yazılamayınca evrenin tam sayılardan oluştuğu inancı sarsıldı.",
+    "tyt_ayt_links": [
+      "Pisagor Teoremi",
+      "Özel Üçgenler (3-4-5, 5-12-13)",
+      "İrrasyonel Sayılar"
+    ],
+    "daily_life": "Ekran en-boy oranları (16:9), GPS mesafe hesaplama.",
+    "connection_note": "Dik Üçgen → a² + b² = c² → İrrasyonel Sayılar (√2)",
+    "surprising_fact": "Efsaneye göre √2'nin irrasyonel olduğunu kanıtlayan Hippasus denize atılmıştır.",
+    "quiz": {
+      "question": "Kenarları 5 ve 12 olan dik üçgenin hipotenüsü kaçtır?",
+      "options": [
+        "13",
+        "15",
+        "17",
+        "14"
+      ],
+      "answer": "13"
+    }
+  },
+  {
+    "day": 19,
+    "title": "Öklid ve İspatlı Geometri",
+    "era_figure": "İskenderiyeli Öklid (MÖ 300)",
+    "hook": "Neden sadece 'biliyorum' demek yetmez, 'ispatlamak' gerekir?",
+    "history": "5 aksiyom ve 5 postulat üzerine kurulu 'Elemanlar' kitabı insanlık tarihinin en çok basılan 2. kitabıdır.",
+    "tyt_ayt_links": [
+      "Geometrik İspatlar",
+      "Aksiyom & Teorem",
+      "Öklid Bağıntıları"
+    ],
+    "daily_life": "Hukuk sistemleri, mantıksal argümanlar, yazılım mimarisi.",
+    "connection_note": "Aksiyom (Doğru Kabul) → Mantıksal Tümdengelim → Teorem",
+    "surprising_fact": "Abraham Lincoln zihnini keskinleştirmek için Öklid'in teoremlerini ezbere ispatlardı.",
+    "quiz": {
+      "question": "Öklid'in meşhur 5. postulatı ne ile ilgilidir?",
+      "options": [
+        "Paralellik",
+        "Dik açı",
+        "Nokta tanımı",
+        "Daire çizimi"
+      ],
+      "answer": "Paralellik"
+    }
+  },
+  {
+    "day": 20,
+    "title": "Cebirin Doğuşu: Bilinmeyenin Peşinde",
+    "era_figure": "İslam Dünyası & Bağdat",
+    "hook": "Sayıları bir kenara bırakıp harflerle düşünmeye nasıl başladık?",
+    "history": "Ticaret, miras taksimi ve arazi paylaşımlarında her durum için ayrı yöntem yerine tek bir kural arandı.",
+    "tyt_ayt_links": [
+      "Cebirsel İfadeler",
+      "Bilinmeyen Mantığı (x)",
+      "Denklem Kurma"
+    ],
+    "daily_life": "Finansal modeller, faiz hesapları, yapay zeka formülleri.",
+    "connection_note": "Aritmetik (Sayılarla) → Cebir (Semboller ve Değişkenlerle)",
+    "surprising_fact": "İspanyollar Arapça 'şey' (bilinmeyen) kelimesini 'xay' olarak yazdı ve bugünkü 'x' doğdu.",
+    "quiz": {
+      "question": "Cebir kelimesinin kökeni olan 'El-Cebr' ne anlama gelir?",
+      "options": [
+        "Kırık kemikleri birleştirmek / Dengelemek",
+        "Sayı saymak",
+        "Bilinmeyeni bulmak",
+        "Hesap yapmak"
+      ],
+      "answer": "Kırık kemikleri birleştirmek / Dengelemek"
+    }
+  },
+  {
+    "day": 21,
+    "title": "El-Hârizmî: Cebiri Sistemleştiren İsim",
+    "era_figure": "El-Hârizmî (780–850)",
+    "hook": "'Cebir' ve 'Algoritma' kelimeleri tarihte nereden gelir?",
+    "history": "Bağdat Beytü'l-Hikme'de yazdığı 'El-Kitabü'l-Muhtasar fi Hesabi'l-Cebr ve'l-Mukabele' cebiri bağımsız bilim yaptı.",
+    "tyt_ayt_links": [
+      "Birinci Dereceden Denklemler",
+      "Algoritmik Düşünce"
+    ],
+    "daily_life": "Yazılım algoritmaları, denklem çözücü programlar.",
+    "connection_note": "El-Cebr (Dengeleme) + El-Mukâbele (Sadeleştirme) → Denklem Çözümü",
+    "surprising_fact": "'Algoritma' kelimesi El-Hârizmî'nin Latince telaffuzu olan 'Algoritmi'den gelir.",
+    "quiz": {
+      "question": "El-Hârizmî hangi tarihi merkezde çalışmalarını yürütmüştür?",
+      "options": [
+        "Bağdat Beytü'l-Hikme",
+        "İskenderiye Kütüphanesi",
+        "Endülüs",
+        "Semerkant Rasathanesi"
+      ],
+      "answer": "Bağdat Beytü'l-Hikme"
+    }
+  },
+  {
+    "day": 22,
+    "title": "Birinci Dereceden Denklemler: x'i Yalnız Bırakmak",
+    "era_figure": "El-Hârizmî & Cebir",
+    "hook": "Bir terazinin iki kefesi dengedeyse bilinmeyen nasıl bulunur?",
+    "history": "Eşitliğin her iki tarafına aynı işlemi yaparak bilinmeyeni tecrit etme ilkesi.",
+    "tyt_ayt_links": [
+      "1. Dereceden Denklemler",
+      "Denklem Sistemleri",
+      "Problem Çözme"
+    ],
+    "daily_life": "Maliyet-fiyat hesapları, bütçe dengeleme, kimyasal denklem denkleştirme.",
+    "connection_note": "Eşitlik Terazisi: Sol = Sağ → Her iki tarafa aynı işlem",
+    "surprising_fact": "Denklemlerdeki '=' sembolü 1557'de Robert Recorde tarafından 'iki paralel çizgiden daha eşit bir şey yoktur' denilerek seçildi.",
+    "quiz": {
+      "question": "3x + 6 = 18 denkleminde x kaçtır?",
+      "options": [
+        "4",
+        "3",
+        "6",
+        "2"
+      ],
+      "answer": "4"
+    }
+  },
+  {
+    "day": 23,
+    "title": "İkinci Dereceden Denklemler: Alan ve Kare",
+    "era_figure": "Babil & Hârizmî",
+    "hook": "ax² + bx + c = 0 denklemi neden kare tamamlama alanından doğdu?",
+    "history": "Karesel büyüklüklerin alan geometrisiyle modellenmesi ve diskriminantın (Δ) keşfi.",
+    "tyt_ayt_links": [
+      "2. Dereceden Denklemler",
+      "Diskriminant (Delta)",
+      "Kök-Katsayı Bağıntıları"
+    ],
+    "daily_life": "Top mermisinin yörüngesi, araba fren mesafesi, kâr maksimizasyonu.",
+    "connection_note": "Kare Tamamlama → Diskriminant: Δ = b² - 4ac → Kök Formülü",
+    "surprising_fact": "Δ < 0 durumu ileride karmaşık sayıların (i² = -1) doğmasına yol açacaktır.",
+    "quiz": {
+      "question": "x² - 5x + 6 = 0 denkleminin kökleri toplamı kaçtır?",
+      "options": [
+        "5",
+        "-5",
+        "6",
+        "-6"
+      ],
+      "answer": "5"
+    }
+  },
+  {
+    "day": 24,
+    "title": "Ömer Hayyam: Geometriyle Denklem Çözen Zihin",
+    "era_figure": "Ömer Hayyam (1048–1131)",
+    "hook": "3. dereceden denklemler cebirsel formül yokken nasıl çözüldü?",
+    "history": "Kübik denklemleri çember, parabol ve hiperbol kesişimleriyle çözen dahi.",
+    "tyt_ayt_links": [
+      "Polinomlar",
+      "3. Derece Denklemler",
+      "Binom Açılımı (Hayyam Üçgeni)"
+    ],
+    "daily_life": "Optik ayna tasarımları, teleskop mercekleri, yörünge mekaniği.",
+    "connection_note": "Cebirsel Kübik Denklem ↔ Geometrik Konik Kesişimleri",
+    "surprising_fact": "Pascal Üçgeni olarak bilinen binom katsayıları tablosunu Pascal'dan yüzyıllar önce Ömer Hayyam bulmuştur.",
+    "quiz": {
+      "question": "Ömer Hayyam hangi tür denklemleri konik kesitlerle geometrik olarak çözmüştür?",
+      "options": [
+        "3. Dereceden (Kübik)",
+        "1. Dereceden",
+        "Lineer Sistemler",
+        "Logaritmik"
+      ],
+      "answer": "3. Dereceden (Kübik)"
+    }
+  },
+  {
+    "day": 25,
+    "title": "Denklem, Geometri ve Konikler",
+    "era_figure": "Apollonius & Hayyam",
+    "hook": "Bir koninin kesitleri nasıl elips, parabol ve hiperbol olur?",
+    "history": "İkinci dereceden iki bilinmeyenli denklemlerin geometrik izdüşümleri.",
+    "tyt_ayt_links": [
+      "Konikler Giriş",
+      "Parabol Geometrisi",
+      "Koni Kesitleri"
+    ],
+    "daily_life": "Gezegenlerin eliptik yörüngeleri, uydu antenleri, fener reflektörleri.",
+    "connection_note": "Koni Kesiti (Geometri) ↔ 2. Derece Denklem (Cebir)",
+    "surprising_fact": "Uydu antenlerinin parabolik olmasının sebebi, paralel gelen tüm sinyalleri tek bir odak noktasına toplamasıdır.",
+    "quiz": {
+      "question": "Gezegenler Güneş etrafında hangi geometrik şekilde dolanır?",
+      "options": [
+        "Elips",
+        "Kusursuz Çember",
+        "Parabol",
+        "Hiperbol"
+      ],
+      "answer": "Elips"
+    }
+  },
+  {
+    "day": 26,
+    "title": "Trigonometrinin Doğuşu: Gökyüzünü Ölçmek",
+    "era_figure": "Hiparkos & Batlamyus",
+    "hook": "Güneş'e ve yıldızlara dokunamadan uzaklıkları nasıl ölçtük?",
+    "history": "Astronomide gök cisimlerinin konumlarını hesaplamak için açı ve çember kirişlerinin incelenmesi.",
+    "tyt_ayt_links": [
+      "Trigonometri Giriş",
+      "Açı Ölçü Birimleri (Radyan/Derece)"
+    ],
+    "daily_life": "Astronomi, deniz navigasyonu, uydu yörüngeleri.",
+    "connection_note": "Gökyüzü Açıları → Çember Kirişleri → Trigonometrik Oranlar",
+    "surprising_fact": "İlk trigonometri cetvelleri üçgenler için değil, gök küresindeki daireler için hazırlanmıştı.",
+    "quiz": {
+      "question": "Radyan cinsinden π (pi) açısı kaç dereceye eşittir?",
+      "options": [
+        "180°",
+        "360°",
+        "90°",
+        "270°"
+      ],
+      "answer": "180°"
+    }
+  },
+  {
+    "day": 27,
+    "title": "Trigonometrinin İlk Adımları: Kirişten Orana",
+    "era_figure": "Antik Yunan & Hint",
+    "hook": "Çember kirişi nasıl oldu da yarım kiriş (sinüs) haline geldi?",
+    "history": "Hint matematikçiler tüm kiriş yerine yarım kirişi (jya) kullandı; bu kavram modern sinüs fonksiyonunu doğurdu.",
+    "tyt_ayt_links": [
+      "Dik Üçgende Trigonometrik Oranlar",
+      "Sinüs ve Kosinüs"
+    ],
+    "daily_life": "GPS triangulasyon, harita konumu bulma, inşaat teodolitleri.",
+    "connection_note": "Tam Kiriş (Yunan) → Yarım Kiriş / Jya (Hint) → Ceyb (Arapça) → Sinus (Latince)",
+    "surprising_fact": "Sinüs kelimesi Arapça 'ceyb' (koyun/kıvrım) kelimesinin Latinceye çevrilmesiyle 'sinus' olmuştur.",
+    "quiz": {
+      "question": "Dik üçgende sinüs oranı nasıl tanımlanır?",
+      "options": [
+        "Karşı Kenar / Hipotenüs",
+        "Komşu Kenar / Hipotenüs",
+        "Karşı / Komşu",
+        "Komşu / Karşı"
+      ],
+      "answer": "Karşı Kenar / Hipotenüs"
+    }
+  },
+  {
+    "day": 28,
+    "title": "Sinüs, Kosinüs ve Tanjant",
+    "era_figure": "El-Battânî & El-Bûzcânî",
+    "hook": "Benzer dik üçgenlerin kenar oranları neden üçgen büyüse de değişmez?",
+    "history": "Açı sabit kaldığı sürece kenar oranlarının değişmezliği prensibi.",
+    "tyt_ayt_links": [
+      "Trigonometrik Oranlar",
+      "Özel Açıların Değerleri (30-45-60)"
+    ],
+    "daily_life": "Bina yükseklik ölçümü, rampa eğimleri, merdiven açıları.",
+    "connection_note": "Açı Sabitliği → Kenar Oranı Sabitliği: tanθ = Karşı / Komşu",
+    "surprising_fact": "Güneş saati çubuğunun gölgesi tanjant ve kotanjant fonksiyonlarının ilk pratik uygulamasıydı.",
+    "quiz": {
+      "question": "tan(45°) değeri kaçtır?",
+      "options": [
+        "1",
+        "0",
+        "√3",
+        "1/√3"
+      ],
+      "answer": "1"
+    }
+  },
+  {
+    "day": 29,
+    "title": "El-Battânî: Trigonometriyi Bağımsızlaştıran Bilgin",
+    "era_figure": "El-Battânî (858–929)",
+    "hook": "Trigonometri astronominin alt dalı olmaktan çıkıp nasıl bağımsız bir bilim oldu?",
+    "history": "Sinüs, kosinüs, tanjant bağıntılarını sistemleştirdi ve Güneş yılını dakikası dakikasına hesapladı.",
+    "tyt_ayt_links": [
+      "Trigonometrik Bağıntılar",
+      "Gelişmiş Trigonometri"
+    ],
+    "daily_life": "Hassas takvimcilik, kıble yönü tayini, deniz haritacılığı.",
+    "connection_note": "Astronomik Gözlem → Trigonometrik Özdeşlikler: sin²θ + cos²θ = 1",
+    "surprising_fact": "El-Battânî'nin bulduğu bir Güneş yılı süresi modern ölçümlerden sadece 2 dakika 22 saniye farklıdır.",
+    "quiz": {
+      "question": "sin²x + cos²x ifadesinin eşiti her zaman kaçtır?",
+      "options": [
+        "1",
+        "0",
+        "tan x",
+        "2"
+      ],
+      "answer": "1"
+    }
+  },
+  {
+    "day": 30,
+    "title": "Trigonometriden Fonksiyonlara: Birim Çember",
+    "era_figure": "Modern Trigonometri",
+    "hook": "Açı 90 dereceden büyük olduğunda sinüs ve kosinüs ne anlama gelir?",
+    "history": "Yarıçapı 1 olan çemberde x koordinatı kosinüs, y koordinatı sinüs olarak genellendi.",
+    "tyt_ayt_links": [
+      "Birim Çember",
+      "İşaret İncelemesi",
+      "Geniş Açıların İndirgenmesi"
+    ],
+    "daily_life": "Alternatif elektrik akımı (AC dalgaları), ses, radyo ve ışık dalgaları.",
+    "connection_note": "Üçgen Sınırı (0-90°) → Çember Genellemesi (0-360°) → Periyodik Dalga",
+    "surprising_fact": "Birim çember sayesinde trigonometri üçgenden kurtulup tüm periyodik doğa olaylarının diline dönüştü.",
+    "quiz": {
+      "question": "Birim çember üzerinde (1, 0) noktası kaç derecelik açıya karşılık gelir?",
+      "options": [
+        "0°",
+        "90°",
+        "180°",
+        "270°"
+      ],
+      "answer": "0°"
+    }
+  },
+  {
+    "day": 31,
+    "title": "Üslü İfadelerin Doğuşu: Tekrarlı Çarpma",
+    "era_figure": "Rönesans Matematiği",
+    "hook": "2⁶⁴ sayısını kağıda sığdırmak ve katlanarak büyümeyi tarif etmek için ne yaptık?",
+    "history": "Tekrarlı çarpmaları aⁿ şeklinde yazarak devasa sayıları kontrol altına alma.",
+    "tyt_ayt_links": [
+      "Üslü Sayılar",
+      "Üslü Sayı Özellikleri",
+      "Üslü Denklemler"
+    ],
+    "daily_life": "Bakteri çoğalması, bileşik faiz, dijital veri depolama (KB, MB, GB, TB).",
+    "connection_note": "Tekrarlı Toplama = Çarpma (3+3+3 = 3x3) → Tekrarlı Çarpma = Üs (3x3x3 = 3³)",
+    "surprising_fact": "Satranç tahtasına her karede ikiye katlanan pirinç taneleri koyulursa toplam pirinç dünyayı kaplar.",
+    "quiz": {
+      "question": "2⁵ ifadesinin değeri kaçtır?",
+      "options": [
+        "32",
+        "10",
+        "16",
+        "64"
+      ],
+      "answer": "32"
+    }
+  },
+  {
+    "day": 32,
+    "title": "Köklü Sayılar: Kökü Bulmak",
+    "era_figure": "Pisagor & Modern Cebir",
+    "hook": "Alanı 50 m² olan bir karenin kenarı tam olarak nedir?",
+    "history": "Kuvvet almanın ters işlemi olarak kök alma (√x) ve irrasyonel köklerin doğası.",
+    "tyt_ayt_links": [
+      "Köklü Sayılar",
+      "Köklü İfadelerde Eşlenik",
+      "Köklü Denklemler"
+    ],
+    "daily_life": "Kare kök hesapları, inşaat mühendisliği, fiziksel hız formülleri.",
+    "connection_note": "Kuvvet Alma (x² = a) ↔ Kök Alma (x = √a)",
+    "surprising_fact": "Kök işareti '√', Latince kök anlamına gelen 'radix' kelimesinin 'r' harfinden türemiştir.",
+    "quiz": {
+      "question": "√75 sayısı a√b şeklinde nasıl yazılır?",
+      "options": [
+        "5√3",
+        "3√5",
+        "25√3",
+        "15√5"
+      ],
+      "answer": "5√3"
+    }
+  },
+  {
+    "day": 33,
+    "title": "Üslü ve Köklü Sayıların Bağı",
+    "era_figure": "Rönesans Cebiri",
+    "hook": "Üs ile kök aslında aynı madalyonun iki yüzü müdür?",
+    "history": "Her köklü sayı aslında üssü kesirli olan bir üslü sayıdır: ⁿ√a = a^(1/n).",
+    "tyt_ayt_links": [
+      "Üslü-Köklü Dönüşümleri",
+      "Denklem Çözümleri"
+    ],
+    "daily_life": "Fizik formülleri, yarılanma ömrü hesapları.",
+    "connection_note": "Üs ↔ Kök Ters İşlem Bağıntısı",
+    "surprising_fact": "Kesirli üsler sayesinde üslü sayıların tüm çarpma/bölme kuralları köklü sayılara da uygulanabilir.",
+    "quiz": {
+      "question": "∛(x²) ifadesinin üslü gösterimi hangisidir?",
+      "options": [
+        "x^(2/3)",
+        "x^(3/2)",
+        "x^6",
+        "x^(-2/3)"
+      ],
+      "answer": "x^(2/3)"
+    }
+  },
+  {
+    "day": 34,
+    "title": "Kesirli Üsler: Genişleyen Kuvvet",
+    "era_figure": "Oresme & Newton",
+    "hook": "Bir sayının 0.5. kuvveti ne anlama gelir?",
+    "history": "Üs kavramının tam sayılardan rasyonel ve gerçel sayılara genişlemesi.",
+    "tyt_ayt_links": [
+      "Rasyonel Üsler",
+      "Üslü Fonksiyon Temeli"
+    ],
+    "daily_life": "Finansal büyüme oranları, nüfus artış projeksiyonları.",
+    "connection_note": "a^(m/n) = ⁿ√(aᵐ) Köprüsü",
+    "surprising_fact": "Kesirli üs kavramı daha sonra kalkülüste türev ve integral almayı son derece basitleştirmiştir.",
+    "quiz": {
+      "question": "16^(3/4) işleminin sonucu kaçtır?",
+      "options": [
+        "8",
+        "12",
+        "64",
+        "4"
+      ],
+      "answer": "8"
+    }
+  },
+  {
+    "day": 35,
+    "title": "Logaritmaya Açılan Kapı: Hesap Krizini Aşmak",
+    "era_figure": "John Napier (1614)",
+    "hook": "17. yüzyılda astronomlar neden kör olma tehlikesiyle karşı karşıyaydı?",
+    "history": "Gezegen yörüngelerini hesaplamak için yüzlerce basamaklı çarpmalar yapmaktan kurtulma arayışı.",
+    "tyt_ayt_links": [
+      "Logaritma Tanımı",
+      "a^x = b ↔ x = log_a(b)"
+    ],
+    "daily_life": "Deprem şiddeti, ses desibel ölçümleri.",
+    "connection_note": "Büyük Sayılarla Çarpma Zorluğu → Üstel Eşleme → Logaritma",
+    "surprising_fact": "Logaritma kelimesi Yunanca 'logos' (oran) ve 'arithmos' (sayı) kelimelerinin birleşimidir.",
+    "quiz": {
+      "question": "log₂(8) ifadesinin değeri kaçtır?",
+      "options": [
+        "3",
+        "4",
+        "16",
+        "2"
+      ],
+      "answer": "3"
+    }
+  },
+  {
+    "day": 36,
+    "title": "Logaritmaya Açılan Kapı II: Üslü Düşünceden Yeni Dile",
+    "era_figure": "Napier & Briggs",
+    "hook": "Çarpma işlemini toplamaya dönüştürmek mümkün müdür?",
+    "history": "Tabanlar aynıyken üsler toplandığı için logaritma çarpmayı toplamaya indirger.",
+    "tyt_ayt_links": [
+      "Logaritma Özellikleri",
+      "Taban Değiştirme"
+    ],
+    "daily_life": "Kimyasal pH dengesi, ses yalıtımı.",
+    "connection_note": "log(a.b) = log a + log b ve log(a/b) = log a - log b",
+    "surprising_fact": "Napier logaritmayı icat ettiğinde fonksiyon kavramı henüz matematikte yoktu.",
+    "quiz": {
+      "question": "log(100) + log(1000) toplamı (10 tabanında) kaçtır?",
+      "options": [
+        "5",
+        "6",
+        "100000",
+        "20"
+      ],
+      "answer": "5"
+    }
+  },
+  {
+    "day": 37,
+    "title": "John Napier: Zor Hesapları Kısaltan Fikir",
+    "era_figure": "John Napier (1550–1617)",
+    "hook": "20 yıl boyunca şatosuna kapanıp neyin tablosunu hazırladı?",
+    "history": "Napier, astronomların ömrünü uzatan meşhur logaritma cetvellerini inşa etti.",
+    "tyt_ayt_links": [
+      "Doğal Logaritma (ln)",
+      "Logaritmik Fonksiyon"
+    ],
+    "daily_life": "Radyoaktif bozunma süreleri, karbon-14 yaş tayini.",
+    "connection_note": "Hesap Yükünü Azaltma → Napier Cetvelleri → Doğal Logaritma",
+    "surprising_fact": "Pierre-Simon Laplace: 'Napier logaritmayı keşfederek astronomların ömrünü iki katına çıkardı.'",
+    "quiz": {
+      "question": "Doğal logaritmanın (ln) tabanı olan 'e' sayısı yaklaşık kaçtır?",
+      "options": [
+        "2.718",
+        "3.141",
+        "1.414",
+        "1.618"
+      ],
+      "answer": "2.718"
+    }
+  },
+  {
+    "day": 38,
+    "title": "Henry Briggs: 10 Tabanlı Pratik Logaritma",
+    "era_figure": "Henry Briggs (1561–1630)",
+    "hook": "Logaritmayı günlük hayatta pratik hesap makinelerine dönüştüren kimdi?",
+    "history": "Napier ile görüşerek 10 tabanlı logaritma cetvellerini (Arithmetica Logarithmica) yayınladı.",
+    "tyt_ayt_links": [
+      "Onluk Logaritma",
+      "Basamak Sayısı Bulma"
+    ],
+    "daily_life": "Slayt cetvelleri (Slide rule), mühendislik el kitapları.",
+    "connection_note": "10 Tabanı → Basamak Değeri Uyumu → Hızlı Mühendislik Hesabı",
+    "surprising_fact": "Apollo 11 astronotları Ay'a giderken yanlarında acil hesaplar için logaritmik slayt cetveli taşıyordu.",
+    "quiz": {
+      "question": "log₁₀(10000) değeri kaçtır?",
+      "options": [
+        "4",
+        "3",
+        "5",
+        "10"
+      ],
+      "answer": "4"
+    }
+  },
+  {
+    "day": 39,
+    "title": "Logaritma Neden İşe Yarar? Gizli Bağlantı",
+    "era_figure": "Klasik Analiz",
+    "hook": "Logaritma sadece bir formül müdür yoksa insan algısının biçimi mi?",
+    "history": "Çok devasa sayı farklarını insan beyninin anlayabileceği doğrusal bir çizgiye sıkıştırır.",
+    "tyt_ayt_links": [
+      "Logaritmik Denklemler",
+      "Logaritmik Eşitsizlikler"
+    ],
+    "daily_life": "İnsan işitme duyusu (Weber-Fechner kanunu), yıldız parlaklıkları.",
+    "connection_note": "Katlanarak Artış (Üstel) ↔ Eşit Adımlarla Artış (Logaritmik)",
+    "surprising_fact": "İnsan kulağı ses şiddetini doğrusal değil, logaritmik olarak algılar.",
+    "quiz": {
+      "question": "log₃(x) = 4 ise x kaçtır?",
+      "options": [
+        "81",
+        "12",
+        "64",
+        "27"
+      ],
+      "answer": "81"
+    }
+  },
+  {
+    "day": 40,
+    "title": "Logaritma Hayatın Neresinde? Richter, Desibel, pH",
+    "era_figure": "Uygulamalı Matematik",
+    "hook": "7 büyüklüğündeki deprem neden 6 büyüklüğündekinin 10 katı genliğe sahiptir?",
+    "history": "Logaritmik ölçeklerde her 1 birimlik artış aslında 10 katlık fiziksel büyüme demektir.",
+    "tyt_ayt_links": [
+      "Logaritma Uygulama Problemleri",
+      "Üstel-Logaritmik Büyüme"
+    ],
+    "daily_life": "Richter deprem ölçeği, ses desibeli, kimyasal pH değeri.",
+    "connection_note": "Logaritmik Ölçek: +1 Birim = x10 Kat Değişim",
+    "surprising_fact": "pH değeri 3 olan bir asit, pH değeri 5 olan bir maddeden 100 kat daha asidiktir.",
+    "quiz": {
+      "question": "Richter ölçeğinde 7 büyüklüğündeki depremin dalga genliği 5 büyüklüğündekinin kaç katıdır?",
+      "options": [
+        "100 kat",
+        "2 kat",
+        "10 kat",
+        "1000 kat"
+      ],
+      "answer": "100 kat"
+    }
+  },
+  {
+    "day": 41,
+    "title": "Descartes'a Doğru: Sayı ile Şeklin Birleşmesi",
+    "era_figure": "17. Yüzyıl Başları",
+    "hook": "Cebirdeki bir denklem ile kağıttaki bir çizgi nasıl aynı şey olabilir?",
+    "history": "Geometri şekillerle uğraşırken cebir denklemlerle uğraşıyordu; ikisini birleştirecek köprü aranıyordu.",
+    "tyt_ayt_links": [
+      "Analitik Geometriye Giriş",
+      "Noktanın Analitiği"
+    ],
+    "daily_life": "Harita koordinatları, piksel tabanlı dijital grafikler.",
+    "connection_note": "Cebirsel İfade (Denklem) ↔ Geometrik Şekil (Grafik)",
+    "surprising_fact": "Descartes'tan önce geometri ile cebir tamamen iki ayrı bilim dalı olarak görülüyordu.",
+    "quiz": {
+      "question": "Analitik düzlemde orijin noktasının koordinatları nedir?",
+      "options": [
+        "(0, 0)",
+        "(1, 1)",
+        "(0, 1)",
+        "(1, 0)"
+      ],
+      "answer": "(0, 0)"
+    }
+  },
+  {
+    "day": 42,
+    "title": "René Descartes: Cebir ile Geometriyi Buluşturan İsim",
+    "era_figure": "René Descartes (1596–1650)",
+    "hook": "'Düşünüyorum, öyleyse varım' diyen filozof koordinat sistemini nasıl düşündü?",
+    "history": "Yatağında tavandaki bir sineğin hareketini izlerken köşelere olan mesafesiyle sineğin yerini belirleme fikri.",
+    "tyt_ayt_links": [
+      "Kartezyen Düzlem",
+      "İki Nokta Arasındaki Uzaklık"
+    ],
+    "daily_life": "Bilgisayar ekranları, CNC makineleri, 3D animasyon.",
+    "connection_note": "Noktanın Konumu → (x, y) Koordinat İkilisi",
+    "surprising_fact": "Kartezyen (Cartesian) kelimesi Descartes'ın Latince ismi olan 'Cartesius'tan gelir.",
+    "quiz": {
+      "question": "(3, 4) noktasının orijine olan uzaklığı kaç birimdir?",
+      "options": [
+        "5",
+        "7",
+        "1",
+        "25"
+      ],
+      "answer": "5"
+    }
+  },
+  {
+    "day": 43,
+    "title": "Pierre de Fermat: Analitik Geometrinin Diğer Öncüsü",
+    "era_figure": "Pierre de Fermat (1607–1665)",
+    "hook": "Analitik geometriyi Descartes ile aynı anda bağımsız bulan kimdi?",
+    "history": "Fermat eğrilerin denklemleri üzerine çalışarak analitik geometri ve diferansiyelin kapısını araladı.",
+    "tyt_ayt_links": [
+      "Doğrunun Analitik İncelenmesi",
+      "Eğim Kavramı"
+    ],
+    "daily_life": "Optik yansıma yasaları (Fermat en kısa zaman prensibi).",
+    "connection_note": "Denklem Eşitliği → Düzlemdeki Eğri",
+    "surprising_fact": "Fermat bir mahkeme hakimiydi ve matematiği sadece boş zamanlarında hobi olarak yapıyordu.",
+    "quiz": {
+      "question": "Fermat'nın optikteki meşhur prensibi nedir?",
+      "options": [
+        "Işığın en kısa zaman alan yolu izlemesi",
+        "Işığın en uzun yolu seçmesi",
+        "Işığın bükülmemesi",
+        "Işığın hızının sabitliği"
+      ],
+      "answer": "Işığın en kısa zaman alan yolu izlemesi"
+    }
+  },
+  {
+    "day": 44,
+    "title": "Koordinat Sistemi: Noktanın Adresi",
+    "era_figure": "Kartezyen Düzlem",
+    "hook": "Bir noktanın dünya üzerinde tam konumu nasıl sadece 2 sayıyla bulunur?",
+    "history": "Düzlemde birbirine dik iki eksen (apsis x, ordinat y) seçilerek her noktaya tek bir adres atanması.",
+    "tyt_ayt_links": [
+      "Analitik Düzlemde Bölgeler",
+      "Orta Nokta ve Eksenler"
+    ],
+    "daily_life": "GPS uydu koordinatları (Enlem-Boylam), havacılık radarları.",
+    "connection_note": "(x, y) Adresi → Düzlemde Benzersiz Konum",
+    "surprising_fact": "Telefon ekranınızdaki her bir piksel (x, y) koordinatlarıyla aydınlatılır.",
+    "quiz": {
+      "question": "(-3, 4) noktası analitik düzlemin kaçıncı bölgesindedir?",
+      "options": [
+        "2. Bölge",
+        "1. Bölge",
+        "3. Bölge",
+        "4. Bölge"
+      ],
+      "answer": "2. Bölge"
+    }
+  },
+  {
+    "day": 45,
+    "title": "Eğim ve Doğru: Değişimin Geometrik Dili",
+    "era_figure": "Analitik Geometri",
+    "hook": "Bir yolun dikliği ile denklemdeki x'in katsayısı arasında ne bağ vardır?",
+    "history": "Eğim, dikeydeki değişimin yataydaki değişime oranıdır: m = Δy / Δx = tanθ.",
+    "tyt_ayt_links": [
+      "Doğrunun Eğimi",
+      "Doğru Denklemleri (y = mx + n)"
+    ],
+    "daily_life": "Yol eğimleri, grafik analizi, fiziksel hız-zaman grafiği.",
+    "connection_note": "Eğim (m) = Dikey Değişim / Yatay Değişim = tanθ",
+    "surprising_fact": "Doğrunun eğimi sabitken eğrilerin eğimi her noktada değişir; bu fark kalkülüsü (türevi) doğurmuştur.",
+    "quiz": {
+      "question": "y = 3x + 5 doğrusunda x her 1 birim arttığında y kaç birim artar?",
+      "options": [
+        "3",
+        "5",
+        "8",
+        "1"
+      ],
+      "answer": "3"
+    }
+  },
+  {
+    "day": 46,
+    "title": "Çemberin Denklemi: Şeklin Cebire Dönüşmesi",
+    "era_figure": "Analitik Geometri",
+    "hook": "Merkeze eşit uzaklıktaki tüm noktalar cebirsel bir formülle nasıl yazılır?",
+    "history": "(x - a)² + (y - b)² = r² denklemi Pisagor teoreminin analitik düzlemdeki doğrudan yansımasıdır.",
+    "tyt_ayt_links": [
+      "Çemberin Analitik İncelenmesi",
+      "Merkez ve Yarıçap"
+    ],
+    "daily_life": "Radar kapsama alanları, baz istasyonu sinyal menzili.",
+    "connection_note": "Geometrik Tanım (Eşit Uzaklık) ↔ Pisagor Cebri: (x-a)² + (y-b)² = r²",
+    "surprising_fact": "Depremin merkez üssü en az 3 sismograf istasyonunun çember denklemlerinin kesiştirilmesiyle bulunur.",
+    "quiz": {
+      "question": "Merkezi (0, 0) ve yarıçapı 5 olan çemberin denklemi nedir?",
+      "options": [
+        "x² + y² = 25",
+        "x² + y² = 5",
+        "x + y = 25",
+        "(x-5)² + y² = 25"
+      ],
+      "answer": "x² + y² = 25"
+    }
+  },
+  {
+    "day": 47,
+    "title": "Parabolün Analitik Dili: y = ax² + bx + c",
+    "era_figure": "Analitik Geometri & Fonksiyon",
+    "hook": "Fıskiyeden fışkıran suyun yörüngesi neden her zaman bir paraboldür?",
+    "history": "Yerçekimi ivmesi altındaki serbest düşme hareketi karesel bir fonksiyon (y = -gt² + vt) üretir.",
+    "tyt_ayt_links": [
+      "Parabol Grafiği",
+      "Tepe Noktası (r, k)",
+      "Maksimum-Minimum Problemleri"
+    ],
+    "daily_life": "Araba farı reflektörleri, asma köprü ana taşıyıcı halatları.",
+    "connection_note": "2. Derece Fonksiyon (Cebir) ↔ Simetrik U Eğrisi (Parabol)",
+    "surprising_fact": "Teleskop aynaları ve çanak antenler parabolik yapılarak ışınların tek odakta toplanması sağlanır.",
+    "quiz": {
+      "question": "f(x) = x² - 4x + 7 parabolünün tepe noktasının apsisi (r) kaçtır?",
+      "options": [
+        "2",
+        "-2",
+        "4",
+        "7"
+      ],
+      "answer": "2"
+    }
+  },
+  {
+    "day": 48,
+    "title": "Fonksiyon Fikrinin Doğuşu: Değişimin İlişkisi",
+    "era_figure": "17. ve 18. Yüzyıl",
+    "hook": "Matematik 'kaç?' sorusundan 'biri değişirse diğeri ne olur?' sorusuna nasıl geçti?",
+    "history": "Bir girdiyi alıp kurallı bir şekilde tek bir çıktıya dönüştüren bağıntı mekanizması.",
+    "tyt_ayt_links": [
+      "Fonksiyon Kavramı",
+      "Tanım ve Değer Kümeleri"
+    ],
+    "daily_life": "Otomat makineleri, algoritma fonksiyonları, termostat kontrolleri.",
+    "connection_note": "Girdi (x) → Kural (f) → Çıktı f(x)",
+    "surprising_fact": "Fonksiyon bir kural makinesidir; aynı girdiyi verirseniz her zaman aynı çıktıyı üretir.",
+    "quiz": {
+      "question": "Tanım kümesindeki bir eleman değer kümesinde birden fazla elemanla eşleşebilir mi?",
+      "options": [
+        "Hayır (Fonksiyon olmaz)",
+        "Evet (Her zaman)",
+        "Sadece birebirse",
+        "Fonksiyon türüne bağlı"
+      ],
+      "answer": "Hayır (Fonksiyon olmaz)"
+    }
+  },
+  {
+    "day": 49,
+    "title": "Gottfried Wilhelm Leibniz ve 'Fonksiyon' Sözcüğü",
+    "era_figure": "Gottfried W. Leibniz (1646–1716)",
+    "hook": "'Fonksiyon', 'koordinat' ve 'diferansiyel' terimlerini ilk kim kullandı?",
+    "history": "Kalkülüsün kurucusu Leibniz, geometrik eğrilerin değişken özelliklerini adlandırmak için bu terimi türetti.",
+    "tyt_ayt_links": [
+      "Fonksiyon Türleri",
+      "Değişkenler Arası İlişkiler"
+    ],
+    "daily_life": "Fiziksel simülasyonlar, diferansiyel hareket modelleri.",
+    "connection_note": "Geometrik Eğri Özelliği → 'Functio' Terimi → Genel Fonksiyon Kavramı",
+    "surprising_fact": "Leibniz aynı zamanda bilgisayarların temeli olan modern ikili (binary 0-1) sistemi geliştiren kişidir.",
+    "quiz": {
+      "question": "Leibniz ile aynı dönemde kalkülüsü bağımsız keşfeden İngiliz bilim insanı kimdir?",
+      "options": [
+        "Isaac Newton",
+        "Descartes",
+        "Euler",
+        "Gauss"
+      ],
+      "answer": "Isaac Newton"
+    }
+  },
+  {
+    "day": 50,
+    "title": "Leonhard Euler ve f(x) Dili",
+    "era_figure": "Leonhard Euler (1707–1783)",
+    "hook": "Matematiğin evrensel alfabesini tek başına kuran dahi kimdi?",
+    "history": "Bugün kullandığımız f(x), e sayısı, i karmaşık birimi, π, Σ toplam sembolü Euler'in mirasıdır.",
+    "tyt_ayt_links": [
+      "Fonksiyon Gösterimi f(x)",
+      "Bileşke ve Ters Fonksiyon"
+    ],
+    "daily_life": "Tüm modern bilimsel formüller, programlama dili fonksiyonları.",
+    "connection_note": "Sezgisel İlişki → Standart Notasyon: y = f(x)",
+    "surprising_fact": "Euler gözlerini kaybettikten sonra bile zihninden matematik yaparak yüzlerce makale yayınlamıştır.",
+    "quiz": {
+      "question": "Euler Özdeşliği olarak bilinen e^(iπ) + 1 = 0 formülü kaç temel sabiti birleştirir?",
+      "options": [
+        "5 temel sabit (e, i, π, 1, 0)",
+        "3 sabit",
+        "2 sabit",
+        "4 sabit"
+      ],
+      "answer": "5 temel sabit (e, i, π, 1, 0)"
+    }
+  },
+  {
+    "day": 51,
+    "title": "Fonksiyon Matematiği Nasıl Değiştirdi?",
+    "era_figure": "Klasik Analiz",
+    "hook": "Trigonometri, logaritma ve polinomlar nasıl aynı çatı altında birleşti?",
+    "history": "Farklı alanlardaki tüm matematiksel ilişkiler 'fonksiyon' çatısı altında tek bir dile kavuştu.",
+    "tyt_ayt_links": [
+      "Fonksiyon Grafikleri",
+      "Öteleme ve Simetri"
+    ],
+    "daily_life": "Borsa grafikleri, hava durumu simülasyonları.",
+    "connection_note": "Ayrı Konular → Fonksiyon Şemsiyesi Altında Birlik",
+    "surprising_fact": "Öteleme kuralları f(x-a)+b tüm fonksiyon grafiklerinde aynı şekilde çalışır.",
+    "quiz": {
+      "question": "f(x) fonksiyonunun grafiğini 2 birim yukarı ötelemek için ne yapılır?",
+      "options": [
+        "f(x) + 2",
+        "f(x - 2)",
+        "f(x + 2)",
+        "2.f(x)"
+      ],
+      "answer": "f(x) + 2"
+    }
+  },
+  {
+    "day": 52,
+    "title": "Kalkülüs Neden Doğdu? Anlık Değişim ve Birikim",
+    "era_figure": "Newton & Leibniz (1680'ler)",
+    "hook": "Gezegenlerin sürekli değişen hızını ve eğri altındaki alanı nasıl hesaplarız?",
+    "history": "İki büyük soru kalkülüsü doğurdu: 1. Anlık Değişim Hızı (Türev) 2. Biriken Toplam Miktar (İntegral).",
+    "tyt_ayt_links": [
+      "Türev ve İntegrale Giriş",
+      "Kalkülüs Temel Teoremi"
+    ],
+    "daily_life": "Roket fırlatma hesapları, yapay zeka gradyan inişi (backpropagation).",
+    "connection_note": "Türev (Değişim) ↔ İntegral (Birikim) Birbirinin Tersidir",
+    "surprising_fact": "Kalkülüs Temel Teoremi, türev ile integralin birbirinin ters işlemi olduğunu ispatlar.",
+    "quiz": {
+      "question": "Bir cismin konumunun zamana göre anlık türevi neyi verir?",
+      "options": [
+        "Hız",
+        "İvme",
+        "Kuvvet",
+        "Kütle"
+      ],
+      "answer": "Hız"
+    }
+  },
+  {
+    "day": 53,
+    "title": "Bernard Bolzano ve Süreklilik",
+    "era_figure": "Bernard Bolzano (1781–1848)",
+    "hook": "Bir eğri elinizi kaldırmadan çiziliyorsa x eksenini mutlaka kesmek zorunda mıdır?",
+    "history": "Süreklilik ve Ara Değer Teoremi'ni sezgiden çıkarıp mantıksal temele oturtan öncü.",
+    "tyt_ayt_links": [
+      "Fonksiyonlarda Süreklilik",
+      "Ara Değer Teoremi"
+    ],
+    "daily_life": "Hız göstergesinin 0'dan 100'e çıkarken 50'yi kesinlikle görmesi kuralı.",
+    "connection_note": "Sezgisel Çizim → Kesin Süreklilik Tanımı",
+    "surprising_fact": "Bolzano, sezgilere güvenmeyip her adımın mantıksal ispatını arayan modern rigorizmin öncüsüdür.",
+    "quiz": {
+      "question": "f(a) negatif, f(b) pozitif ve f sürekli ise (a, b) aralığında ne vardır?",
+      "options": [
+        "En az bir kök (f(c)=0)",
+        "Maksimum nokta",
+        "Türevsiz nokta",
+        "Tanımsızlık"
+      ],
+      "answer": "En az bir kök (f(c)=0)"
+    }
+  },
+  {
+    "day": 54,
+    "title": "Augustin-Louis Cauchy ve Modern Analiz",
+    "era_figure": "Cauchy (1789–1857)",
+    "hook": "Sonsuz küçük kavramı yerine 'limit' fikrini kim sağlamlaştırdı?",
+    "history": "Kalkülüsü sonsuz küçük gibi belirsiz felsefi kavramlardan kurtarıp limit temeline oturttu.",
+    "tyt_ayt_links": [
+      "Limit Kavramı",
+      "Sağdan-Soldan Limit"
+    ],
+    "daily_life": "Yaklaşım hesapları, mühendislik tolerans payları.",
+    "connection_note": "Sonsuz Küçük → Limit Yaklaşımı: x → a iken f(x) → L",
+    "surprising_fact": "Cauchy'nin adı matematikte en çok teorem ve kavrama verilen isimdir.",
+    "quiz": {
+      "question": "Bir noktada limitin var olması için hangi şart gereklidir?",
+      "options": [
+        "Sağdan ve soldan limitlerin eşit olması",
+        "Fonksiyonun o noktada tanımlı olması",
+        "Türevinin olması",
+        "Sürekli olması"
+      ],
+      "answer": "Sağdan ve soldan limitlerin eşit olması"
+    }
+  },
+  {
+    "day": 55,
+    "title": "Karl Weierstrass ve Rigoröz Limit (ε-δ)",
+    "era_figure": "Karl Weierstrass (1815–1897)",
+    "hook": "Matematikte 'yaklaşmak' ne demektir? Epsilon-Delta tanımı neden doğdu?",
+    "history": "Limit ve analizi tamamen hatasız, sarsılmaz mantıksal eşitsizliklerle kuran 'Modern Analizin Babası'.",
+    "tyt_ayt_links": [
+      "Limit Tanımı (Epsilon-Delta)",
+      "Analizin Temelleri"
+    ],
+    "daily_life": "Yüksek hassasiyetli ölçüm cihazları, nanoteknoloji.",
+    "connection_note": "Sezgisel Yaklaşım → Kesin Eşitsizlik (|x-a| < δ ⇒ |f(x)-L| < ε)",
+    "surprising_fact": "Weierstrass, her noktasında sürekli olan ama hiçbir noktasında türevi olmayan canavar bir fonksiyon inşa etmiştir.",
+    "quiz": {
+      "question": "Epsilon-Delta (ε-δ) tanımı hangi kavramın kesin tanımıdır?",
+      "options": [
+        "Limit",
+        "İntegral",
+        "Logaritma",
+        "Matris"
+      ],
+      "answer": "Limit"
+    }
+  },
+  {
+    "day": 56,
+    "title": "Limitten Türeve: Okulda Neden Önce Limit Öğreniriz?",
+    "era_figure": "Eğitim & Tarih Paradoksu",
+    "hook": "Tarihte türev önce bulunduysa okulda neden önce limit öğreniyoruz?",
+    "history": "Newton ve Leibniz türevi sezgisel buldu ama mantıksal sağlamlık için limit sonradan inşa edildi.",
+    "tyt_ayt_links": [
+      "Türevin Limit Tanımı",
+      "f'(x) = lim (f(x+h)-f(x))/h"
+    ],
+    "daily_life": "Değişim hızı ölçümleri, anlık yakıt tüketimi.",
+    "connection_note": "Tarih: Türev → Limit / Müfredat: Limit → Türev",
+    "surprising_fact": "Türev aslında '0/0 belirsizliğinin limit yardımıyla çözülmüş halidir.'",
+    "quiz": {
+      "question": "f(x) = x² fonksiyonunun türevi f'(x) nedir?",
+      "options": [
+        "2x",
+        "x",
+        "x² / 2",
+        "2"
+      ],
+      "answer": "2x"
+    }
+  },
+  {
+    "day": 57,
+    "title": "Richard Dedekind ve Gerçek Sayılar",
+    "era_figure": "Richard Dedekind (1831–1916)",
+    "hook": "Sayı doğrusunda rasyonel sayılar arasında kalan boşluklar nasıl kapatıldı?",
+    "history": "Dedekind kesitleriyle gerçel sayılar kümesini (R) kurarak sayı doğrusunu deliksiz hale getirdi.",
+    "tyt_ayt_links": [
+      "Gerçek Sayılar Kümesi (R)",
+      "Sayı Doğrusu"
+    ],
+    "daily_life": "Sürekli zaman ve mekan akışı modellemeleri.",
+    "connection_note": "Rasyonel Boşluklar → Dedekind Kesiti → Sürekli Gerçek Sayılar (R)",
+    "surprising_fact": "Sayı doğrusundaki irrasyonel sayıların miktarı rasyonel sayılardan sonsuz kat daha fazladır.",
+    "quiz": {
+      "question": "Aşağıdakilerden hangisi bir irrasyonel sayıdır?",
+      "options": [
+        "√2",
+        "3/4",
+        "0.25",
+        "-7"
+      ],
+      "answer": "√2"
+    }
+  },
+  {
+    "day": 58,
+    "title": "Georg Cantor ve Kümeler: Sonsuzlukların Hiyerarşisi",
+    "era_figure": "Georg Cantor (1845–1918)",
+    "hook": "Tüm sonsuzluklar aynı büyüklükte midir?",
+    "history": "Doğal sayıların sonsuzluğu ile reel sayıların sonsuzluğunun farklı olduğunu (ℵ₀ < c) kanıtladı.",
+    "tyt_ayt_links": [
+      "Kümeler Teorisi",
+      "Sonsuz Kümeler"
+    ],
+    "daily_life": "Veritabanı sorgulama dilleri (SQL), veri yapıları.",
+    "connection_note": "Birebir Eşleme → Sayılabilir ve Sayılamaz Sonsuzluklar",
+    "surprising_fact": "Cantor'un köşegen yöntemi matematikte devrim yaratmış ama çağdaşları tarafından dışlanmasına yol açmıştır.",
+    "quiz": {
+      "question": "Doğal sayılar kümesi ile reel sayılar kümesinin eleman sayıları eşit midir?",
+      "options": [
+        "Hayır, reel sayılar sayılamaz sonsuzdur",
+        "Evet, ikisi de sonsuzdur",
+        "Doğal sayılar daha büyüktür",
+        "Bilinemez"
+      ],
+      "answer": "Hayır, reel sayılar sayılamaz sonsuzdur"
+    }
+  },
+  {
+    "day": 59,
+    "title": "Gottlob Frege ve Sembolik Mantık",
+    "era_figure": "Gottlob Frege (1848–1925)",
+    "hook": "Tüm matematiği saf mantık kuralları üzerine inşa etmek mümkün müdür?",
+    "history": "Matematiksel mantığı sembolik dille kurarak modern mantığın ve analitik felsefenin temelini attı.",
+    "tyt_ayt_links": [
+      "Mantık Konusu",
+      "Önermeler ve Doğruluk Tabloları",
+      "Niceleyiciler (∀, ∃)"
+    ],
+    "daily_life": "Bilgisayar yazılım mantığı, Boolean aramaları, yapay zeka mantıksal çıkarımları.",
+    "connection_note": "Doğal Dil Muğlaklığı → Sembolik Mantık Kesinliği",
+    "surprising_fact": "Bugün arama motorlarında kullandığımız AND, OR, NOT mantığı Frege ve Boole'un mirasıdır.",
+    "quiz": {
+      "question": "p ∧ q önermesinin doğru (1) olması için ne gereklidir?",
+      "options": [
+        "Hem p hem q doğru olmalıdır",
+        "Sadece biri doğru olsa yeter",
+        "İkisi de yanlış olmalıdır",
+        "p doğru q yanlış olmalıdır"
+      ],
+      "answer": "Hem p hem q doğru olmalıdır"
+    }
+  },
+  {
+    "day": 60,
+    "title": "Giuseppe Peano: Doğal Sayıların Aksiyomları",
+    "era_figure": "Giuseppe Peano (1858–1932)",
+    "hook": "1, 2, 3 sayılarının ne olduğunu aksiyomlarla sıfırdan nasıl tanımlarız?",
+    "history": "5 basit Peano aksiyomuyla doğal sayıları ve tümevarım ilkesini kusursuz tanımladı.",
+    "tyt_ayt_links": [
+      "Doğal Sayılar Aksiyomları",
+      "Matematiksel Tümevarım"
+    ],
+    "daily_life": "Yazılımda recursive (özyinelemeli) fonksiyonlar ve döngüler.",
+    "connection_note": "0 Sayısı + Ardıl Fonksiyonu S(n) → Tüm Doğal Sayılar",
+    "surprising_fact": "Peano aksiyomlarına göre her doğal sayının tek bir ardılı (successor) vardır.",
+    "quiz": {
+      "question": "Tümevarım yöntemi matematikte ne için kullanılır?",
+      "options": [
+        "Bir önermenin tüm doğal sayılar için doğruluğunu ispatlamak",
+        "Yaklaşık hesap yapmak",
+        "Sayıları çarpmak",
+        "Grafik çizmek"
+      ],
+      "answer": "Bir önermenin tüm doğal sayılar için doğruluğunu ispatlamak"
+    }
+  },
+  {
+    "day": 61,
+    "title": "David Hilbert ve Aksiyomatik Geometri",
+    "era_figure": "David Hilbert (1862–1943)",
+    "hook": "Öklid'in 2200 yıllık geometrisi modern çağda nasıl yeniden kuruldu?",
+    "history": "Grundlagen der Geometrie kitabıyla geometrinin eksik kalmış boşluklarını 20 modern aksiyomla kapattı.",
+    "tyt_ayt_links": [
+      "Modern Geometri Temelleri",
+      "Aksiyomatik Sistemler"
+    ],
+    "daily_life": "Bilgisayarlı geometri ve CAD tasarım yazılımları.",
+    "connection_note": "Sezgisel Çizim → Katı Aksiyomatik Temel",
+    "surprising_fact": "Hilbert: 'Nokta, doğru ve düzlem yerine masa, sandalye ve bira bardağı diyebilmeliyiz.'",
+    "quiz": {
+      "question": "Hilbert geometrisinde kaç ana aksiyom grubu vardır?",
+      "options": [
+        "5 grup",
+        "3 grup",
+        "1 grup",
+        "10 grup"
+      ],
+      "answer": "5 grup"
+    }
+  },
+  {
+    "day": 62,
+    "title": "Hilbert'in 23 Problemi: 20. Yüzyılın Yol Haritası",
+    "era_figure": "David Hilbert (1900 Paris)",
+    "hook": "Bir matematikçi tüm bir yüzyılın bilimsel gündemini tek bir konuşmayla nasıl belirledi?",
+    "history": "1900 Paris Kongresi'nde sunduğu 23 çözülmemiş problem 20. yüzyıl matematiğini şekillendirdi.",
+    "tyt_ayt_links": [
+      "Matematik Felsefesi",
+      "Çözülemeyen Problemler (Riemann Hipotezi)"
+    ],
+    "daily_life": "Kuantum mekaniği, modern şifreleme ve algoritma teorisi.",
+    "connection_note": "Açık Problemler → Yüzyıllık Araştırma ve Yeni Teoriler",
+    "surprising_fact": "Hilbert'in problemlerinden biri olan Riemann Hipotezi hala 1 milyon dolar ödüllü çözülememiş bir problemdir.",
+    "quiz": {
+      "question": "Hilbert'in 23 problemini ilan ettiği meşhur kongre hangi yılda yapılmıştır?",
+      "options": [
+        "1900",
+        "1950",
+        "1850",
+        "1923"
+      ],
+      "answer": "1900"
+    }
+  },
+  {
+    "day": 63,
+    "title": "Bertrand Russell ve Küme Paradoksu",
+    "era_figure": "Bertrand Russell (1872–1970)",
+    "hook": "'Kendisini tıraş etmeyenleri tıraş eden berber' matematiği nasıl krizin eşiğine getirdi?",
+    "history": "Sınırsız küme tanımlamanın çelişki (Russell Paradoksu) yarattığını göstererek mantıkçılığı sarstı.",
+    "tyt_ayt_links": [
+      "Kümeler Mantığı",
+      "Paradoks Kavramı"
+    ],
+    "daily_life": "Yazılımda sonsuz döngüler, mantıksal hata ayıklama.",
+    "connection_note": "Serbest Küme Tanımı → Çelişki / Paradoks → Kuralcı Aksiyomlar",
+    "surprising_fact": "Russell'ın mektubu Frege'nin hayatı boyunca yazdığı kitabın basım aşamasında temellerini sarsmıştır.",
+    "quiz": {
+      "question": "Russell Paradoksu hangi matematiksel alanda kriz yaratmıştır?",
+      "options": [
+        "Kümeler Teorisi",
+        "Trigonometri",
+        "Geometri",
+        "Kalkülüs"
+      ],
+      "answer": "Kümeler Teorisi"
+    }
+  },
+  {
+    "day": 64,
+    "title": "Henri Lebesgue ve Modern İntegral",
+    "era_figure": "Henri Lebesgue (1875–1941)",
+    "hook": "Riemann integrali yetmeyince alanı dilimlemek yerine basamaklara ayırmak neyi çözdü?",
+    "history": "Eğrinin altındaki alanı dikey şeritler yerine yatay değer dilimleriyle toplayan modern ölçüm teorisi.",
+    "tyt_ayt_links": [
+      "İntegral Tanımı",
+      "Ölçüm Teorisi"
+    ],
+    "daily_life": "Kuantum fiziği olasılık dalgaları, sinyal işleme.",
+    "connection_note": "Dikey Parçalama (Riemann) → Yatay Parçalama (Lebesgue)",
+    "surprising_fact": "Lebesgue integrali, Riemann integralinin alanını hesaplayamadığı çok karmaşık fonksiyonları integraller.",
+    "quiz": {
+      "question": "Lebesgue integrali alanı hangi eksene göre parçalayarak toplar?",
+      "options": [
+        "Yatay (Değer Ekseni y)",
+        "Dikey (Tanım Ekseni x)",
+        "Zaman ekseni",
+        "Z ekseni"
+      ],
+      "answer": "Yatay (Değer Ekseni y)"
+    }
+  },
+  {
+    "day": 65,
+    "title": "Ernst Zermelo ve ZFC Aksiyomları",
+    "era_figure": "Ernst Zermelo (1871–1953)",
+    "hook": "Kümeler teorisini paradokslardan korumak için hangi katı kurallar kondu?",
+    "history": "Zermelo-Fraenkel Kümeler Teorisi (ZFC), modern matematiğin üzerine oturduğu standart anayasadır.",
+    "tyt_ayt_links": [
+      "Kümeler ve Alt Kümeler",
+      "Aksiyomatik Temeller"
+    ],
+    "daily_life": "Veri tabanı şemaları ve tip teorisi.",
+    "connection_note": "Paradoks Tehdidi → ZFC Aksiyomları → Güvenli Matematik",
+    "surprising_fact": "Bugün lisede öğrendiğimiz kümeler konusu ZFC sisteminin basitleştirilmiş sezgisel versiyonudur.",
+    "quiz": {
+      "question": "ZFC kısaltmasındaki 'C' harfi hangi aksiyomu temsil eder?",
+      "options": [
+        "Choice (Seçim Aksiyomu)",
+        "Continuity",
+        "Calculus",
+        "Cantor"
+      ],
+      "answer": "Choice (Seçim Aksiyomu)"
+    }
+  },
+  {
+    "day": 66,
+    "title": "Andrey Kolmogorov ve Aksiyomatik Olasılık",
+    "era_figure": "Andrey Kolmogorov (1903–1987)",
+    "hook": "Şans ve kumar masası hesapları nasıl oldu da kesin bir matematiğe dönüştü?",
+    "history": "Olasılığı küme teorisi ve ölçüm üzerine 3 temel aksiyomla oturtarak modern bilim yaptı.",
+    "tyt_ayt_links": [
+      "Olasılık Fonksiyonu P(A)",
+      "Örnek Uzay",
+      "Bağımsız Olaylar"
+    ],
+    "daily_life": "Sigortacılık, borsa risk analizi, yapay zeka makine öğrenmesi.",
+    "connection_note": "Örnek Uzay (S) → Olay Kümeleri (A) → Olasılık Ölçümü: 0 ≤ P(A) ≤ 1",
+    "surprising_fact": "Kolmogorov'a göre bir olayın olasılığı, örnek uzaydaki kümesinin büyüklük ölçüsünden ibarettir.",
+    "quiz": {
+      "question": "Bir olayın gerçekleşme olasılığı P(A) hangi aralıkta yer alır?",
+      "options": [
+        "0 ile 1 arasında [0, 1]",
+        "-1 ile 1 arasında",
+        "0 ile sonsuz arasında",
+        "1 ile 100 arasında"
+      ],
+      "answer": "0 ile 1 arasında [0, 1]"
+    }
+  },
+  {
+    "day": 67,
+    "title": "Alan Turing ve Hesaplanabilirlik",
+    "era_figure": "Alan Turing (1912–1954)",
+    "hook": "'Mekanik olarak hesaplanabilir ne demektir?' Bilgisayar nasıl doğdu?",
+    "history": "Turing Makinesi kavramıyla algoritma mantığını formüle etti ve Enigma şifresini kırdı.",
+    "tyt_ayt_links": [
+      "Algoritmalar",
+      "Mantık ve Akış Şemaları"
+    ],
+    "daily_life": "Tüm modern bilgisayarlar, akıllı telefonlar, yapay zeka modelleri.",
+    "connection_note": "Matematiksel Mantık → Turing Makinesi → Evrensel Bilgisayar",
+    "surprising_fact": "Turing 1936 tarihli makalesinde bilgisayarlar henüz fiziksel olarak yokken yazılım mantığını kurmuştur.",
+    "quiz": {
+      "question": "Algoritma ve yapay zeka teorisinin kurucusu kabul edilen İngiliz dahi kimdir?",
+      "options": [
+        "Alan Turing",
+        "Charles Babbage",
+        "John Locke",
+        "Ada Lovelace"
+      ],
+      "answer": "Alan Turing"
+    }
+  },
+  {
+    "day": 68,
+    "title": "Von Neumann & Morgenstern: Oyun Teorisi",
+    "era_figure": "John von Neumann (1903–1957)",
+    "hook": "Karşı tarafın da düşündüğü ortamlarda en iyi strateji nasıl hesaplanır?",
+    "history": "Oyun Teorisi ve Minimax teoremiyle ekonomi, savaş stratejisi ve karar mekanizmalarını modelledi.",
+    "tyt_ayt_links": [
+      "Optimizasyon",
+      "Matris Oyunları",
+      "Mantıksal Strateji"
+    ],
+    "daily_life": "Şirket rekabet stratejileri, poker botları, müzayede fiyatlandırması.",
+    "connection_note": "Bireysel Karar → Stratejik Etkileşim → Oyun Teorisi Dengesi",
+    "surprising_fact": "Von Neumann nükleer fizikten bilgisayar mimarisine ve ekonomiye kadar çağın en parlak polimatıdır.",
+    "quiz": {
+      "question": "Oyun teorisinde iki tarafın da stratejisini değiştirmek istemediği dengeye ne ad verilir?",
+      "options": [
+        "Nash Dengesi",
+        "Euler Dengesi",
+        "Turing Noktası",
+        "Fermat Dengesi"
+      ],
+      "answer": "Nash Dengesi"
+    }
+  },
+  {
+    "day": 69,
+    "title": "George Dantzig: Doğrusal Programlama",
+    "era_figure": "George Dantzig (1914–2005)",
+    "hook": "Binlerce kısıt altında en düşük maliyet veya en yüksek kâr nasıl bulunur?",
+    "history": "Simplex Algoritması'nı geliştirerek doğrusal eşitsizlik sistemlerinin en iyi çözümünü buldu.",
+    "tyt_ayt_links": [
+      "Eşitsizlik Sistemleri",
+      "Doğrusal Programlama",
+      "Optimizasyon"
+    ],
+    "daily_life": "Kargo lojistiği, uçuş rotaları, fabrika üretim optimizasyonu.",
+    "connection_note": "Doğrusal Eşitsizlikler Bölgesi → Köşe Noktaları → Maksimum/Minimum Kâr",
+    "surprising_fact": "Dantzig üniversitede derse geç kalıp tahtadaki iki meşhur çözülmemiş problemi ev ödevi sanarak çözmüştür.",
+    "quiz": {
+      "question": "Doğrusal programlamada en iyi çözüm çokgenin neresinde aranır?",
+      "options": [
+        "Köşe noktalarında",
+        "Tam merkezinde",
+        "Sonsuzda",
+        "Orijinde"
+      ],
+      "answer": "Köşe noktalarında"
+    }
+  },
+  {
+    "day": 70,
+    "title": "Claude Shannon: 0 ve 1 ile Değişen Dünya",
+    "era_figure": "Claude Shannon (1916–2001)",
+    "hook": "Mantık devreleri ve bilgi teorisi nasıl dijital çağı başlattı?",
+    "history": "Boole mantığını elektrik anahtarlarına (açık/kapalı = 1/0) uygulayarak dijital elektroniği kurdu.",
+    "tyt_ayt_links": [
+      "Mantık (0-1)",
+      "İkili Sayı Sistemi",
+      "Bilgi Kuramı"
+    ],
+    "daily_life": "İnternet, dijital veri aktarımı, telekomünikasyon, dosya sıkıştırma.",
+    "connection_note": "Boole Mantığı ↔ Elektrik Devresi ↔ Dijital Bit (0-1)",
+    "surprising_fact": "Shannon 'Bit' (Binary Digit) terimini ilk kez resmi makalesinde kullanarak bilgi birimi yapmıştır.",
+    "quiz": {
+      "question": "Dijital dünyadaki en küçük bilgi birimi nedir?",
+      "options": [
+        "Bit",
+        "Byte",
+        "Hertz",
+        "Piksel"
+      ],
+      "answer": "Bit"
+    }
+  },
+  {
+    "day": 71,
+    "title": "John Tukey: Veri Sadece Hesaplanmaz, Okunur",
+    "era_figure": "John Tukey (1915–2000)",
+    "hook": "Milyonlarca sayının ortasında kaybolmadan verinin hikayesini nasıl anlarız?",
+    "history": "Keşifsel Veri Analizi (EDA) ve Kutu Grafiği (Boxplot) ile istatistiği görselleştirdi.",
+    "tyt_ayt_links": [
+      "İstatistik & Veri Yorumu",
+      "Kutu Grafiği (Boxplot)",
+      "Aritmetik Ortalama ve Medyan"
+    ],
+    "daily_life": "Veri bilimi, piyasa anketleri, kalite kontrol testleri.",
+    "connection_note": "Ham Sayı Yığını → Görsel Özet (Boxplot) → Anlamlı Karar",
+    "surprising_fact": "'Bit' ve 'Software' kelimelerini literatüre kazandıran isimlerden biri de Tukey'dir.",
+    "quiz": {
+      "question": "Bir veri grubunda tam ortadaki değere ne ad verilir?",
+      "options": [
+        "Medyan (Ortanca)",
+        "Mod (Tepe Değer)",
+        "Aritmetik Ortalama",
+        "Standart Sapma"
+      ],
+      "answer": "Medyan (Ortanca)"
+    }
+  },
+  {
+    "day": 72,
+    "title": "Benoît Mandelbrot: Doğanın Fraktal Geometrisi",
+    "era_figure": "Benoît Mandelbrot (1924–2010)",
+    "hook": "Bulutlar neden küre, dağlar neden koni, sahil şeritleri neden düz çizgi değildir?",
+    "history": "Fraktal Geometri ile kendi kendine benzeyen girintili çıkıntılı sonsuz doğa şekillerini modelledi.",
+    "tyt_ayt_links": [
+      "Fraktallar",
+      "Örüntüler",
+      "Geometrik Diziler"
+    ],
+    "daily_life": "CGI film efektleri, anten tasarımları, borsa fiyat dalgalanmaları.",
+    "connection_note": "Klasik Düzgün Geometri → Fraktal Geometri (Özbenzeşim)",
+    "surprising_fact": "Mandelbrot Kümesi basit bir formülün (z = z² + c) sonsuz karmaşıklıkta bir evren oluşturabildiğini gösterdi.",
+    "quiz": {
+      "question": "Bir şeklin kendi küçük parçalarının bütününe benzemesi özelliğine ne denir?",
+      "options": [
+        "Özbenzeşim (Self-similarity)",
+        "Simetri",
+        "Öteleme",
+        "Dönme"
+      ],
+      "answer": "Özbenzeşim (Self-similarity)"
+    }
+  },
+  {
+    "day": 73,
+    "title": "Mitchell Feigenbaum: Kaos Teorisi",
+    "era_figure": "Mitchell Feigenbaum (1944–2019)",
+    "hook": "Basit bir formül nasıl öngörülemez ve kaotik davranabilir?",
+    "history": "Lojistik harita ve periyot katlanması üzerinden kaosun evrensel sabitini (δ = 4.6692...) buldu.",
+    "tyt_ayt_links": [
+      "Diziler ve Limit Davranışı",
+      "Kaos Teorisi"
+    ],
+    "daily_life": "Hava durumu tahminleri, kalp ritmi dalgalanmaları, ekosistem nüfus modelleri.",
+    "connection_note": "Deterministik Sistem → Periyot Katlanması → Kaos",
+    "surprising_fact": "Kelebek Etkisi: Bir kelebeğin kanat çırpışı dünyanın başka yerinde fırtınaya yol açabilir.",
+    "quiz": {
+      "question": "Hava durumunun 10-15 günden daha uzun vadeli kesin tahmin edilememesinin sebebi nedir?",
+      "options": [
+        "Kaotik sistem olması (Kelebek Etkisi)",
+        "Yeterli uydu olmaması",
+        "Sıcaklığın ölçülememesi",
+        "Matematiğin yetersizliği"
+      ],
+      "answer": "Kaotik sistem olması (Kelebek Etkisi)"
+    }
+  },
+  {
+    "day": 74,
+    "title": "RSA ve Asal Sayılar: Sayı Teorisinin Güvenliği",
+    "era_figure": "Rivest, Shamir, Adleman (1977)",
+    "hook": "2000 yıllık saf asal sayılar teorisi nasıl internet bankacılığının zırhı oldu?",
+    "history": "İki büyük asal sayıyı çarpmak çok kolay ama devasa bir sayıyı çarpanlarına ayırmak imkansız derecede zordur.",
+    "tyt_ayt_links": [
+      "Asal Sayılar",
+      "Modüler Aritmetik",
+      "Bölünebilme"
+    ],
+    "daily_life": "Kredi kartı güvenliği, HTTPS şifrelemesi, blockchain ve kripto para.",
+    "connection_note": "Pür Asal Sayı Teorisi → Tek Yönlü Fonksiyonlar → Dijital RSA Şifreleme",
+    "surprising_fact": "Bugün internetteki tüm güvenli alışverişler Öklid ve Fermat'nın asal sayı teoremlerine dayanır.",
+    "quiz": {
+      "question": "RSA şifreleme algoritması temelde hangi sayı türünün zor çarpanlarına ayrılmasına dayanır?",
+      "options": [
+        "Büyük Asal Sayılar",
+        "Tam Sayılar",
+        "Kesirli Sayılar",
+        "Negatif Sayılar"
+      ],
+      "answer": "Büyük Asal Sayılar"
+    }
+  },
+  {
+    "day": 75,
+    "title": "Andrew Wiles ve Fermat'nın Son Teoremi",
+    "era_figure": "Andrew Wiles (1995)",
+    "hook": "350 yıldır çözülemeyen 'aⁿ + bⁿ = cⁿ (n>2)' bilmecesi nasıl çözüldü?",
+    "history": "Fermat'nın 1637'de kitap kenarına yazdığı iddiayı eliptik eğriler ve modüler formlarla 7 yılda ispatladı.",
+    "tyt_ayt_links": [
+      "Tam Sayı Çözümleri",
+      "Üslü Denklemler",
+      "İleri Cebir"
+    ],
+    "daily_life": "Modern kriptografi ve cebirsel geometri gelişimi.",
+    "connection_note": "350 Yıllık Soru → Yeni Matematiksel Teoriler → Büyük İspat",
+    "surprising_fact": "Wiles teoremin ispatını tamamladığında tavan arasında gizlice 7 yıl boyunca tek başına çalışmıştı.",
+    "quiz": {
+      "question": "Fermat'nın Son Teoremi hangi n değerleri için pozitif tam sayı çözümü olmadığını söyler?",
+      "options": [
+        "n > 2 için",
+        "n = 2 için",
+        "n = 1 için",
+        "Tüm n değerleri için"
+      ],
+      "answer": "n > 2 için"
+    }
+  },
+  {
+    "day": 76,
+    "title": "Matematik Bitti mi? Canlı Bir Evren",
+    "era_figure": "Çağdaş Matematik",
+    "hook": "Tüm formüller bulundu mu yoksa yolculuk yeni mi başlıyor?",
+    "history": "Yapay zeka, kuantum bilişim ve yeni açık problemlerle matematik her gün büyümeye devam ediyor.",
+    "tyt_ayt_links": [
+      "Tüm TYT-AYT Konularının Bütünlüğü"
+    ],
+    "daily_life": "Kuantum bilgisayarlar, otonom araçlar, evrenin kozmolojik modelleri.",
+    "connection_note": "Bin Yıllık Yolculuk → Günümüz Teknolojisi → Geleceğin Matematiği",
+    "surprising_fact": "Clay Matematik Enstitüsü'nün her biri 1 milyon dolar ödüllü 7 Milenyum Probleminden 6'sı hala çözülmeyi bekliyor.",
+    "quiz": {
+      "question": "Matematik tamamlanmış bir bina mıdır, sürekli genişleyen bir şehir mi?",
+      "options": [
+        "Sürekli genişleyen bir şehir",
+        "Tamamlanmış bitmiş bir yapı",
+        "Sadece okul dersidir",
+        "Formül ezberidir"
+      ],
+      "answer": "Sürekli genişleyen bir şehir"
+    }
+  },
+  {
+    "day": 77,
+    "title": "Büyük Bağlantı: Üslü ↔ Köklü ↔ Logaritma",
+    "era_figure": "TYT-AYT Omurgası",
+    "hook": "Aynı matematiksel ilişkinin üç farklı sorusu nasıl tek formüldür?",
+    "history": "2³ = 8 (Üslü: Sonuç kaç?) ↔ ∛8 = 2 (Köklü: Taban kaç?) ↔ log₂(8) = 3 (Logaritma: Üs kaç?).",
+    "tyt_ayt_links": [
+      "Üslü Sayılar",
+      "Köklü Sayılar",
+      "Logaritma"
+    ],
+    "daily_life": "Ölçekleme, büyüme oranları, yarı ömür.",
+    "connection_note": "Üs ↔ Kök ↔ Logaritma Tek Bir Üçgendir",
+    "surprising_fact": "Bu üç konu aslında tek bir konudur; sadece sorulan değişkenin yeri değişir.",
+    "quiz": {
+      "question": "b^c = a ifadesinde c'yi bulmak için hangi işlem kullanılır?",
+      "options": [
+        "Logaritma (log_b a)",
+        "Kök alma",
+        "Çarpma",
+        "Türev"
+      ],
+      "answer": "Logaritma (log_b a)"
+    }
+  },
+  {
+    "day": 78,
+    "title": "Büyük Bağlantı: Denklem ↔ Fonksiyon ↔ Grafik",
+    "era_figure": "Cebirden Geometriye",
+    "hook": "Bir cebirsel denklem ile düzlemdeki bir çizgi nasıl aynı gerçeği anlatır?",
+    "history": "Cebir denklemi çözer, fonksiyon ilişkiyi kurar, grafik ise görselleştirir.",
+    "tyt_ayt_links": [
+      "Denklemler",
+      "Fonksiyonlar",
+      "Grafik Okuma"
+    ],
+    "daily_life": "Mühendislik eğrileri, sensör veri grafikleri.",
+    "connection_note": "Denklem (Statik) → Fonksiyon (Dinamik) → Grafik (Görsel)",
+    "surprising_fact": "Bir denklemin reel kökleri, fonksiyonun grafiğinin x eksenini kestiği noktalardır.",
+    "quiz": {
+      "question": "f(x) = 0 denkleminin çözüm kümesi grafikte neyi gösterir?",
+      "options": [
+        "x eksenini kestiği noktaları",
+        "y eksenini kestiği noktayı",
+        "Tepe noktasını",
+        "Asimptotları"
+      ],
+      "answer": "x eksenini kestiği noktaları"
+    }
+  },
+  {
+    "day": 79,
+    "title": "Büyük Bağlantı: Oran ↔ Benzerlik ↔ Trigonometri",
+    "era_figure": "Kenardan Açıya",
+    "hook": "İlkokuldaki oran-orantı AYT trigonometrisine nasıl dönüşür?",
+    "history": "Benzer üçgenlerin kenar oranları trigonometrik oranları (sin, cos, tan) doğurur.",
+    "tyt_ayt_links": [
+      "Oran-Orantı",
+      "Üçgende Benzerlik",
+      "Trigonometri"
+    ],
+    "daily_life": "Gölge boyu hesapları, navigasyon, 3D çizim.",
+    "connection_note": "Oran → Benzerlik Oranı (k) → Sabit Trigonometrik Oranlar",
+    "surprising_fact": "Trigonometri aslında dik üçgendeki kenar oranlarının açılara göre isimlendirilmiş halidir.",
+    "quiz": {
+      "question": "Benzerlik oranı 2 olan iki üçgenin alanları oranı kaçtır?",
+      "options": [
+        "4",
+        "2",
+        "8",
+        "1"
+      ],
+      "answer": "4"
+    }
+  },
+  {
+    "day": 80,
+    "title": "Büyük Bağlantı: Eğim ↔ Limit ↔ Türev",
+    "era_figure": "Değişimin İzinde",
+    "hook": "Doğrunun eğiminden eğrinin teğetine nasıl geçeriz?",
+    "history": "İki nokta arasındaki ortalama değişim hızında noktalar limit ile birleştirilince türev (anlık teğet) doğar.",
+    "tyt_ayt_links": [
+      "Doğrunun Eğimi",
+      "Limit Yaklaşımı",
+      "Türevin Geometrik Anlamı"
+    ],
+    "daily_life": "Araç hız göstergesi, ekonomi marjinal maliyet.",
+    "connection_note": "Ortalama Hız (Δy/Δx) → Limit (Δx→0) → Anlık Türev f'(x)",
+    "surprising_fact": "Türev, bir fonksiyonun grafiğine çizilen teğet doğrusunun eğimidir.",
+    "quiz": {
+      "question": "f(x) eğrisine x=a noktasında çizilen teğetin eğimi neye eşittir?",
+      "options": [
+        "f'(a) (O noktadaki türeve)",
+        "f(a) değerine",
+        "Limit değerine",
+        "İntegrale"
+      ],
+      "answer": "f'(a) (O noktadaki türeve)"
+    }
+  },
+  {
+    "day": 81,
+    "title": "Büyük Bağlantı: Toplam ↔ Alan ↔ İntegral",
+    "era_figure": "Parçadan Bütüne",
+    "hook": "Toplama işlemi eğrilerin altındaki alanı nasıl hesaplar?",
+    "history": "Düzensiz şekiller sonsuz küçük dikdörtgenlere bölünür ve integral ile toplanır.",
+    "tyt_ayt_links": [
+      "Dört İşlemde Toplama",
+      "Geometrik Alan",
+      "Belirli İntegral"
+    ],
+    "daily_life": "Hacim hesapları, fiziksel iş, toplam elektrik tüketimi.",
+    "connection_note": "Ayrık Toplam (Σ) → Sonsuz Parçalama → Sürekli İntegral (∫)",
+    "surprising_fact": "İntegral sembolü '∫', Latince toplam anlamına gelen 'Summa' kelimesinin uzatılmış 'S' harfidir.",
+    "quiz": {
+      "question": "f(x) fonksiyonunun [a, b] aralığındaki integrali geometrik olarak neyi verir?",
+      "options": [
+        "Eğri ile x ekseni arasındaki net alanı",
+        "Eğrinin eğimini",
+        "Teğet boyunu",
+        "Maksimum değeri"
+      ],
+      "answer": "Eğri ile x ekseni arasındaki net alanı"
+    }
+  },
+  {
+    "day": 82,
+    "title": "Büyük Bağlantı: Kümeler ↔ Fonksiyon ↔ Olasılık",
+    "era_figure": "Gruplama ve Eşleme",
+    "hook": "Kümeler konusu fonksiyon ve olasılığın temelini nasıl oluşturur?",
+    "history": "Küme elemanları gruplar; fonksiyon onları eşler; olasılık ise örnek uzaydaki kümeleri ölçer.",
+    "tyt_ayt_links": [
+      "Kümeler",
+      "Fonksiyonlar",
+      "Olasılık"
+    ],
+    "daily_life": "Veritabanı ilişkileri, risk analizleri.",
+    "connection_note": "Küme (Grupla) → Fonksiyon (Eşle) → Olasılık (Ölç)",
+    "surprising_fact": "Olasılıktaki 'A veya B olayı', kümelerdeki A ∪ B (birleşim) işlemidir.",
+    "quiz": {
+      "question": "Kümelerde kesişim (A ∩ B) olasılıkta neye karşılık gelir?",
+      "options": [
+        "A ve B olayının birlikte gerçekleşmesi",
+        "Sadece A'nın olması",
+        "İkisinin de olmaması",
+        "Ayrık olaylar"
+      ],
+      "answer": "A ve B olayının birlikte gerçekleşmesi"
+    }
+  },
+  {
+    "day": 83,
+    "title": "Büyük Bağlantı: Çarpanlara Ayırma ↔ Polinom ↔ Denklem",
+    "era_figure": "Parçalayarak Çözmek",
+    "hook": "Karmaşık bir cebirsel ifadeyi parçalamak neden çözümü kolaylaştırır?",
+    "history": "Büyük ifadeler çarpanlarına ayrıldığında her bir çarpanı 0'a eşitlemek kökleri verir.",
+    "tyt_ayt_links": [
+      "Çarpanlara Ayırma",
+      "Polinomlar",
+      "Denklem Çözümü"
+    ],
+    "daily_life": "Şifreleme algoritmaları, sinyal filtreleme.",
+    "connection_note": "P(x) = 0 → (x-a)(x-b) = 0 → x=a veya x=b",
+    "surprising_fact": "Çarpanlara ayırma matematiğin 'atomlarına ayırma' yöntemidir.",
+    "quiz": {
+      "question": "x² - 9 ifadesinin çarpanlarına ayrılmış hali nedir?",
+      "options": [
+        "(x - 3)(x + 3)",
+        "(x - 9)(x + 1)",
+        "(x - 3)²",
+        "x(x - 9)"
+      ],
+      "answer": "(x - 3)(x + 3)"
+    }
+  },
+  {
+    "day": 84,
+    "title": "Büyük Bağlantı: Mutlak Değer ↔ Uzaklık ↔ Eşitsizlik",
+    "era_figure": "Geometrik Mesafe",
+    "hook": "Mutlak değer neden sadece 'eksi yutma makinesi' değildir?",
+    "history": "|x - a| ifadesi x sayısının a noktasına olan geometrik uzaklığıdır; asla negatif olamaz.",
+    "tyt_ayt_links": [
+      "Mutlak Değer",
+      "Uzaklık Kavramı",
+      "Basit Eşitsizlikler"
+    ],
+    "daily_life": "Hata payı toleransları (± 0.05 mm), CNC hassasiyeti.",
+    "connection_note": "Cebirsel Tanım (|x|) ↔ Geometrik Anlam (Sayı Doğrusunda Uzaklık)",
+    "surprising_fact": "|x - 3| < 5 ifadesi '3'e uzaklığı 5 birimden az olan sayılar' demektir.",
+    "quiz": {
+      "question": "|x - 2| = 5 denkleminin çözüm kümesi nedir?",
+      "options": [
+        "{-3, 7}",
+        "{3, -7}",
+        "{5, -5}",
+        "{2, 5}"
+      ],
+      "answer": "{-3, 7}"
+    }
+  },
+  {
+    "day": 85,
+    "title": "Büyük Bağlantı: 2. Derece Denklem ↔ Diskriminant ↔ Parabol",
+    "era_figure": "Delta'nın Gücü",
+    "hook": "Tek bir sayı (Delta) denklemin ve grafiğin kaderini nasıl belirler?",
+    "history": "Δ > 0 ise 2 kök (2 kesim), Δ = 0 ise çift kat kök (teğet), Δ < 0 ise reel kök yok (kesmez).",
+    "tyt_ayt_links": [
+      "2. Dereceden Denklemler",
+      "Diskriminant (Delta)",
+      "Parabol ve x Ekseni"
+    ],
+    "daily_life": "Yörünge analizi, optik yansıma.",
+    "connection_note": "Diskriminant Δ = b² - 4ac ↔ Parabolün x Eksenini Kesme Durumu",
+    "surprising_fact": "Delta sıfırdan küçük olduğunda parabol x eksenine hiç değmez, havada asılı kalır.",
+    "quiz": {
+      "question": "Δ = 0 olduğunda parabol x eksenine göre nasıldır?",
+      "options": [
+        "Teğettir",
+        "İki noktada keser",
+        "Hiç kesmez",
+        "Orijinden geçer"
+      ],
+      "answer": "Teğettir"
+    }
+  },
+  {
+    "day": 86,
+    "title": "Büyük Bağlantı: Örüntü ↔ Dizi ↔ Fonksiyon",
+    "era_figure": "Adım Adım Modelleme",
+    "hook": "Tekrar eden sayılar dizilere, diziler ise fonksiyonlara nasıl bağlanır?",
+    "history": "Dizi, tanım kümesi pozitif doğal sayılar (N+) olan özel bir fonksiyondur: a_n = f(n).",
+    "tyt_ayt_links": [
+      "Örüntüler",
+      "Aritmetik ve Geometrik Diziler",
+      "Fonksiyon Bağı"
+    ],
+    "daily_life": "Finansal taksit ödemeleri, Fibonacci sayıları, bilgisayar algoritmaları.",
+    "connection_note": "Örüntü Kuralı → Dizi Genel Terimi (a_n) → Doğal Sayı Fonksiyonu",
+    "surprising_fact": "Fibonacci dizisinde her terim kendinden önceki iki terimin toplamıdır: 1, 1, 2, 3, 5, 8...",
+    "quiz": {
+      "question": "Aritmetik bir dizide ardışık terimler arasındaki fark nasıldır?",
+      "options": [
+        "Sabittir (Ortak fark)",
+        "Katlanarak artar",
+        "Sıfırdır",
+        "Değişkendir"
+      ],
+      "answer": "Sabittir (Ortak fark)"
+    }
+  },
+  {
+    "day": 87,
+    "title": "Büyük Bağlantı: Sayma ↔ Permütasyon ↔ Kombinasyon ↔ Olasılık",
+    "era_figure": "Seçim ve Sıralama",
+    "hook": "'Kaç farklı yol var?' sorusu olasılığın kapısını nasıl açar?",
+    "history": "Permütasyon sıralar (koltuk/şifre), kombinasyon seçer (takım/grup), olasılık ise isteneni tüme oranlar.",
+    "tyt_ayt_links": [
+      "Sayma İlkeleri",
+      "Permütasyon P(n,r)",
+      "Kombinasyon C(n,r)",
+      "Olasılık"
+    ],
+    "daily_life": "Şifre kombinasyonları, piyango şansları, turnuva kuraları.",
+    "connection_note": "Seç (Kombinasyon) + Sırala (Permütasyon) → Olasılık Hesabı",
+    "surprising_fact": "6 kişilik bir gruptan 2 kişi seçmek kombinasyondur; 2 kişiyi yan yana oturtmak permütasyondur.",
+    "quiz": {
+      "question": "5 elemanlı bir kümenin 2 elemanlı alt küme sayısı C(5, 2) kaçtır?",
+      "options": [
+        "10",
+        "20",
+        "25",
+        "5"
+      ],
+      "answer": "10"
+    }
+  },
+  {
+    "day": 88,
+    "title": "Büyük Bağlantı: Çember ↔ Trigonometri ↔ Analitik Geometri",
+    "era_figure": "Dalgalar ve Dönüşler",
+    "hook": "Sinüs ve kosinüs neden üçgende hapsolmayıp çembere taşındı?",
+    "history": "Birim çember üzerinde dönen bir nokta sinüs ve kosinüs dalgalarını, bu dalgalar da analitik eğrileri üretir.",
+    "tyt_ayt_links": [
+      "Birim Çember",
+      "Trigonometrik Fonksiyonlar",
+      "Analitik Geometri"
+    ],
+    "daily_life": "Ses dalgaları, elektrokardiyogram (EKG), deprem titreşimleri.",
+    "connection_note": "Üçgen Oranı → Birim Çember Dönüşü → Sinüs Dalgası Grafiği",
+    "surprising_fact": "Güneşin doğuş batış saatleri yıl boyunca bir sinüs dalgası şeklinde periyodik salınır.",
+    "quiz": {
+      "question": "Sinüs fonksiyonunun grafiği nasıl bir yapıya sahiptir?",
+      "options": [
+        "Periyodik Dalga",
+        "Düz Çizgi",
+        "Parabol",
+        "Hiperbol"
+      ],
+      "answer": "Periyodik Dalga"
+    }
+  },
+  {
+    "day": 89,
+    "title": "Büyük Bağlantı: Problem ↔ Denklem ↔ Fonksiyon Modelleme",
+    "era_figure": "Sözelden Matematiğe",
+    "hook": "Günlük hayattaki sözel bir problem matematiğe nasıl tercüme edilir?",
+    "history": "Metindeki bilinmeyene x demek denklemi kurar, değişkenler arası bağıntıyı yazmak ise fonksiyon modelini oluşturur.",
+    "tyt_ayt_links": [
+      "TYT Problemler (Yaş, İşçi, Hız)",
+      "Denklem Kurma",
+      "Matematiksel Modelleme"
+    ],
+    "daily_life": "Bütçe planlama, seyahat süresi optimizasyonu, şirket kâr analizleri.",
+    "connection_note": "Sözel Durum → Değişken Tanımlama (x) → Denklem/Fonksiyon",
+    "surprising_fact": "Tüm problemler aslında 'verilenler' ve 'istenen' arasındaki matematiksel bir köprüdür.",
+    "quiz": {
+      "question": "'Bir sayının 2 katının 3 fazlası' cebirsel olarak nasıl yazılır?",
+      "options": [
+        "2x + 3",
+        "2(x + 3)",
+        "3x + 2",
+        "x² + 3"
+      ],
+      "answer": "2x + 3"
+    }
+  },
+  {
+    "day": 90,
+    "title": "Büyük Bağlantı: Eşitsizlik ↔ İşaret Tablosu ↔ Grafik ↔ Bölge",
+    "era_figure": "Karar Sınırları",
+    "hook": "'Eşit değil' bilgisi haritada nasıl bölge ve karar oluşturur?",
+    "history": "Eşitsizlikler tek bir noktayı değil, bir bölgeyi tanımlar; işaret tablosu ve grafik bu bölgenin sınırlarını çizer.",
+    "tyt_ayt_links": [
+      "2. Dereceden Eşitsizlikler",
+      "İşaret Tablosu",
+      "Grafiksel Çözüm"
+    ],
+    "daily_life": "Bütçe sınırları, hız limitleri, fabrika kapasite kısıtları.",
+    "connection_note": "Eşitsizlik → Kökleri Bul → İşaret Tablosu Yap → Doğru Bölgeyi Tara",
+    "surprising_fact": "İşaret tablosundaki '+' ve '-' işaretleri fonksiyon grafiğinin x ekseninin üstünde mi altında mı olduğunu gösterir.",
+    "quiz": {
+      "question": "(x - 2)(x - 5) < 0 eşitsizliğinin çözüm aralığı nedir?",
+      "options": [
+        "(2, 5)",
+        "(-∞, 2)",
+        "(5, ∞)",
+        "R - [2, 5]"
+      ],
+      "answer": "(2, 5)"
+    }
+  },
+  {
+    "day": 91,
+    "title": "Büyük Bağlantı: Bölünebilme ↔ Asal Çarpan ↔ EBOB-EKOK ↔ Periyot",
+    "era_figure": "Sayıların DNA'sı",
+    "hook": "TYT'nin sayı konuları neden aynı büyük ailenin parçasıdır?",
+    "history": "Asal sayılar sayıların atomlarıdır; EBOB ve EKOK bu atomların ortaklıklarını ve buluşma döngülerini inceler.",
+    "tyt_ayt_links": [
+      "Asal Çarpanlara Ayırma",
+      "EBOB - EKOK",
+      "Periyodik Problemler"
+    ],
+    "daily_life": "Nöbet çizelgeleri, çark dişlileri, lamba yanıp sönme periyotları.",
+    "connection_note": "Asal Çarpanlar → Ortak Bölen (EBOB) + Ortak Kat (EKOK) → Periyodik Tekrar",
+    "surprising_fact": "İki zilin tekrar birlikte çalma süresi EKOK ile bulunur.",
+    "quiz": {
+      "question": "12 ve 18 sayılarının EKOK'u kaçtır?",
+      "options": [
+        "36",
+        "6",
+        "72",
+        "24"
+      ],
+      "answer": "36"
+    }
+  },
+  {
+    "day": 92,
+    "title": "Büyük Bağlantı: Tablo ↔ Grafik ↔ Ortalama ↔ Veri Yorumu",
+    "era_figure": "Veriden Bilgiye",
+    "hook": "Ham sayılar yığını ne zaman anlamlı bir bilgiye dönüşür?",
+    "history": "Veriler tablolara dizilir, ortalama ve medyanla özetlenir, grafiklerle görselleştirilerek geleceğe dair tahmin üretilir.",
+    "tyt_ayt_links": [
+      "Merkezi Eğilim Ölçüleri",
+      "Grafik Yorumlama (Daire, Sütun, Çizgi)"
+    ],
+    "daily_life": "Seçim anketleri, ekonomi enflasyon raporları, sporcu performans analizleri.",
+    "connection_note": "Ham Veri → Tablo & Özet İstatistik → Grafiksel Yorum",
+    "surprising_fact": "Bir dağılımda uç değerler (aşırı zengin/aşırı fakir) varsa ortalama yerine medyan daha güvenilir bilgi verir.",
+    "quiz": {
+      "question": "Bir daire grafiğinde %25'lik dilim kaç derecelik merkez açıya karşılık gelir?",
+      "options": [
+        "90°",
+        "45°",
+        "60°",
+        "180°"
+      ],
+      "answer": "90°"
+    }
+  },
+  {
+    "day": 93,
+    "title": "Fonksiyonların Büyük Ailesi",
+    "era_figure": "AYT Fonksiyon Şemsiyesi",
+    "hook": "AYT'de ayrı gibi görünen tüm fonksiyonlar tek bir aile midir?",
+    "history": "Doğrusal (mx+n), Parabolik (ax²+bx+c), Polinom, Üstel (aˣ), Logaritmik (log x) ve Trigonometrik fonksiyonların büyük atlası.",
+    "tyt_ayt_links": [
+      "Tüm Fonksiyon Çeşitleri",
+      "AYT Fonksiyonlar Genel Tekrar"
+    ],
+    "daily_life": "Mühendislik simülasyonları, fizik kanunları.",
+    "connection_note": "Tek Bir Mantık: Girdi → Kural → Çıktı / Farklı Değişim Hızları",
+    "surprising_fact": "Doğrusal fonksiyon sabit hızla artar, parabol ivmeyle artar, üstel fonksiyon patlayarak artar, logaritma yavaşlayarak artar.",
+    "quiz": {
+      "question": "Aşağıdakilerden hangisi en hızlı büyüyen fonksiyon türüdür?",
+      "options": [
+        "Üstel Fonksiyon (2ˣ)",
+        "Doğrusal Fonksiyon (2x)",
+        "Logaritmik Fonksiyon (log x)",
+        "Karesel Fonksiyon (x²)"
+      ],
+      "answer": "Üstel Fonksiyon (2ˣ)"
+    }
+  },
+  {
+    "day": 94,
+    "title": "Geometrinin Büyük Bağlantı Ağı",
+    "era_figure": "Noktadan Analitiğe",
+    "hook": "Bir üçgenden analitik geometriye uzanan dev zincir nasıl kurulur?",
+    "history": "Nokta → Doğru → Açı → Üçgen (Benzerlik & Pisagor) → Dörtgen → Çember → Analitik Düzlem.",
+    "tyt_ayt_links": [
+      "Geometri Konu Zinciri",
+      "Tüm Geometri Özeti"
+    ],
+    "daily_life": "Mimari projeler, oyun motorları, robotik kol kinematiği.",
+    "connection_note": "Noktadan Başlayan ve Analitikte Cebirle Taçlanan Geometri Ağı",
+    "surprising_fact": "Tüm çokgenlerin alan ve açı özellikleri aslında üçgenlere bölünerek hesaplanır.",
+    "quiz": {
+      "question": "Düzlemde iç açıları toplamı 180 derece olan en temel çokgen hangisidir?",
+      "options": [
+        "Üçgen",
+        "Dörtgen",
+        "Beşgen",
+        "Altıgen"
+      ],
+      "answer": "Üçgen"
+    }
+  },
+  {
+    "day": 95,
+    "title": "Analizin Büyük Bağlantı Ağı: Limit ↔ Türev ↔ İntegral",
+    "era_figure": "Kalkülüsün Kalbi",
+    "hook": "Limit, türev ve integral neden birbirinden asla ayrılamaz?",
+    "history": "Limit yaklaşımı kurar, Türev anlık eğimi ve hızı ölçer, İntegral ise tüm parçaları birleştirip alanı ve birikimi hesaplar.",
+    "tyt_ayt_links": [
+      "Limit",
+      "Türev",
+      "İntegral",
+      "Kalkülüs Zinciri"
+    ],
+    "daily_life": "Roket bilimi, yapay zeka derin öğrenme optimizasyonu, ekonomi dinamikleri.",
+    "connection_note": "Yaklaşım (Limit) → Anlık Değişim (Türev) ↔ Toplam Birikim (İntegral)",
+    "surprising_fact": "Türev ile integral birbirini yok eden ters işlemlerdir (Kalkülüsün Temel Teoremi).",
+    "quiz": {
+      "question": "Bir hız-zaman grafiğinin altındaki integral alanı neyi verir?",
+      "options": [
+        "Alınan Toplam Yolu (Yer Değiştirme)",
+        "İvmeyi",
+        "Kuvveti",
+        "Sürtünmeyi"
+      ],
+      "answer": "Alınan Toplam Yolu (Yer Değiştirme)"
+    }
+  },
+  {
+    "day": 96,
+    "title": "TYT-AYT Büyük Bağlantı Haritası",
+    "era_figure": "40 Konunun Çekirdeği",
+    "hook": "40'a yakın sınav konusu aslında kaç temel fikirden doğar?",
+    "history": "1. Sayma ve Ölçme (TYT Temel) 2. Eşitlik ve Değişken (Cebir) 3. İlişki ve Kural (Fonksiyon) 4. Şekil ve Konum (Geometri) 5. Değişim ve Birikim (Analiz).",
+    "tyt_ayt_links": [
+      "Bütüncül TYT-AYT Zihin Haritası"
+    ],
+    "daily_life": "Problem çözme disiplini, sistemik düşünme becerisi.",
+    "connection_note": "5 Çekirdek Fikir → 40 Müfredat Konusu → Sınav Başarısı",
+    "surprising_fact": "Konuların mantıksal ağını kuran bir öğrenci için formül ezberleme ihtiyacı %80 azalır.",
+    "quiz": {
+      "question": "TYT ve AYT matematiğinin ortak köprüsü olan en merkezi konu hangisidir?",
+      "options": [
+        "Fonksiyonlar",
+        "Logaritma",
+        "İntegral",
+        "Karmaşık Sayılar"
+      ],
+      "answer": "Fonksiyonlar"
+    }
+  },
+  {
+    "day": 97,
+    "title": "Büyük Kapanış: Her Yeni Konuda 5 Soru Metodu",
+    "era_figure": "Matematiksel Düşünme Sanatı",
+    "hook": "Bundan sonra karşınıza çıkan her matematik konusunu nasıl fethedersiniz?",
+    "history": "5 Altın Soru: 1. Neden doğdu? 2. Hangi önceki konuya dayanıyor? 3. Hangi sonraki konuya bağlanıyor? 4. Grafiği ne anlatıyor? 5. Gerçek hayatta neyi modelliyor?",
+    "tyt_ayt_links": [
+      "YKS Başarı Stratejisi",
+      "Kalıcı Öğrenme Metodolojisi"
+    ],
+    "daily_life": "Hayat boyu analitik problem çözme yeteneği.",
+    "connection_note": "Merak Et → İlişkilendir → Modelle → Sorgula",
+    "surprising_fact": "Matematik sadece bir sınav dersi değil; insanın evreni ve aklını anlama sanatıdır.",
+    "quiz": {
+      "question": "Bir matematik konusunu kalıcı öğrenmenin en etkili yolu nedir?",
+      "options": [
+        "Neden doğduğunu ve diğer konularla bağını kavramak",
+        "Sadece formülü ezberlemek",
+        "Soruları ezbere çözmek",
+        "Konuyu atlamak"
+      ],
+      "answer": "Neden doğduğunu ve diğer konularla bağını kavramak"
+    }
+  }
+]
