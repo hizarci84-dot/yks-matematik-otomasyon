@@ -76,19 +76,48 @@ class InstagramPublisher:
         )
         return cl
 
+    def build_reels_caption(self, day_data):
+        day_num = day_data["day"]
+        title = day_data["title"]
+        hook = day_data.get("hook", "")
+        history = day_data.get("history", "")
+        tyt_links = ", ".join(day_data.get("tyt_ayt_links", []))
+        surprising_fact = day_data.get("surprising_fact", "")
+        quiz = day_data.get("quiz", {})
+        quiz_q = quiz.get("question", "")
+        quiz_opts = " | ".join([f"[{lbl}] {opt}" for lbl, opt in zip(["A", "B", "C", "D"], quiz.get("options", []))])
+
+        caption = (
+            f"📐 YKS & TYT-AYT ZİHİN HARİTASI • GÜN {day_num} / 97\n"
+            f"📌 Konu: {title}\n\n"
+            f"❓ \"{hook}\"\n\n"
+            f"📜 Neden Doğdu? (Mantığı):\n{history}\n\n"
+            f"🎯 Sınav Yansıması:\nBu kavram TYT/AYT'de {tyt_links} ünitelerinin temelidir.\n\n"
+            f"💡 Şaşırtıcı Bilgi:\n{surprising_fact}\n\n"
+            f"✍️ GÜNÜN SORUSU:\n{quiz_q}\n{quiz_opts}\n"
+            f"👉 Doğru cevabınızı yorumlara yazın!\n\n"
+            f"──────────────────\n"
+            f"👨‍🏫 Hazırlayan: @mufithocailematematik\n"
+            f"🏛️ Kaynak: @riyazihane (Matematik Deneyim Merkezi)\n"
+            f"\"Matematik sadece formül değil; insanlığın düşünme tarihidir.\"\n\n"
+            f"#yks #yks2026 #tyt #ayt #tytmatematik #aytmatematik #matematik "
+            f"#zihinharitası #ykskampı #mufithocailematematik #riyazihane"
+        )
+        return caption
+
     def publish_via_instagrapi(self, image_path, video_path=None, caption=""):
         """Publish using instagrapi with cached session without triggering 429 login limits."""
         cl = self.setup_instagrapi_client()
         
         logged_in = False
         
-        # 1. First priority: Load authentic session file (Bypasses /login/ completely!)
+        # 1. First priority: Load authentic session file
         if os.path.exists(self.session_file):
             try:
                 print("📁 Loading session from data/ig_session.json...")
                 cl.load_settings(self.session_file)
                 logged_in = True
-                print("✅ Successfully authenticated via cached session settings (No /login/ call needed)!")
+                print("✅ Successfully authenticated via cached session settings!")
             except Exception as e:
                 print(f"⚠️ Session file loading error: {e}")
 
@@ -113,7 +142,7 @@ class InstagramPublisher:
         if not logged_in:
             raise Exception("Instagram authentication failed. Please create data/ig_session.json.")
 
-        # Upload Story
+        # 1. Upload Story
         print(f"📤 Uploading Story ({image_path})...")
         media = None
         max_retries = 3
@@ -130,21 +159,25 @@ class InstagramPublisher:
                 if attempt == max_retries:
                     raise e
 
-        # Optionally Upload Reels
+        # 2. Automatically Upload Reels Video (if generated)
+        reels_media = None
         if video_path and os.path.exists(video_path):
-            print(f"📤 Uploading Reels video ({video_path})...")
+            print(f"🎬 Uploading Reels Video to Profile ({video_path})...")
             for attempt in range(1, max_retries + 1):
                 try:
                     time.sleep(3)
-                    clip = cl.clip_upload(video_path, caption=caption)
-                    print(f"🎉 SUCCESS: Reels published live! Media ID: {clip.pk}")
+                    reels_media = cl.clip_upload(video_path, caption=caption)
+                    print(f"🎉 SUCCESS: Reels Video published live! Media ID: {reels_media.pk}")
                     break
                 except Exception as e:
                     print(f"⚠️ Reels attempt {attempt} failed: {e}")
-                    if attempt == max_retries:
-                        print("Skipping Reels upload after retries.")
+                    time.sleep(5)
 
-        return {"status": "success", "story_id": str(media.pk) if media else "ok"}
+        return {
+            "status": "success",
+            "story_id": str(media.pk) if media else None,
+            "reels_id": str(reels_media.pk) if reels_media else None
+        }
 
     def run_daily_publish(self, publish_video=False):
         state = self.load_state()
@@ -173,14 +206,10 @@ class InstagramPublisher:
         if publish_video:
             video_path = self.video_gen.generate_video(day_data, filename=f"reels_day_{curr_day:03d}.mp4")
 
-        # 3. Publish to Instagram
-        caption = (
-            f"Gün {curr_day} / 97: {day_data['title']}\n\n"
-            f"{day_data.get('hook', '')}\n\n"
-            f"Müfit Hoca ile Matematik • Kaynak: @riyazihane\n"
-            f"#yks #tyt #ayt #matematik #zihinharitası"
-        )
-        
+        # 3. Build Rich Caption
+        caption = self.build_reels_caption(day_data)
+
+        # 4. Publish to Instagram
         publish_result = None
         if os.path.exists(self.session_file) or self.ig_sessionid or self.ig_username:
             publish_result = self.publish_via_instagrapi(story_path, video_path=video_path, caption=caption)
@@ -188,7 +217,7 @@ class InstagramPublisher:
             print("⚠️ [MOCK / DRY-RUN]: No credentials found.")
             publish_result = {"status": "mock_success", "day": curr_day}
 
-        # 4. Update State
+        # 5. Update State
         now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         history_entry = {
             "day": curr_day,
