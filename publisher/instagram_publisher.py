@@ -3,6 +3,7 @@ import sys
 import json
 import time
 import requests
+import traceback
 from datetime import datetime
 
 # Add project root to sys.path
@@ -16,14 +17,14 @@ class InstagramPublisher:
         self.state_file = state_file
         self.campaign_file = campaign_file
         
-        # Method 1: Direct Login Credentials (No Meta App / Facebook required)
-        self.ig_username = os.environ.get("IG_USERNAME")
-        self.ig_password = os.environ.get("IG_PASSWORD")
+        # Method 1: Direct Login Credentials
+        self.ig_username = os.environ.get("IG_USERNAME", "").strip()
+        self.ig_password = os.environ.get("IG_PASSWORD", "").strip()
         self.session_file = "data/ig_session.json"
         
-        # Method 2: Meta Graph API (Optional)
-        self.account_id = os.environ.get("INSTAGRAM_ACCOUNT_ID")
-        self.access_token = os.environ.get("INSTAGRAM_ACCESS_TOKEN")
+        # Method 2: Meta Graph API
+        self.account_id = os.environ.get("INSTAGRAM_ACCOUNT_ID", "").strip()
+        self.access_token = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "").strip()
         
         self.github_repo = os.environ.get("GITHUB_REPOSITORY", "user/repo")
         self.github_ref = os.environ.get("GITHUB_REF_NAME", "main")
@@ -48,43 +49,59 @@ class InstagramPublisher:
         return day_data
 
     def publish_via_instagrapi(self, image_path, video_path=None, caption=""):
-        """Direct publishing using Instagram credentials without Meta Developer App."""
+        """Direct publishing using Instagram credentials."""
         from instagrapi import Client
+        from instagrapi.exceptions import (
+            BadPassword, TwoFactorRequired, ChallengeRequired, LoginRequired
+        )
         
         cl = Client()
+        cl.delay_range = [2, 5]
         
-        # Try loading saved session first to avoid repeated logins
         session_loaded = False
         if os.path.exists(self.session_file):
             try:
                 cl.load_settings(self.session_file)
                 cl.login(self.ig_username, self.ig_password)
                 session_loaded = True
-                print("Logged in using existing Instagram session.")
+                print("✅ Logged in using cached Instagram session.")
             except Exception as e:
-                print(f"Session expired or invalid, logging in fresh: {e}")
+                print(f"⚠️ Cached session invalid ({e}), attempting fresh login...")
 
         if not session_loaded:
-            print(f"Logging in to Instagram as @{self.ig_username}...")
-            cl.login(self.ig_username, self.ig_password)
-            cl.dump_settings(self.session_file)
-            print("Session saved successfully.")
+            print(f"🔑 Attempting Instagram login for: @{self.ig_username}...")
+            try:
+                cl.login(self.ig_username, self.ig_password)
+                cl.dump_settings(self.session_file)
+                print("✅ Login successful! Session cached.")
+            except TwoFactorRequired:
+                print("❌ [HATA]: Instagram hesabınızda 2 Faktörlü Doğrulama (2FA/SMS) açık.")
+                raise Exception("TwoFactorRequired: Lütfen Instagram güvenlik ayarlarından geçici olarak 2FA'yı kapatın veya oturum dosyasını kullanın.")
+            except ChallengeRequired:
+                print("❌ [HATA]: Instagram yeni bir cihazdan giriş yapıldığı için güvenlik doğrulaması (Challenge/E-posta onayı) istedi.")
+                raise Exception("ChallengeRequired: Lütfen Instagram uygulamanızdan veya e-postanızdan 'Giriş yapan bendim' onayını verin.")
+            except BadPassword:
+                print("❌ [HATA]: Instagram şifresi veya kullanıcı adı hatalı girildi.")
+                raise Exception("BadPassword: Lütfen GitHub Secrets'taki IG_USERNAME ve IG_PASSWORD değerlerini kontrol edin.")
+            except Exception as e:
+                print(f"❌ [HATA]: Instagram giriş hatası: {e}")
+                raise e
 
         # Upload Story
-        print(f"Uploading Story to @{self.ig_username}...")
+        print(f"📤 Uploading Story for @{self.ig_username} ({image_path})...")
         media = cl.photo_upload_to_story(image_path)
-        print(f"SUCCESS: Story uploaded live! Media ID: {media.pk}")
+        print(f"🎉 SUCCESS: Story published live! Media ID: {media.pk}")
 
-        # Optionally Upload Video as Reels
+        # Optionally Upload Reels
         if video_path and os.path.exists(video_path):
-            print(f"Uploading Reels video to @{self.ig_username}...")
+            print(f"📤 Uploading Reels video ({video_path})...")
             clip = cl.clip_upload(video_path, caption=caption)
-            print(f"SUCCESS: Reels uploaded live! Media ID: {clip.pk}")
+            print(f"🎉 SUCCESS: Reels published live! Media ID: {clip.pk}")
 
         return {"status": "success", "story_id": str(media.pk)}
 
     def publish_via_graph_api(self, image_url):
-        """Official Meta Graph API (fallback)."""
+        """Official Meta Graph API."""
         container_url = f"https://graph.facebook.com/v19.0/{self.account_id}/media"
         params = {
             "image_url": image_url,
@@ -140,14 +157,14 @@ class InstagramPublisher:
         
         publish_result = None
         if self.ig_username and self.ig_password:
-            print("Using Direct Instagram Login (instagrapi)...")
+            print(f"Attempting Direct Instagram Login as @{self.ig_username}...")
             publish_result = self.publish_via_instagrapi(story_path, video_path=video_path, caption=caption)
         elif self.account_id and self.access_token:
-            print("Using Meta Graph API...")
+            print("Attempting Meta Graph API...")
             public_img_url = f"https://raw.githubusercontent.com/{self.github_repo}/{self.github_ref}/dist/stories/day_{curr_day:03d}.jpg"
             publish_result = self.publish_via_graph_api(public_img_url)
         else:
-            print("[DRY-RUN / MOCK MODE]: No Instagram credentials configured.")
+            print("⚠️ [MOCK / DRY-RUN]: No credentials found in environment variables.")
             publish_result = {"status": "mock_success", "day": curr_day}
 
         # 4. Update State
@@ -180,4 +197,11 @@ if __name__ == "__main__":
         state["current_day"] = args.day
         publisher.save_state(state)
 
-    publisher.run_daily_publish(publish_video=args.video)
+    try:
+        publisher.run_daily_publish(publish_video=args.video)
+    except Exception as e:
+        print("\n" + "="*50)
+        print(f"FATAL ERROR IN PUBLISHER: {e}")
+        traceback.print_exc()
+        print("="*50 + "\n")
+        sys.exit(1)
