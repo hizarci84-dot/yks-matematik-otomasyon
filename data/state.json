@@ -1,26 +1,6 @@
 {
-  "current_day": 3,
+  "current_day": 1,
   "total_days": 97,
-  "campaign_name": "YKS / TYT-AYT Kampı & Zihin Haritaları",
-  "last_published_date": "2026-08-15 14:38:16",
-  "published_history": [
-    {
-      "day": 1,
-      "title": "Matematiğin Yolculuğu Başlıyor",
-      "published_at": "2026-08-15 14:31:42",
-      "result": {
-        "status": "success",
-        "story_id": "3964324194539655956"
-      }
-    },
-    {
-      "day": 2,
-      "title": "Bu Yolculuk Nasıl Okunur?",
-      "published_at": "2026-08-15 14:38:16",
-      "result": {
-        "status": "success",
-        "story_id": "3964327497495395642"
-      }
-    }
-  ]
+  "last_published_date": null,
+  "published_history": []
 }
