@@ -2,17 +2,19 @@ import os
 import sys
 import json
 import textwrap
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 # Add project root to sys.path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 class MultiSlideStoryGenerator:
-    def __init__(self, font_dir="assets/fonts", output_dir="dist/stories/multi_slide"):
+    def __init__(self, font_dir="assets/fonts", logo_path="assets/images/mufit_hoca_logo.png", output_dir="dist/stories/multi_slide"):
         self.font_dir = font_dir
+        self.logo_path = logo_path
         self.output_dir = output_dir
         os.makedirs(self.output_dir, exist_ok=True)
         self.load_fonts()
+        self.prepare_logo()
 
     def load_fonts(self):
         def get_font(name, size):
@@ -21,31 +23,51 @@ class MultiSlideStoryGenerator:
                 return ImageFont.truetype(path, size)
             return ImageFont.load_default()
 
-        # Premium Typography Hierarchy (Maximized Legibility & Balance)
-        self.font_super_title = get_font("TitleBold.ttf", 50)
-        self.font_main_title = get_font("TitleBold.ttf", 40)
-        self.font_brand_header = get_font("TitleBold.ttf", 28)
-        self.font_brand_sub = get_font("BodyBold.ttf", 20)
-        self.font_badge = get_font("TitleBold.ttf", 24)
-        self.font_era = get_font("SerifBold.ttf", 28)
+        # Typography Hierarchy
+        self.font_super_title = get_font("TitleBold.ttf", 46)
+        self.font_main_title = get_font("TitleBold.ttf", 38)
+        self.font_brand_header = get_font("TitleBold.ttf", 26)
+        self.font_brand_sub = get_font("BodyBold.ttf", 19)
+        self.font_badge = get_font("TitleBold.ttf", 23)
+        self.font_era = get_font("SerifBold.ttf", 26)
         
         # Body and Card text
-        self.font_hero_quote = get_font("SerifBold.ttf", 42)
-        self.font_node_tag = get_font("TitleBold.ttf", 22)
-        self.font_node_title = get_font("TitleBold.ttf", 26)
-        self.font_node_body = get_font("Body.ttf", 26)
-        self.font_node_bold = get_font("BodyBold.ttf", 26)
-        self.font_arrow_lbl = get_font("TitleBold.ttf", 21)
+        self.font_hero_quote = get_font("SerifBold.ttf", 38)
+        self.font_node_tag = get_font("TitleBold.ttf", 21)
+        self.font_node_title = get_font("TitleBold.ttf", 25)
+        self.font_node_body = get_font("Body.ttf", 25)
+        self.font_node_bold = get_font("BodyBold.ttf", 25)
+        self.font_arrow_lbl = get_font("TitleBold.ttf", 19)
         
-        # Quiz fonts (Large, comfortable tap targets)
-        self.font_quiz_hero = get_font("TitleBold.ttf", 36)
-        self.font_quiz_letter = get_font("TitleBold.ttf", 32)
-        self.font_quiz_opt_lg = get_font("BodyBold.ttf", 32)
+        # Quiz fonts
+        self.font_quiz_hero = get_font("TitleBold.ttf", 34)
+        self.font_quiz_letter = get_font("TitleBold.ttf", 30)
+        self.font_quiz_opt_lg = get_font("BodyBold.ttf", 30)
         
-        self.font_swipe = get_font("TitleBold.ttf", 24)
-        self.font_small = get_font("Body.ttf", 21)
-        self.font_footer = get_font("TitleBold.ttf", 21)
-        self.font_footer_sub = get_font("Serif.ttf", 19)
+        # Swipe & Side indicators
+        self.font_swipe = get_font("TitleBold.ttf", 23)
+        self.font_side_swipe = get_font("TitleBold.ttf", 21)
+        self.font_small = get_font("Body.ttf", 19)
+        self.font_footer = get_font("TitleBold.ttf", 20)
+        self.font_footer_sub = get_font("Serif.ttf", 18)
+
+    def prepare_logo(self, size=(110, 110)):
+        self.logo_img = None
+        if os.path.exists(self.logo_path):
+            try:
+                base_logo = Image.open(self.logo_path).convert("RGBA")
+                base_logo = base_logo.resize(size, Image.Resampling.LANCZOS)
+                
+                # Circular Mask
+                mask = Image.new("L", size, 0)
+                mask_draw = ImageDraw.Draw(mask)
+                mask_draw.ellipse((0, 0, size[0], size[1]), fill=255)
+                
+                circular_logo = ImageOps.fit(base_logo, mask.size, centering=(0.5, 0.5))
+                circular_logo.putalpha(mask)
+                self.logo_img = circular_logo
+            except Exception as e:
+                print(f"Warning: Logo preparation failed: {e}")
 
     def clean_special_chars(self, text):
         return (
@@ -82,49 +104,81 @@ class MultiSlideStoryGenerator:
         for cx, cy in [(32, 32), (W - 32, 32), (32, H - 32), (W - 32, H - 32)]:
             self.draw_bullet_diamond(draw, cx, cy, size=7, color="#8C6A2E")
 
-    def draw_top_branding(self, draw, W, curr_y, slide_num, total_slides=3):
-        # 1. Müfit Hoca Title
+    def draw_top_branding(self, img, draw, W, curr_y, slide_num, total_slides=3):
+        # 1. Circular Logo Avatar (Centered)
+        if self.logo_img:
+            lw, lh = self.logo_img.size
+            lx = int((W - lw) / 2)
+            ly = curr_y
+            
+            # Gold Ring around logo
+            draw.ellipse([lx - 4, ly - 4, lx + lw + 4, ly + lh + 4], fill="#C5A059", outline="#8C682D", width=2)
+            draw.ellipse([lx - 1, ly - 1, lx + lw + 1, ly + lh + 1], fill="#1B1710")
+            img.paste(self.logo_img, (lx, ly), self.logo_img)
+            curr_y += lh + 14
+        else:
+            curr_y += 10
+
+        # 2. Müfit Hoca Title
         h_brand = "MÜFİT HOCA İLE MATEMATİK"
         bbox = draw.textbbox((0, 0), h_brand, font=self.font_brand_header)
         tw = bbox[2] - bbox[0]
         draw.text(((W - tw) / 2, curr_y), h_brand, fill="#2A2114", font=self.font_brand_header)
-        curr_y += 36
+        curr_y += 34
 
-        # 2. Source Attribution Pill
+        # 3. Source Attribution Pill
         h_attr = "Kaynak: @riyazihane  •  @mufithocailematematik"
         bbox = draw.textbbox((0, 0), h_attr, font=self.font_brand_sub)
         tw = bbox[2] - bbox[0]
-        draw.rounded_rectangle([(W - tw - 34) / 2, curr_y, (W + tw + 34) / 2, curr_y + 34], radius=17, fill="#EFE5D0")
-        draw.text(((W - tw) / 2, curr_y + 5), h_attr, fill="#5C482C", font=self.font_brand_sub)
-        curr_y += 46
+        draw.rounded_rectangle([(W - tw - 30) / 2, curr_y, (W + tw + 30) / 2, curr_y + 30], radius=15, fill="#EFE5D0")
+        draw.text(((W - tw) / 2, curr_y + 4), h_attr, fill="#5C482C", font=self.font_brand_sub)
+        curr_y += 38
 
-        # 3. Slide Counter Indicator
+        # 4. Slide Counter Indicator
         slide_pill = f"BÖLÜM {slide_num} / {total_slides}"
         bbox = draw.textbbox((0, 0), slide_pill, font=self.font_small)
         tw = bbox[2] - bbox[0]
-        draw.rounded_rectangle([(W - tw - 28) / 2, curr_y, (W + tw + 28) / 2, curr_y + 30], radius=6, fill="#D9C7A7")
-        draw.text(((W - tw) / 2, curr_y + 4), slide_pill, fill="#3A2C18", font=self.font_small)
-        curr_y += 46
+        draw.rounded_rectangle([(W - tw - 24) / 2, curr_y, (W + tw + 24) / 2, curr_y + 26], radius=6, fill="#D9C7A7")
+        draw.text(((W - tw) / 2, curr_y + 3), slide_pill, fill="#3A2C18", font=self.font_small)
+        curr_y += 38
 
         return curr_y
 
+    def draw_right_swipe_tab(self, draw, W, px=820, py=1480):
+        """Draws a clean, non-overlapping floating right-swipe prompt tab."""
+        pill_w = 180
+        pill_h = 52
+
+        draw.rounded_rectangle([px, py, px + pill_w, py + pill_h], radius=26, fill="#8C682D", outline="#D4AF37", width=2)
+        
+        lbl = "Kaydır >"
+        bbox = draw.textbbox((0, 0), lbl, font=self.font_side_swipe)
+        tw = bbox[2] - bbox[0]
+        draw.text((px + 22, py + 12), lbl, fill="#FFFFFF", font=self.font_side_swipe)
+        
+        # Golden Chevrons
+        cx = px + tw + 32
+        cy = py + int(pill_h / 2)
+        draw.polygon([(cx, cy - 8), (cx + 8, cy), (cx, cy + 8), (cx + 3, cy + 8), (cx + 11, cy), (cx + 3, cy - 8)], fill="#F8E8C0")
+        draw.polygon([(cx + 10, cy - 8), (cx + 18, cy), (cx + 10, cy + 8), (cx + 13, cy + 8), (cx + 21, cy), (cx + 13, cy - 8)], fill="#F8E8C0")
+
     def draw_footer_swipe(self, draw, W, H, text="Zihin Haritası & Mantık"):
-        footer_y = 1590
+        footer_y = 1600
         draw.line([100, footer_y, W - 100, footer_y], fill="#DAC9A6", width=1)
         
         lbl = f"{text}  >>"
         bbox = draw.textbbox((0, 0), lbl, font=self.font_swipe)
         tw = bbox[2] - bbox[0]
-        draw.rounded_rectangle([(W - tw - 52) / 2, footer_y + 16, (W + tw + 52) / 2, footer_y + 68], radius=26, fill="#8C682D")
-        draw.text(((W - tw) / 2, footer_y + 26), lbl, fill="#FFFFFF", font=self.font_swipe)
+        draw.rounded_rectangle([(W - tw - 48) / 2, footer_y + 16, (W + tw + 48) / 2, footer_y + 64], radius=24, fill="#8C682D")
+        draw.text(((W - tw) / 2, footer_y + 24), lbl, fill="#FFFFFF", font=self.font_swipe)
 
         f_sub = "“Matematik sadece formül değil; insanlığın düşünme tarihidir.”"
         bbox = draw.textbbox((0, 0), f_sub, font=self.font_footer_sub)
         tw = bbox[2] - bbox[0]
-        draw.text(((W - tw) / 2, footer_y + 78), f_sub, fill="#7A6849", font=self.font_footer_sub)
+        draw.text(((W - tw) / 2, footer_y + 74), f_sub, fill="#7A6849", font=self.font_footer_sub)
 
     # =========================================================================
-    # SLIDE 1: VURUCU KAPAK & KANCA (MAKSİMUM FERAHLIK)
+    # SLIDE 1: VURUCU KAPAK & KANCA
     # =========================================================================
     def generate_slide_1_cover(self, day_data, filename=None):
         day_num = day_data["day"]
@@ -137,40 +191,40 @@ class MultiSlideStoryGenerator:
         draw = ImageDraw.Draw(img)
         self.draw_base_frame(draw, W, H)
 
-        curr_y = self.draw_top_branding(draw, W, 210, slide_num=1)
+        curr_y = self.draw_top_branding(img, draw, W, 210, slide_num=1)
 
         # 1. Main Campaign Badge
         badge_str = f"YKS / TYT-AYT ZİHİN HARİTASI • GÜN {day_num} / 97"
         bbox = draw.textbbox((0, 0), badge_str, font=self.font_badge)
         tw = bbox[2] - bbox[0]
-        draw.rounded_rectangle([(W - tw - 52) / 2, curr_y, (W + tw + 52) / 2, curr_y + 46], radius=8, fill="#8C682D")
-        draw.text(((W - tw) / 2, curr_y + 9), badge_str, fill="#FFFFFF", font=self.font_badge)
-        curr_y += 76
+        draw.rounded_rectangle([(W - tw - 44) / 2, curr_y, (W + tw + 44) / 2, curr_y + 40], radius=8, fill="#8C682D")
+        draw.text(((W - tw) / 2, curr_y + 8), badge_str, fill="#FFFFFF", font=self.font_badge)
+        curr_y += 58
 
         # 2. Hero Title
-        title_lines = self.wrap_text(title, width=22)
+        title_lines = self.wrap_text(title, width=24)
         for line in title_lines:
             bbox = draw.textbbox((0, 0), line, font=self.font_super_title)
             tw = bbox[2] - bbox[0]
             draw.text(((W - tw) / 2, curr_y), line, fill="#1B1710", font=self.font_super_title)
-            curr_y += 60
+            curr_y += 54
 
         if era_figure:
             sub_str = f"~ {era_figure} ~"
             bbox = draw.textbbox((0, 0), sub_str, font=self.font_era)
             tw = bbox[2] - bbox[0]
             draw.text(((W - tw) / 2, curr_y), sub_str, fill="#7A5A29", font=self.font_era)
-            curr_y += 54
+            curr_y += 46
         else:
-            curr_y += 30
+            curr_y += 24
 
         draw.line([140, curr_y, W - 140, curr_y], fill="#DAC9A6", width=2)
         self.draw_bullet_diamond(draw, W/2, curr_y, size=7, color="#8C682D")
-        curr_y += 70
+        curr_y += 56
 
         # 3. Big Prominent Hook Box
-        hook_lines = self.wrap_text(f"“{hook}”", width=22)
-        hook_h = len(hook_lines) * 66 + 110
+        hook_lines = self.wrap_text(f"“{hook}”", width=24)
+        hook_h = len(hook_lines) * 60 + 94
         card_w = W - 140
         card_x = 70
 
@@ -180,15 +234,15 @@ class MultiSlideStoryGenerator:
         tag_txt = "GÜNÜN KANCASI"
         bbox = draw.textbbox((0, 0), tag_txt, font=self.font_node_tag)
         tw = bbox[2] - bbox[0]
-        draw.rounded_rectangle([card_x + 30, curr_y + 22, card_x + 30 + tw + 32, curr_y + 58], radius=6, fill="#8C682D")
-        draw.text((card_x + 46, curr_y + 27), tag_txt, fill="#FFFFFF", font=self.font_node_tag)
+        draw.rounded_rectangle([card_x + 28, curr_y + 20, card_x + 28 + tw + 28, curr_y + 52], radius=6, fill="#8C682D")
+        draw.text((card_x + 42, curr_y + 24), tag_txt, fill="#FFFFFF", font=self.font_node_tag)
 
-        hy = curr_y + 84
+        hy = curr_y + 74
         for line in hook_lines:
             draw.text((card_x + 36, hy), line, fill="#2C1D07", font=self.font_hero_quote)
-            hy += 66
+            hy += 60
 
-        curr_y += hook_h + 76
+        curr_y += hook_h + 60
 
         # 4. Highlight Summary Capsule
         capsule_lines = [
@@ -199,7 +253,10 @@ class MultiSlideStoryGenerator:
             bbox = draw.textbbox((0, 0), line, font=self.font_node_bold)
             tw = bbox[2] - bbox[0]
             draw.text(((W - tw) / 2, curr_y), line, fill="#5B4527", font=self.font_node_bold)
-            curr_y += 42
+            curr_y += 38
+
+        # Floating right-swipe prompt at y = 1490
+        self.draw_right_swipe_tab(draw, W, px=830, py=1490)
 
         self.draw_footer_swipe(draw, W, H, text="Kaydırın: Zihin Haritası")
 
@@ -211,7 +268,7 @@ class MultiSlideStoryGenerator:
         return out_path
 
     # =========================================================================
-    # SLIDE 2: KAVRAMSAL ZİHİN HARİTASI (MAKSİMUM AÇIK OK ARALIKLARI: 100px)
+    # SLIDE 2: KAVRAMSAL ZİHİN HARİTASI
     # =========================================================================
     def generate_slide_2_mindmap(self, day_data, filename=None):
         day_num = day_data["day"]
@@ -227,7 +284,7 @@ class MultiSlideStoryGenerator:
         draw = ImageDraw.Draw(img)
         self.draw_base_frame(draw, W, H)
 
-        curr_y = self.draw_top_branding(draw, W, 210, slide_num=2)
+        curr_y = self.draw_top_branding(img, draw, W, 210, slide_num=2)
 
         # Header Title
         h_title = f"ZİHİN HARİTASI: {title}"
@@ -236,10 +293,10 @@ class MultiSlideStoryGenerator:
             bbox = draw.textbbox((0, 0), line, font=self.font_main_title)
             tw = bbox[2] - bbox[0]
             draw.text(((W - tw) / 2, curr_y), line, fill="#1B1710", font=self.font_main_title)
-            curr_y += 48
+            curr_y += 44
         
         draw.line([140, curr_y, W - 140, curr_y], fill="#DAC9A6", width=1)
-        curr_y += 36
+        curr_y += 26
 
         card_w = W - 120
         card_x = 60
@@ -249,31 +306,31 @@ class MultiSlideStoryGenerator:
         # NODE 1: DOĞUŞ SEBEBİ (MANTIK)
         # ---------------------------------------------------------
         hist_lines = self.wrap_text(history, width=38)
-        n1_h = len(hist_lines) * 36 + 76
+        n1_h = len(hist_lines) * 32 + 66
         draw.rounded_rectangle([card_x, curr_y, card_x + card_w, curr_y + n1_h], radius=14, fill="#FFFDF7", outline="#D5C099", width=2)
         
         tag1 = "1. NEDEN DOĞDU? (MANTIK)"
         bbox = draw.textbbox((0, 0), tag1, font=self.font_node_tag)
         tw = bbox[2] - bbox[0]
-        draw.rounded_rectangle([card_x + 22, curr_y + 16, card_x + 22 + tw + 30, curr_y + 50], radius=6, fill="#8C682D")
-        draw.text((card_x + 37, curr_y + 20), tag1, fill="#FFFFFF", font=self.font_node_tag)
+        draw.rounded_rectangle([card_x + 22, curr_y + 14, card_x + 22 + tw + 28, curr_y + 46], radius=6, fill="#8C682D")
+        draw.text((card_x + 36, curr_y + 18), tag1, fill="#FFFFFF", font=self.font_node_tag)
 
-        ny = curr_y + 64
+        ny = curr_y + 56
         for line in hist_lines:
             draw.text((card_x + 28, ny), line, fill="#2C261D", font=self.font_node_body)
-            ny += 36
+            ny += 32
         curr_y += n1_h
 
-        # FLOW ARROW 1 -> 2 (Maksimum Genişlik: 95px)
-        arrow_h = 95
+        # FLOW ARROW 1 -> 2 (72px)
+        arrow_h = 72
         draw.line([mid_x, curr_y, mid_x, curr_y + arrow_h], fill="#8C682D", width=4)
-        draw.polygon([(mid_x, curr_y + arrow_h), (mid_x - 9, curr_y + arrow_h - 14), (mid_x + 9, curr_y + arrow_h - 14)], fill="#8C682D")
+        draw.polygon([(mid_x, curr_y + arrow_h), (mid_x - 8, curr_y + arrow_h - 13), (mid_x + 8, curr_y + arrow_h - 13)], fill="#8C682D")
         
         lbl = "TYT - AYT Sınav Yansıması"
         bbox = draw.textbbox((0, 0), lbl, font=self.font_arrow_lbl)
         tw = bbox[2] - bbox[0]
-        draw.rounded_rectangle([(mid_x - tw/2 - 22), curr_y + 28, (mid_x + tw/2 + 22), curr_y + 66], radius=8, fill="#EFE4D0", outline="#CDBB9B", width=2)
-        draw.text((mid_x - tw/2, curr_y + 34), lbl, fill="#5B4527", font=self.font_arrow_lbl)
+        draw.rounded_rectangle([(mid_x - tw/2 - 18), curr_y + 18, (mid_x + tw/2 + 18), curr_y + 50], radius=8, fill="#EFE4D0", outline="#CDBB9B", width=2)
+        draw.text((mid_x - tw/2, curr_y + 23), lbl, fill="#5B4527", font=self.font_arrow_lbl)
         curr_y += arrow_h
 
         # ---------------------------------------------------------
@@ -281,45 +338,45 @@ class MultiSlideStoryGenerator:
         # ---------------------------------------------------------
         conn_str = conn_note if conn_note else "Temel Kavramlar > Modelleme > Analiz"
         conn_lines = self.wrap_text(f"Kavram Zinciri: {conn_str}", width=38)
-        n2_h = 116 + (len(conn_lines) * 34)
+        n2_h = 104 + (len(conn_lines) * 30)
         draw.rounded_rectangle([card_x, curr_y, card_x + card_w, curr_y + n2_h], radius=14, fill="#F5ECE0", outline="#C6AE85", width=2)
 
         tag2 = "2. SINAVDA NEREDE ÇIKAR?"
         bbox = draw.textbbox((0, 0), tag2, font=self.font_node_tag)
         tw = bbox[2] - bbox[0]
-        draw.rounded_rectangle([card_x + 22, curr_y + 16, card_x + 22 + tw + 30, curr_y + 50], radius=6, fill="#685028")
-        draw.text((card_x + 37, curr_y + 20), tag2, fill="#FFFFFF", font=self.font_node_tag)
+        draw.rounded_rectangle([card_x + 22, curr_y + 14, card_x + 22 + tw + 28, curr_y + 46], radius=6, fill="#685028")
+        draw.text((card_x + 36, curr_y + 18), tag2, fill="#FFFFFF", font=self.font_node_tag)
 
         tag_x = card_x + 28
-        tag_y = curr_y + 64
+        tag_y = curr_y + 56
         for topic in tyt_links:
             clean_topic = self.clean_special_chars(topic)
             tag_str = f"• {clean_topic}"
             bbox = draw.textbbox((0, 0), tag_str, font=self.font_node_bold)
-            t_w = bbox[2] - bbox[0] + 28
+            t_w = bbox[2] - bbox[0] + 26
             if tag_x + t_w > W - 80:
                 tag_x = card_x + 28
-                tag_y += 46
-            draw.rounded_rectangle([tag_x, tag_y, tag_x + t_w, tag_y + 38], radius=6, fill="#E3D1AE", outline="#BFA87E")
-            draw.text((tag_x + 14, tag_y + 4), tag_str, fill="#2A2214", font=self.font_node_bold)
+                tag_y += 42
+            draw.rounded_rectangle([tag_x, tag_y, tag_x + t_w, tag_y + 34], radius=6, fill="#E3D1AE", outline="#BFA87E")
+            draw.text((tag_x + 12, tag_y + 3), tag_str, fill="#2A2214", font=self.font_node_bold)
             tag_x += t_w + 14
 
-        cy = tag_y + 50
+        cy = tag_y + 46
         for line in conn_lines:
             draw.text((card_x + 28, cy), line, fill="#4A3B22", font=self.font_node_bold)
-            cy += 34
+            cy += 30
         curr_y += n2_h
 
-        # FLOW ARROW 2 -> 3 (Maksimum Genişlik: 95px)
-        arrow_h = 95
+        # FLOW ARROW 2 -> 3 (72px)
+        arrow_h = 72
         draw.line([mid_x, curr_y, mid_x, curr_y + arrow_h], fill="#8C682D", width=4)
-        draw.polygon([(mid_x, curr_y + arrow_h), (mid_x - 9, curr_y + arrow_h - 14), (mid_x + 9, curr_y + arrow_h - 14)], fill="#8C682D")
+        draw.polygon([(mid_x, curr_y + arrow_h), (mid_x - 8, curr_y + arrow_h - 13), (mid_x + 8, curr_y + arrow_h - 13)], fill="#8C682D")
         
         lbl = "Gerçek Dünya Bağlantısı"
         bbox = draw.textbbox((0, 0), lbl, font=self.font_arrow_lbl)
         tw = bbox[2] - bbox[0]
-        draw.rounded_rectangle([(mid_x - tw/2 - 22), curr_y + 28, (mid_x + tw/2 + 22), curr_y + 66], radius=8, fill="#EFE4D0", outline="#CDBB9B", width=2)
-        draw.text((mid_x - tw/2, curr_y + 34), lbl, fill="#5B4527", font=self.font_arrow_lbl)
+        draw.rounded_rectangle([(mid_x - tw/2 - 18), curr_y + 18, (mid_x + tw/2 + 18), curr_y + 50], radius=8, fill="#EFE4D0", outline="#CDBB9B", width=2)
+        draw.text((mid_x - tw/2, curr_y + 23), lbl, fill="#5B4527", font=self.font_arrow_lbl)
         curr_y += arrow_h
 
         # ---------------------------------------------------------
@@ -329,22 +386,25 @@ class MultiSlideStoryGenerator:
         if daily_life:
             fact_lines.append("")
             fact_lines.extend(self.wrap_text(f"Günlük Hayat: {daily_life}", width=38))
-        n3_h = len(fact_lines) * 34 + 76
+        n3_h = len(fact_lines) * 30 + 68
         draw.rounded_rectangle([card_x, curr_y, card_x + card_w, curr_y + n3_h], radius=14, fill="#FFFFFF", outline="#D8C8A8", width=2)
 
         tag3 = "3. BİLİYOR MUYDUNUZ?"
         bbox = draw.textbbox((0, 0), tag3, font=self.font_node_tag)
         tw = bbox[2] - bbox[0]
-        draw.rounded_rectangle([card_x + 22, curr_y + 16, card_x + 22 + tw + 30, curr_y + 50], radius=6, fill="#7B6133")
-        draw.text((card_x + 37, curr_y + 20), tag3, fill="#FFFFFF", font=self.font_node_tag)
+        draw.rounded_rectangle([card_x + 22, curr_y + 14, card_x + 22 + tw + 28, curr_y + 46], radius=6, fill="#7B6133")
+        draw.text((card_x + 36, curr_y + 18), tag3, fill="#FFFFFF", font=self.font_node_tag)
 
-        fy = curr_y + 64
+        fy = curr_y + 56
         for line in fact_lines:
             if line.startswith("Şaşırtıcı Bilgi:") or line.startswith("Günlük Hayat:"):
                 draw.text((card_x + 28, fy), line, fill="#3E3018", font=self.font_node_bold)
             else:
                 draw.text((card_x + 28, fy), line, fill="#3E3018", font=self.font_node_body)
-            fy += 34
+            fy += 30
+
+        # Floating right-swipe prompt at y = 1490 (below Node 3)
+        self.draw_right_swipe_tab(draw, W, px=830, py=1490)
 
         self.draw_footer_swipe(draw, W, H, text="Kaydırın: Günün Sorusu")
 
@@ -356,7 +416,7 @@ class MultiSlideStoryGenerator:
         return out_path
 
     # =========================================================================
-    # SLIDE 3: GÜNÜN SORUSU & İNTERAKTİF TEST (MAKSİMUM BOŞLUKLAR & GÜVENLİ BÖLGE)
+    # SLIDE 3: GÜNÜN SORUSU & İNTERAKTİF TEST
     # =========================================================================
     def generate_slide_3_quiz(self, day_data, filename=None):
         day_num = day_data["day"]
@@ -370,77 +430,77 @@ class MultiSlideStoryGenerator:
         draw = ImageDraw.Draw(img)
         self.draw_base_frame(draw, W, H)
 
-        curr_y = self.draw_top_branding(draw, W, 210, slide_num=3)
+        curr_y = self.draw_top_branding(img, draw, W, 210, slide_num=3)
 
         # Header Badge
         badge_str = f"GÜNÜN YKS MATEMATİK SORUSU • GÜN {day_num}"
         bbox = draw.textbbox((0, 0), badge_str, font=self.font_badge)
         tw = bbox[2] - bbox[0]
-        draw.rounded_rectangle([(W - tw - 52) / 2, curr_y, (W + tw + 52) / 2, curr_y + 46], radius=8, fill="#D4AF37")
-        draw.text(((W - tw) / 2, curr_y + 9), badge_str, fill="#1E1911", font=self.font_badge)
-        curr_y += 68
+        draw.rounded_rectangle([(W - tw - 44) / 2, curr_y, (W + tw + 44) / 2, curr_y + 40], radius=8, fill="#D4AF37")
+        draw.text(((W - tw) / 2, curr_y + 8), badge_str, fill="#1E1911", font=self.font_badge)
+        curr_y += 56
 
         # Subtitle
         sub_str = f"Konu: {title}"
         bbox = draw.textbbox((0, 0), sub_str, font=self.font_era)
         tw = bbox[2] - bbox[0]
         draw.text(((W - tw) / 2, curr_y), sub_str, fill="#7A5A29", font=self.font_era)
-        curr_y += 52
+        curr_y += 44
 
         draw.line([140, curr_y, W - 140, curr_y], fill="#DAC9A6", width=2)
-        curr_y += 50
+        curr_y += 40
 
         card_w = W - 140
         card_x = 70
 
-        # Giant Question Card (Fills generously)
+        # Giant Question Card
         q_lines = self.wrap_text(quiz_q, width=28)
-        q_card_h = len(q_lines) * 54 + 104
+        q_card_h = len(q_lines) * 50 + 88
         draw.rounded_rectangle([card_x, curr_y, card_x + card_w, curr_y + q_card_h], radius=16, fill="#FFFDF7", outline="#8C682D", width=3)
         
         tag_q = "GÜNÜN SORUSU"
         bbox = draw.textbbox((0, 0), tag_q, font=self.font_node_tag)
         tw = bbox[2] - bbox[0]
-        draw.rounded_rectangle([card_x + 26, curr_y + 18, card_x + 26 + tw + 30, curr_y + 52], radius=6, fill="#8C682D")
-        draw.text((card_x + 41, curr_y + 22), tag_q, fill="#FFFFFF", font=self.font_node_tag)
+        draw.rounded_rectangle([card_x + 24, curr_y + 16, card_x + 24 + tw + 28, curr_y + 48], radius=6, fill="#8C682D")
+        draw.text((card_x + 38, curr_y + 20), tag_q, fill="#FFFFFF", font=self.font_node_tag)
 
-        qy = curr_y + 72
+        qy = curr_y + 60
         for line in q_lines:
             draw.text((card_x + 32, qy), line, fill="#1E1911", font=self.font_quiz_hero)
-            qy += 54
+            qy += 50
 
-        # Expanded Gap before Choice Buttons (64px)
-        curr_y += q_card_h + 64
+        # Gap before Choice Buttons
+        curr_y += q_card_h + 46
 
-        # 4 Large Interactive Choice Buttons (Height: 96px, Gap: 32px)
+        # 4 Large Interactive Choice Buttons (Height: 90px, Gap: 26px)
         opt_labels = ["A", "B", "C", "D"]
         for i, opt in enumerate(quiz_opts):
-            opt_h = 96
+            opt_h = 90
             draw.rounded_rectangle([card_x, curr_y, card_x + card_w, curr_y + opt_h], radius=16, fill="#241E15", outline="#8C682D", width=2)
             
-            # Letter Badge Circle (Larger diameter: 56px)
-            draw.ellipse([card_x + 22, curr_y + 20, card_x + 78, curr_y + 76], fill="#D4AF37")
-            draw.text((card_x + 37, curr_y + 26), opt_labels[i], fill="#1E1911", font=self.font_quiz_letter)
+            # Letter Badge Circle
+            draw.ellipse([card_x + 20, curr_y + 18, card_x + 72, curr_y + 70], fill="#D4AF37")
+            draw.text((card_x + 35, curr_y + 24), opt_labels[i], fill="#1E1911", font=self.font_quiz_letter)
             
             # Option Text
-            draw.text((card_x + 100, curr_y + 28), opt, fill="#F7EAC7", font=self.font_quiz_opt_lg)
-            curr_y += opt_h + 32
+            draw.text((card_x + 94, curr_y + 26), opt, fill="#F7EAC7", font=self.font_quiz_opt_lg)
+            curr_y += opt_h + 26
 
-        curr_y += 36
+        curr_y += 30
 
-        # Call to Action Banner (Centered and balanced)
+        # Call to Action Banner
         cta_text = "Doğru cevabınızı yoruma yazın veya hikayeye yanıt verin!"
         bbox = draw.textbbox((0, 0), cta_text, font=self.font_node_bold)
         tw = bbox[2] - bbox[0]
         draw.text(((W - tw) / 2, curr_y), cta_text, fill="#5B4527", font=self.font_node_bold)
-        curr_y += 44
+        curr_y += 38
 
         f_sol = "Detaylı çözüm yarın sabahki hikayede açıklanacak!"
         bbox = draw.textbbox((0, 0), f_sol, font=self.font_small)
         tw = bbox[2] - bbox[0]
         draw.text(((W - tw) / 2, curr_y), f_sol, fill="#8C682D", font=self.font_small)
 
-        # Footer branding (inside Safe Zone at y = 1620)
+        # Footer branding
         footer_y = 1620
         draw.line([100, footer_y, W - 100, footer_y], fill="#DAC9A6", width=1)
         f1 = "Hazırlayan: @mufithocailematematik  |  Kaynak: @riyazihane"
