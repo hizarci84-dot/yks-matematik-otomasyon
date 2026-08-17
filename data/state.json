@@ -1,35 +1,19 @@
 {
-  "current_day": 4,
+  "current_day": 2,
   "total_days": 97,
-  "last_published_date": "2026-08-17 06:42:12",
+  "last_published_date": "2026-08-17 17:57:55",
   "published_history": [
     {
       "day": 1,
       "title": "Matematiğin Yolculuğu Başlıyor",
-      "published_at": "2026-08-15 14:46:43",
+      "published_at": "2026-08-17 17:57:55",
       "result": {
         "status": "success",
-        "story_id": "3964331451583091520",
-        "reels_id": "3964331565755132197"
-      }
-    },
-    {
-      "day": 2,
-      "title": "Bu Yolculuk Nasıl Okunur?",
-      "published_at": "2026-08-16 06:30:52",
-      "result": {
-        "status": "success",
-        "story_id": "3964806937799033472",
-        "reels_id": null
-      }
-    },
-    {
-      "day": 3,
-      "title": "Büyük Kronoloji I: İlk Adımlar",
-      "published_at": "2026-08-17 06:42:12",
-      "result": {
-        "status": "success",
-        "story_id": "3965537446514677177",
+        "story_ids": [
+          "3965786474858736897",
+          "3965786684297108735",
+          "3965786921929675194"
+        ],
         "reels_id": null
       }
     }

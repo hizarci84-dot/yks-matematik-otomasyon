@@ -6,11 +6,19 @@ import requests
 import traceback
 from datetime import datetime
 
+# Configure UTF-8 for console output on Windows
+try:
+    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stderr.reconfigure(encoding='utf-8')
+except Exception:
+    pass
+
 # Add project root to sys.path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from engine.story_generator import StoryGenerator
+from engine.multi_slide_generator import MultiSlideStoryGenerator
 from engine.video_generator import ReelsVideoGenerator
+from instagrapi.types import StoryPoll
 
 class InstagramPublisher:
     def __init__(self, state_file="data/state.json", campaign_file="data/campaign_97_days.json"):
@@ -30,7 +38,7 @@ class InstagramPublisher:
         self.github_repo = os.environ.get("GITHUB_REPOSITORY", "user/repo")
         self.github_ref = os.environ.get("GITHUB_REF_NAME", "main")
         
-        self.story_gen = StoryGenerator()
+        self.multi_slide_gen = MultiSlideStoryGenerator()
         self.video_gen = ReelsVideoGenerator()
 
     def load_state(self):
@@ -105,77 +113,108 @@ class InstagramPublisher:
         )
         return caption
 
-    def publish_via_instagrapi(self, image_path, video_path=None, caption=""):
-        """Publish using instagrapi with cached session without triggering 429 login limits."""
-        cl = self.setup_instagrapi_client()
+    def build_quiz_poll_sticker(self, quiz_data):
+        """Construct an interactive poll/quiz sticker for Slide 3."""
+        if not quiz_data:
+            return None
+            
+        question = quiz_data.get("question", "Günün Sorusu")
+        if len(question) > 60:
+            question = "Günün YKS Sorusu:"
+            
+        options = quiz_data.get("options", [])
+        if not options:
+            return None
+
+        clean_opts = [f"{lbl}) {opt[:25]}" for lbl, opt in zip(["A", "B", "C", "D"], options)]
         
+        # Position the sticker directly over the options area
+        poll = StoryPoll(
+            question=question,
+            options=clean_opts,
+            x=0.5,
+            y=0.58,
+            width=0.86,
+            height=0.36,
+            is_multi_option=True,
+            viewer_can_vote=True
+        )
+        return poll
+
+    def publish_via_instagrapi(self, slide_paths, day_data=None, video_path=None, caption=""):
+        """Publish 3-slide story sequence with interactive Quiz sticker."""
+        cl = self.setup_instagrapi_client()
         logged_in = False
         
-        # 1. First priority: Load authentic session file
+        # 1. Load session file
         if os.path.exists(self.session_file):
             try:
-                print("📁 Loading session from data/ig_session.json...")
+                print("Loading session from data/ig_session.json...")
                 cl.load_settings(self.session_file)
                 logged_in = True
-                print("✅ Successfully authenticated via cached session settings!")
+                print("Successfully authenticated via cached session settings!")
             except Exception as e:
-                print(f"⚠️ Session file loading error: {e}")
+                print(f"Session file loading error: {e}")
 
-        # 2. Second priority: Session ID cookie
+        # 2. Session ID cookie fallback
         if not logged_in and self.ig_sessionid:
             try:
-                print("🔑 Logging in using IG_SESSIONID cookie...")
+                print("Logging in using IG_SESSIONID cookie...")
                 cl.login_by_sessionid(self.ig_sessionid)
                 logged_in = True
-                print("✅ Session ID login successful!")
+                print("Session ID login successful!")
             except Exception as e:
-                print(f"⚠️ Session ID login failed: {e}")
-
-        # 3. Third priority: Fresh login (if no session exists)
-        if not logged_in and self.ig_username and self.ig_password:
-            print(f"🔑 Attempting fresh login for @{self.ig_username}...")
-            cl.login(self.ig_username, self.ig_password)
-            cl.dump_settings(self.session_file)
-            logged_in = True
-            print("✅ Login successful!")
+                print(f"Session ID login failed: {e}")
 
         if not logged_in:
-            raise Exception("Instagram authentication failed. Please create data/ig_session.json.")
+            raise Exception("Instagram authentication failed. Please check data/ig_session.json.")
 
-        # 1. Upload Story
-        print(f"📤 Uploading Story ({image_path})...")
-        media = None
+        uploaded_story_ids = []
         max_retries = 3
-        
-        for attempt in range(1, max_retries + 1):
-            try:
-                time.sleep(2)
-                media = cl.photo_upload_to_story(image_path)
-                print(f"🎉 SUCCESS: Story published live! Media ID: {media.pk}")
-                break
-            except Exception as e:
-                print(f"⚠️ Story attempt {attempt}/{max_retries} failed ({e}). Retrying in 4s...")
-                time.sleep(4)
-                if attempt == max_retries:
-                    raise e
 
-        # 2. Automatically Upload Reels Video (if generated)
+        # Prepare Quiz Poll Sticker for Slide 3
+        quiz_poll = None
+        if day_data and "quiz" in day_data:
+            quiz_poll = self.build_quiz_poll_sticker(day_data["quiz"])
+
+        # Upload All 3 Slides in Sequence
+        for i, slide_path in enumerate(slide_paths, start=1):
+            print(f"Uploading Slide {i}/{len(slide_paths)}: {slide_path}...")
+            slide_media = None
+            
+            # Slide 3 gets the interactive quiz poll sticker
+            polls_to_attach = [quiz_poll] if (i == 3 and quiz_poll) else []
+
+            for attempt in range(1, max_retries + 1):
+                try:
+                    time.sleep(2)
+                    slide_media = cl.photo_upload_to_story(slide_path, polls=polls_to_attach)
+                    print(f"SUCCESS: Slide {i} published live! Media ID: {slide_media.pk}")
+                    uploaded_story_ids.append(str(slide_media.pk))
+                    break
+                except Exception as e:
+                    print(f"Slide {i} attempt {attempt}/{max_retries} failed ({e}). Retrying in 4s...")
+                    time.sleep(4)
+                    if attempt == max_retries:
+                        raise e
+
+        # Upload Reels Video (if generated)
         reels_media = None
         if video_path and os.path.exists(video_path):
-            print(f"🎬 Uploading Reels Video to Profile ({video_path})...")
+            print(f"Uploading Reels Video to Profile ({video_path})...")
             for attempt in range(1, max_retries + 1):
                 try:
                     time.sleep(3)
                     reels_media = cl.clip_upload(video_path, caption=caption)
-                    print(f"🎉 SUCCESS: Reels Video published live! Media ID: {reels_media.pk}")
+                    print(f"SUCCESS: Reels Video published live! Media ID: {reels_media.pk}")
                     break
                 except Exception as e:
-                    print(f"⚠️ Reels attempt {attempt} failed: {e}")
+                    print(f"Reels attempt {attempt} failed: {e}")
                     time.sleep(5)
 
         return {
             "status": "success",
-            "story_id": str(media.pk) if media else None,
+            "story_ids": uploaded_story_ids,
             "reels_id": str(reels_media.pk) if reels_media else None
         }
 
@@ -198,8 +237,8 @@ class InstagramPublisher:
             print(f"Error: Day {curr_day} data not found in campaign JSON!")
             return
 
-        # 1. Render High-Resolution Story Image
-        story_path = self.story_gen.generate_story(day_data, filename=f"day_{curr_day:03d}.jpg")
+        # 1. Render 3-Slide Story Suite
+        slide_paths = self.multi_slide_gen.generate_day_suite(day_data)
         
         # 2. Optionally Render Reels Video
         video_path = None
@@ -212,9 +251,9 @@ class InstagramPublisher:
         # 4. Publish to Instagram
         publish_result = None
         if os.path.exists(self.session_file) or self.ig_sessionid or self.ig_username:
-            publish_result = self.publish_via_instagrapi(story_path, video_path=video_path, caption=caption)
+            publish_result = self.publish_via_instagrapi(slide_paths, day_data=day_data, video_path=video_path, caption=caption)
         else:
-            print("⚠️ [MOCK / DRY-RUN]: No credentials found.")
+            print("[MOCK / DRY-RUN]: No credentials found.")
             publish_result = {"status": "mock_success", "day": curr_day}
 
         # 5. Update State
