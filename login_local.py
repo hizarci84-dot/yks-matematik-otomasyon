@@ -1,8 +1,10 @@
 import os
 import sys
+import time
 import subprocess
+from uuid import uuid4
 from instagrapi import Client
-from instagrapi.exceptions import TwoFactorRequired, ChallengeRequired
+from instagrapi.exceptions import TwoFactorRequired
 
 # UTF-8 console output
 try:
@@ -11,12 +13,41 @@ try:
 except Exception:
     pass
 
+def custom_two_factor_login(cl, verification_code):
+    two_factor_info = cl.last_json.get("two_factor_info", {})
+    two_factor_identifier = two_factor_info.get("two_factor_identifier")
+    
+    # 1: SMS, 2: WhatsApp, 3: TOTP / Authenticator App
+    v_method = "1" if two_factor_info.get("sms_two_factor_on") else "3"
+    
+    data = {
+        "verification_code": verification_code,
+        "phone_id": cl.phone_id,
+        "_csrftoken": cl.token,
+        "two_factor_identifier": two_factor_identifier,
+        "username": cl.username,
+        "trust_this_device": "1",
+        "guid": cl.uuid,
+        "device_id": cl.android_device_id,
+        "waterfall_id": str(uuid4()),
+        "verification_method": v_method,
+    }
+    
+    logged = cl.private_request("accounts/two_factor_login/", data, login=True)
+    cl.authorization_data = cl.parse_authorization(
+        cl.last_response.headers.get("ig-set-authorization")
+    )
+    if logged:
+        cl.login_flow()
+        cl.last_login = time.time()
+        cl.relogin_attempt = 0
+        return True
+    return False
+
 def main():
     print("=" * 60)
-    print("       MÜFİT HOCA - INSTAGRAM 2FA OTURUM DOĞRULAYICI")
+    print("       MÜFİT HOCA - INSTAGRAM SMS/2FA DOĞRULAYICI")
     print("=" * 60)
-    print("Bu araç, 2FA kodunuzu Instagram'a güvenle ileterek oturumu")
-    print("otomatik olarak oluşturur ve GitHub'a yükler.\n")
 
     username = "mufithocailematematik"
     password = "844945gmab.2234"
@@ -39,7 +70,7 @@ def main():
         "version_code": "561657871"
     })
 
-    print(f"⏳ @{username} hesabına bağlanılıyor...")
+    print(f"\n⏳ @{username} hesabına bağlanılıyor ve SMS kodu isteniyor...")
     try:
         logged_in = cl.login(username, password)
         if logged_in:
@@ -47,26 +78,32 @@ def main():
             cl.dump_settings("data/ig_session.json")
             print("\n✅ Giriş başarılı! data/ig_session.json güncellendi.")
     except TwoFactorRequired:
+        info = cl.last_json.get("two_factor_info", {})
+        phone_mask = info.get("obfuscated_phone_number_2", info.get("obfuscated_phone_number", ""))
         print("\n" + "=" * 60)
-        print("🔔 İki Adımlı Doğrulama (2FA) Devrede!")
-        print("Telefonunuza az önce gelen 6 haneli kodu aşağıya yazın.")
+        print(f"📲 Instagram ({phone_mask}) numaralı telefonunuza SMS kodu gönderdi!")
         print("=" * 60)
-        code = input("\n📱 6 Haneli 2FA Onay Kodunu Girin: ").strip()
         
-        print("\n⏳ Kod Instagram'a iletiliyor...")
-        cl.login(username, password, verification_code=code)
-        os.makedirs("data", exist_ok=True)
-        cl.dump_settings("data/ig_session.json")
-        print("\n✅ 2FA doğrulaması başarılı! Oturum kaydedildi.")
+        code = input("\n📱 Telefonunuza gelen 6 Haneli SMS Kodunu Girin: ").strip()
+        
+        print("\n⏳ Kod Instagram SMS servisine iletiliyor...")
+        success = custom_two_factor_login(cl, code)
+        if success:
+            os.makedirs("data", exist_ok=True)
+            cl.dump_settings("data/ig_session.json")
+            print("\n✅ 2FA SMS doğrulaması başarıyla onaylandı! Oturum kaydedildi.")
+        else:
+            print("\n❌ Kod onaylanamadı.")
+            return
     except Exception as e:
-        print(f"\n❌ Giriş başarısız oldu: {e}")
+        print(f"\n❌ Giriş hatası: {e}")
         return
 
-    # Automatically commit and push session to GitHub
-    print("\n📤 Güncel oturum dosyası GitHub reponuza yükleniyor...")
+    # Push to GitHub
+    print("\n📤 Güncel 2FA oturumu GitHub'a yükleniyor...")
     try:
         subprocess.run(["git", "add", "data/ig_session.json"], check=True)
-        subprocess.run(["git", "commit", "-m", "chore: Update 2FA authentic Instagram session file"], check=True)
+        subprocess.run(["git", "commit", "-m", "chore: Add 2FA SMS verified session"], check=True)
         subprocess.run(["git", "push", "origin", "main"], check=True)
         print("\n" + "=" * 60)
         print("🎉 TEBRİKLER! 2FA onaylı oturumunuz GitHub'a yüklendi.")
