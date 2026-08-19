@@ -11,30 +11,17 @@ try:
 except Exception:
     pass
 
-def challenge_code_handler(username, choice):
-    code = input(f"\n📩 Instagram doğrulama kodu gönderdi ({choice}). Lütfen gelen kodu buraya yazın: ").strip()
-    return code
-
 def main():
     print("=" * 60)
-    print("      INSTAGRAM GÜNCEL OTURUM YENİLEYİCİ")
+    print("       MÜFİT HOCA - INSTAGRAM 2FA OTURUM DOĞRULAYICI")
     print("=" * 60)
-    print("Instagram hesabınızda e-posta/şifre değişikliği yapıldığında")
-    print("bu araç yeni oturum anahtarını (data/ig_session.json) üretir")
-    print("ve otomatik olarak GitHub'a yükler.\n")
+    print("Bu araç, 2FA kodunuzu Instagram'a güvenle ileterek oturumu")
+    print("otomatik olarak oluşturur ve GitHub'a yükler.\n")
 
-    username = input("Instagram Kullanıcı Adınız [Varsayılan: mufithocailematematik]: ").strip()
-    if not username:
-        username = "mufithocailematematik"
-
-    password = input("Instagram Güncel Şifreniz: ").strip()
-
-    if not password:
-        print("[HATA] Şifre boş bırakılamaz.")
-        return
+    username = "mufithocailematematik"
+    password = "844945gmab.2234"
 
     cl = Client()
-    cl.challenge_code_handler = challenge_code_handler
     cl.set_locale("tr_TR")
     cl.set_country(90)
     cl.set_timezone_offset(3 * 3600)
@@ -52,33 +39,38 @@ def main():
         "version_code": "561657871"
     })
 
-    print(f"\n⏳ @{username} hesabına giriş yapılıyor...")
+    print(f"⏳ @{username} hesabına bağlanılıyor...")
     try:
         logged_in = cl.login(username, password)
         if logged_in:
             os.makedirs("data", exist_ok=True)
             cl.dump_settings("data/ig_session.json")
-            print("✅ Giriş başarılı! data/ig_session.json güncellendi.")
+            print("\n✅ Giriş başarılı! data/ig_session.json güncellendi.")
     except TwoFactorRequired:
-        code = input("\n📱 İki Adımlı Doğrulama (2FA) Kodu: ").strip()
-        cl.login_by_2fa(code)
+        print("\n" + "=" * 60)
+        print("🔔 İki Adımlı Doğrulama (2FA) Devrede!")
+        print("Telefonunuza az önce gelen 6 haneli kodu aşağıya yazın.")
+        print("=" * 60)
+        code = input("\n📱 6 Haneli 2FA Onay Kodunu Girin: ").strip()
+        
+        print("\n⏳ Kod Instagram'a iletiliyor...")
+        cl.login(username, password, verification_code=code)
         os.makedirs("data", exist_ok=True)
         cl.dump_settings("data/ig_session.json")
-        print("✅ 2FA ile giriş başarılı! data/ig_session.json güncellendi.")
+        print("\n✅ 2FA doğrulaması başarılı! Oturum kaydedildi.")
     except Exception as e:
         print(f"\n❌ Giriş başarısız oldu: {e}")
-        print("\nİpucu: Instagram uygulamanızı telefonunuzdan açıp 'Giriş yapan bendim' onayını verin ve tekrar deneyin.")
         return
 
     # Automatically commit and push session to GitHub
     print("\n📤 Güncel oturum dosyası GitHub reponuza yükleniyor...")
     try:
         subprocess.run(["git", "add", "data/ig_session.json"], check=True)
-        subprocess.run(["git", "commit", "-m", "chore: Update authentic Instagram session file"], check=True)
+        subprocess.run(["git", "commit", "-m", "chore: Update 2FA authentic Instagram session file"], check=True)
         subprocess.run(["git", "push", "origin", "main"], check=True)
         print("\n" + "=" * 60)
-        print("🎉 TEBRİKLER! Yeni oturumunuz GitHub'a başarıyla yüklendi.")
-        print("Artık her sabahki otomatik paylaşımlar sorunsuz devam edecektir!")
+        print("🎉 TEBRİKLER! 2FA onaylı oturumunuz GitHub'a yüklendi.")
+        print("Artık paylaşımlarınız her sabah 09:00'da otomatik devam edecek!")
         print("=" * 60)
     except Exception as e:
         print(f"Git yükleme uyarısı: {e}")
