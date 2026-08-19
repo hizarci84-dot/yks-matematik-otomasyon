@@ -1,0 +1,51 @@
+{
+    "uuids": {
+        "phone_id": "0999939a-b4d2-4978-aec6-812b29ef4a98",
+        "uuid": "b052964d-34e0-418f-bb12-5695fb6fd0ae",
+        "client_session_id": "17690240-cba9-4be3-8489-43e99074dce3",
+        "advertising_id": "a3c63391-c9cf-4eff-bedc-c5a84bb16008",
+        "android_device_id": "android-0ac43f990a7b1221",
+        "request_id": "c326b67b-167f-4dfd-b591-1a1b7241d40a",
+        "tray_session_id": "2888b75b-3ad4-43ab-bed7-3848a34ad8f1"
+    },
+    "mid": "aoVZvQABAAGOGDxnHccmH1p7F_ae",
+    "ig_u_rur": null,
+    "ig_www_claim": null,
+    "authorization_data": {},
+    "cookies": {},
+    "last_login": null,
+    "device_settings": {
+        "android_version": 33,
+        "android_release": "13.0",
+        "dpi": "480dpi",
+        "resolution": "1080x2400",
+        "manufacturer": "Samsung",
+        "device": "SM-G998B",
+        "model": "galaxy-s21-ultra",
+        "cpu": "exynos2100",
+        "app_version": "315.0.0.38.109",
+        "version_code": "561657871"
+    },
+    "user_agent": "Instagram 315.0.0.38.109 Android (33/13.0; 480dpi; 1080x2400; Samsung; galaxy-s21-ultra; SM-G998B; exynos2100; tr_TR; 561657871)",
+    "country": "90",
+    "country_code": 1,
+    "locale": "tr_TR",
+    "timezone_offset": 10800,
+    "timezone_name": "GMT+03:00",
+    "push_disabled": true,
+    "request_timeout": 1,
+    "public_request_retries_count": 3,
+    "public_request_retries_timeout": 2,
+    "session_retry_total": 3,
+    "session_retry_backoff_factor": 2,
+    "session_retry_statuses": [
+        429,
+        500,
+        502,
+        503,
+        504
+    ],
+    "public_transport": "requests",
+    "public_transport_impersonate": "chrome136",
+    "tls_verify": true
+}
