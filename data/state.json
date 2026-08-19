@@ -1,7 +1,7 @@
 {
-  "current_day": 3,
+  "current_day": 4,
   "total_days": 97,
-  "last_published_date": "2026-08-18 06:34:25",
+  "last_published_date": "2026-08-19 10:18:53",
   "published_history": [
     {
       "day": 1,
@@ -27,6 +27,20 @@
           "3966257936833327114",
           "3966258135794413267",
           "3966258301024734777"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 3,
+      "title": "Büyük Kronoloji I: İlk Adımlar",
+      "published_at": "2026-08-19 10:18:53",
+      "result": {
+        "status": "success",
+        "story_ids": [
+          "3967005000685006265",
+          "3967005213621398886",
+          "3967005440054984503"
         ],
         "reels_id": null
       }
