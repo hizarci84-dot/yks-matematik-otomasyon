@@ -2,6 +2,7 @@ import os
 import sys
 import json
 import time
+import random
 import requests
 import traceback
 from datetime import datetime
@@ -25,13 +26,13 @@ class InstagramPublisher:
         self.state_file = state_file
         self.campaign_file = campaign_file
         
-        # Method 1: Session-based login
+        # Session file
         self.session_file = "data/ig_session.json"
         self.ig_sessionid = os.environ.get("IG_SESSIONID", "").strip()
         self.ig_username = os.environ.get("IG_USERNAME", "").strip()
         self.ig_password = os.environ.get("IG_PASSWORD", "").strip()
         
-        # Method 2: Meta Graph API (Fallback)
+        # Meta Graph API (Fallback)
         self.account_id = os.environ.get("INSTAGRAM_ACCOUNT_ID", "").strip()
         self.access_token = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "").strip()
         
@@ -61,7 +62,8 @@ class InstagramPublisher:
         from instagrapi import Client
         
         cl = Client()
-        cl.delay_range = [2, 4]
+        # Human-like randomized request delays
+        cl.delay_range = [4, 8]
         cl.set_locale("tr_TR")
         cl.set_country(90)
         cl.set_timezone_offset(3 * 3600)
@@ -128,7 +130,6 @@ class InstagramPublisher:
 
         clean_opts = [f"{lbl}) {opt[:25]}" for lbl, opt in zip(["A", "B", "C", "D"], options)]
         
-        # Position the sticker directly over the options area
         poll = StoryPoll(
             question=question,
             options=clean_opts,
@@ -142,7 +143,7 @@ class InstagramPublisher:
         return poll
 
     def publish_via_instagrapi(self, slide_paths, day_data=None, video_path=None, caption=""):
-        """Publish 3-slide story sequence with interactive Quiz sticker."""
+        """Publish 3-slide story sequence with human-like delays to prevent spam detection."""
         cl = self.setup_instagrapi_client()
         logged_in = False
         
@@ -177,7 +178,7 @@ class InstagramPublisher:
         if day_data and "quiz" in day_data:
             quiz_poll = self.build_quiz_poll_sticker(day_data["quiz"])
 
-        # Upload All 3 Slides in Sequence
+        # Upload All 3 Slides in Sequence with Safe Human Delays
         for i, slide_path in enumerate(slide_paths, start=1):
             print(f"Uploading Slide {i}/{len(slide_paths)}: {slide_path}...")
             slide_media = None
@@ -187,14 +188,21 @@ class InstagramPublisher:
 
             for attempt in range(1, max_retries + 1):
                 try:
-                    time.sleep(2)
+                    # Realistic human pause before uploading (8-14 seconds between slides)
+                    if i > 1:
+                        sleep_time = random.uniform(8.0, 14.0)
+                        print(f"Pacing upload like a human user... waiting {sleep_time:.1f}s")
+                        time.sleep(sleep_time)
+                    else:
+                        time.sleep(3)
+
                     slide_media = cl.photo_upload_to_story(slide_path, polls=polls_to_attach)
                     print(f"SUCCESS: Slide {i} published live! Media ID: {slide_media.pk}")
                     uploaded_story_ids.append(str(slide_media.pk))
                     break
                 except Exception as e:
-                    print(f"Slide {i} attempt {attempt}/{max_retries} failed ({e}). Retrying in 4s...")
-                    time.sleep(4)
+                    print(f"Slide {i} attempt {attempt}/{max_retries} failed ({e}). Retrying in 10s...")
+                    time.sleep(10)
                     if attempt == max_retries:
                         raise e
 
@@ -204,13 +212,13 @@ class InstagramPublisher:
             print(f"Uploading Reels Video to Profile ({video_path})...")
             for attempt in range(1, max_retries + 1):
                 try:
-                    time.sleep(3)
+                    time.sleep(random.uniform(10.0, 15.0))
                     reels_media = cl.clip_upload(video_path, caption=caption)
                     print(f"SUCCESS: Reels Video published live! Media ID: {reels_media.pk}")
                     break
                 except Exception as e:
                     print(f"Reels attempt {attempt} failed: {e}")
-                    time.sleep(5)
+                    time.sleep(12)
 
         return {
             "status": "success",
