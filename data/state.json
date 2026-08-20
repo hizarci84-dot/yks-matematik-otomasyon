@@ -1,7 +1,7 @@
 {
-  "current_day": 4,
+  "current_day": 5,
   "total_days": 97,
-  "last_published_date": "2026-08-19 10:18:53",
+  "last_published_date": "2026-08-20 12:06:24",
   "published_history": [
     {
       "day": 1,
@@ -41,6 +41,20 @@
           "3967005000685006265",
           "3967005213621398886",
           "3967005440054984503"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 4,
+      "title": "Büyük Kronoloji II: Bilinmeyenden Fonksiyona",
+      "published_at": "2026-08-20 12:06:24",
+      "result": {
+        "status": "success",
+        "story_ids": [
+          "3967783578733251927",
+          "3967783956665151532",
+          "3967784318499493164"
         ],
         "reels_id": null
       }
