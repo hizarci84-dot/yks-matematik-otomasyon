@@ -1,7 +1,7 @@
 {
-  "current_day": 5,
+  "current_day": 6,
   "total_days": 97,
-  "last_published_date": "2026-08-20 12:06:24",
+  "last_published_date": "2026-08-21 06:38:06",
   "published_history": [
     {
       "day": 1,
@@ -55,6 +55,20 @@
           "3967783578733251927",
           "3967783956665151532",
           "3967784318499493164"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 5,
+      "title": "Matematik Neden Doğdu? Sayma İhtiyacı",
+      "published_at": "2026-08-21 06:38:06",
+      "result": {
+        "status": "success",
+        "story_ids": [
+          "3968433838459459498",
+          "3968434124158812373",
+          "3968434446583392998"
         ],
         "reels_id": null
       }
