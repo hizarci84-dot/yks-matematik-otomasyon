@@ -1,7 +1,7 @@
 {
-  "current_day": 6,
+  "current_day": 7,
   "total_days": 97,
-  "last_published_date": "2026-08-21 06:38:06",
+  "last_published_date": "2026-08-22 06:31:42",
   "published_history": [
     {
       "day": 1,
@@ -69,6 +69,20 @@
           "3968433838459459498",
           "3968434124158812373",
           "3968434446583392998"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 6,
+      "title": "Doğal Sayılar: Saymak, Sıralamak, Karşılaştırmak",
+      "published_at": "2026-08-22 06:31:42",
+      "result": {
+        "status": "success",
+        "story_ids": [
+          "3969155300019592641",
+          "3969155664009517147",
+          "3969155992021081823"
         ],
         "reels_id": null
       }
