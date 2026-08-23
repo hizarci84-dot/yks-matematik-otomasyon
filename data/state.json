@@ -1,7 +1,7 @@
 {
-  "current_day": 7,
+  "current_day": 8,
   "total_days": 97,
-  "last_published_date": "2026-08-22 06:31:42",
+  "last_published_date": "2026-08-23 06:33:06",
   "published_history": [
     {
       "day": 1,
@@ -83,6 +83,20 @@
           "3969155300019592641",
           "3969155664009517147",
           "3969155992021081823"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 7,
+      "title": "İlk Sayı Sistemleri: Sembollerin Gücü",
+      "published_at": "2026-08-23 06:33:06",
+      "result": {
+        "status": "success",
+        "story_ids": [
+          "3969880884882439783",
+          "3969881214831316422",
+          "3969881472084804990"
         ],
         "reels_id": null
       }
