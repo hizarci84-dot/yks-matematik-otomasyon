@@ -1,7 +1,7 @@
 {
-  "current_day": 8,
+  "current_day": 9,
   "total_days": 97,
-  "last_published_date": "2026-08-23 06:33:06",
+  "last_published_date": "2026-08-24 06:46:22",
   "published_history": [
     {
       "day": 1,
@@ -97,6 +97,20 @@
           "3969880884882439783",
           "3969881214831316422",
           "3969881472084804990"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 8,
+      "title": "Basamak Değeri: Konumsal Sistemin Doğuşu",
+      "published_at": "2026-08-24 06:46:22",
+      "result": {
+        "status": "success",
+        "story_ids": [
+          "3970612350100453999",
+          "3970612655840241184",
+          "3970612944324488611"
         ],
         "reels_id": null
       }
