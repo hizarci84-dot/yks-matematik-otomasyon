@@ -1,7 +1,7 @@
 {
-  "current_day": 9,
+  "current_day": 10,
   "total_days": 97,
-  "last_published_date": "2026-08-24 06:46:22",
+  "last_published_date": "2026-08-25 06:38:17",
   "published_history": [
     {
       "day": 1,
@@ -111,6 +111,20 @@
           "3970612350100453999",
           "3970612655840241184",
           "3970612944324488611"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 9,
+      "title": "Babil Matematiği ve 60 Tabanlı Sistem",
+      "published_at": "2026-08-25 06:38:17",
+      "result": {
+        "status": "success",
+        "story_ids": [
+          "3971333047995097102",
+          "3971333356561698374",
+          "3971333623738878502"
         ],
         "reels_id": null
       }
