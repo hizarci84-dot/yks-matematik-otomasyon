@@ -1,7 +1,7 @@
 {
-  "current_day": 10,
+  "current_day": 11,
   "total_days": 97,
-  "last_published_date": "2026-08-25 06:38:17",
+  "last_published_date": "2026-08-26 06:40:20",
   "published_history": [
     {
       "day": 1,
@@ -125,6 +125,20 @@
           "3971333047995097102",
           "3971333356561698374",
           "3971333623738878502"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 10,
+      "title": "Saat, Dakika ve Açı: Babil Mirası",
+      "published_at": "2026-08-26 06:40:20",
+      "result": {
+        "status": "success",
+        "story_ids": [
+          "3972058806351259511",
+          "3972059099189024866",
+          "3972059437669327012"
         ],
         "reels_id": null
       }
