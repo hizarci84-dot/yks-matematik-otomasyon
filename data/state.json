@@ -1,7 +1,7 @@
 {
-  "current_day": 11,
+  "current_day": 12,
   "total_days": 97,
-  "last_published_date": "2026-08-26 06:40:20",
+  "last_published_date": "2026-08-27 17:15:24",
   "published_history": [
     {
       "day": 1,
@@ -139,6 +139,20 @@
           "3972058806351259511",
           "3972059099189024866",
           "3972059437669327012"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 11,
+      "title": "Mısır Matematiği ve Nil Taşkınları",
+      "published_at": "2026-08-27 17:15:24",
+      "result": {
+        "status": "success",
+        "story_ids": [
+          "3973103286378492000",
+          "3973103597889497148",
+          "3973103867843230784"
         ],
         "reels_id": null
       }
