@@ -32,15 +32,9 @@ class InstagramPublisher:
         self.state_file = state_file
         self.campaign_file = campaign_file
         
-        # Meta Graph API (Official - Primary)
+        # Meta Graph API (Official - Safe, permanent, 0% ban risk)
         self.account_id = os.environ.get("INSTAGRAM_ACCOUNT_ID", "").strip()
         self.access_token = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "").strip()
-        
-        # Session file (Unofficial fallback)
-        self.session_file = "data/ig_session.json"
-        self.ig_sessionid = os.environ.get("IG_SESSIONID", "").strip()
-        self.ig_username = os.environ.get("IG_USERNAME", "").strip()
-        self.ig_password = os.environ.get("IG_PASSWORD", "").strip()
         
         self.github_repo = os.environ.get("GITHUB_REPOSITORY", "hizarci84-dot/yks-matematik-otomasyon")
         self.github_ref = os.environ.get("GITHUB_REF_NAME", "main")
@@ -277,26 +271,17 @@ class InstagramPublisher:
         # 3. Build Rich Caption
         caption = self.build_reels_caption(day_data)
 
-        # 4. Publish to Instagram
-        publish_result = None
-        if self.account_id and self.access_token:
-            # Official Meta Graph API (Safe, permanent, zero password / ban risk)
-            publish_result = self.publish_via_meta_graph_api(
-                slide_paths, day_data=day_data, video_path=video_path, caption=caption
+        # 4. Publish to Instagram (Meta Official Graph API)
+        if not self.account_id or not self.access_token:
+            raise Exception(
+                "❌ HATA: INSTAGRAM_ACCOUNT_ID veya INSTAGRAM_ACCESS_TOKEN bulunamadı!\n"
+                "Lütfen GitHub Repo -> Settings -> Secrets and variables -> Actions menüsünden "
+                "INSTAGRAM_ACCOUNT_ID ve INSTAGRAM_ACCESS_TOKEN anahtarlarını ekleyin."
             )
-        elif os.path.exists(self.session_file) or self.ig_sessionid or self.ig_username:
-            print("Notice: Meta Graph API credentials not found. Using local session fallback...")
-            from instagrapi import Client
-            cl = Client()
-            cl.load_settings(self.session_file)
-            uploaded_ids = []
-            for sp in slide_paths:
-                m = cl.photo_upload_to_story(sp)
-                uploaded_ids.append(str(m.pk))
-            publish_result = {"status": "success", "method": "instagrapi", "story_ids": uploaded_ids}
-        else:
-            print("[MOCK / DRY-RUN]: No credentials found. Story images generated in dist/stories/.")
-            publish_result = {"status": "mock_success", "day": curr_day}
+
+        publish_result = self.publish_via_meta_graph_api(
+            slide_paths, day_data=day_data, video_path=video_path, caption=caption
+        )
 
         # 5. Update State
         now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
