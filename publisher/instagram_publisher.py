@@ -16,7 +16,8 @@ except Exception:
 
 try:
     from dotenv import load_dotenv
-    load_dotenv()
+    env_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".env"))
+    load_dotenv(dotenv_path=env_path)
 except Exception:
     pass
 
@@ -65,7 +66,7 @@ class InstagramPublisher:
 
     def upload_to_public_url(self, file_path):
         """Uploads a local media file to a direct public HTTPS URL for Meta Graph API."""
-        print(f"Uploading {os.path.basename(file_path)} to temporary public hosting...")
+        print(f"Uploading {os.path.basename(file_path)} to public hosting for Meta API...")
         
         # 1. Try Catbox direct uploader
         try:

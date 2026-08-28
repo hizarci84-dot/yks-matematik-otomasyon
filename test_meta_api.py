@@ -1,12 +1,18 @@
 ﻿import os
 import sys
-import json
 import requests
 
 # UTF-8 encoding for Windows
 try:
     sys.stdout.reconfigure(encoding='utf-8')
     sys.stderr.reconfigure(encoding='utf-8')
+except Exception:
+    pass
+
+try:
+    from dotenv import load_dotenv
+    env_path = os.path.abspath(os.path.join(os.path.dirname(__file__), ".env"))
+    load_dotenv(dotenv_path=env_path)
 except Exception:
     pass
 
