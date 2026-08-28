@@ -1,7 +1,7 @@
 {
-  "current_day": 12,
+  "current_day": 13,
   "total_days": 97,
-  "last_published_date": "2026-08-27 17:15:24",
+  "last_published_date": "2026-08-28 21:06:26",
   "published_history": [
     {
       "day": 1,
@@ -153,6 +153,21 @@
           "3973103286378492000",
           "3973103597889497148",
           "3973103867843230784"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 12,
+      "title": "Kesirler: Bütünü Eşit Parçalara Bölmek",
+      "published_at": "2026-08-28 21:06:26",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18086477213675712",
+          "18345004600270513",
+          "17997154644005698"
         ],
         "reels_id": null
       }
