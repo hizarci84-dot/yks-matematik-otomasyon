@@ -1,8 +1,14 @@
-# Python & Cache
+﻿# Python & Cache
 __pycache__/
 *.py[cod]
 *$py.class
 *.log
+.env
+.env.*
+
+# Instagram sessions and local secrets
+data/ig_session.json
+data/pending_2fa_session.json
 
 # Scratch and OCR intermediates
 scratch_pages/
