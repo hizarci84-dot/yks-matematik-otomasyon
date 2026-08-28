@@ -1,4 +1,4 @@
-name: Daily Instagram Story Automation
+﻿name: Daily Instagram Story Automation
 
 on:
   schedule:
@@ -41,9 +41,6 @@ jobs:
 
       - name: 🚀 Günlük Hikayeyi Üret ve Instagram'a Gönder
         env:
-          IG_SESSIONID: ${{ secrets.IG_SESSIONID }}
-          IG_USERNAME: ${{ secrets.IG_USERNAME }}
-          IG_PASSWORD: ${{ secrets.IG_PASSWORD }}
           INSTAGRAM_ACCOUNT_ID: ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}

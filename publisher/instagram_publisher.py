@@ -1,4 +1,4 @@
-import os
+﻿import os
 import sys
 import json
 import time
@@ -19,24 +19,23 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 
 from engine.multi_slide_generator import MultiSlideStoryGenerator
 from engine.video_generator import ReelsVideoGenerator
-from instagrapi.types import StoryPoll
 
 class InstagramPublisher:
     def __init__(self, state_file="data/state.json", campaign_file="data/campaign_97_days.json"):
         self.state_file = state_file
         self.campaign_file = campaign_file
         
-        # Session file
+        # Meta Graph API (Official - Primary)
+        self.account_id = os.environ.get("INSTAGRAM_ACCOUNT_ID", "").strip()
+        self.access_token = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "").strip()
+        
+        # Session file (Unofficial fallback)
         self.session_file = "data/ig_session.json"
         self.ig_sessionid = os.environ.get("IG_SESSIONID", "").strip()
         self.ig_username = os.environ.get("IG_USERNAME", "").strip()
         self.ig_password = os.environ.get("IG_PASSWORD", "").strip()
         
-        # Meta Graph API (Fallback)
-        self.account_id = os.environ.get("INSTAGRAM_ACCOUNT_ID", "").strip()
-        self.access_token = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "").strip()
-        
-        self.github_repo = os.environ.get("GITHUB_REPOSITORY", "user/repo")
+        self.github_repo = os.environ.get("GITHUB_REPOSITORY", "hizarci84-dot/yks-matematik-otomasyon")
         self.github_ref = os.environ.get("GITHUB_REF_NAME", "main")
         
         self.multi_slide_gen = MultiSlideStoryGenerator()
@@ -58,33 +57,159 @@ class InstagramPublisher:
         day_data = next((d for d in days if d["day"] == day_num), None)
         return day_data
 
-    def setup_instagrapi_client(self):
-        from instagrapi import Client
+    def upload_to_public_url(self, file_path):
+        """Uploads a local media file to a direct public HTTPS URL for Meta Graph API."""
+        print(f"Uploading {os.path.basename(file_path)} to temporary public hosting...")
         
-        cl = Client()
-        # Human-like randomized request delays
-        cl.delay_range = [4, 8]
-        cl.set_locale("tr_TR")
-        cl.set_country(90)
-        cl.set_timezone_offset(3 * 3600)
-        
-        # Mobile Android profile
-        cl.set_device({
-            "app_version": "315.0.0.38.109",
-            "android_version": 33,
-            "android_release": "13.0",
-            "dpi": "480dpi",
-            "resolution": "1080x2400",
-            "manufacturer": "Samsung",
-            "device": "SM-G998B",
-            "model": "galaxy-s21-ultra",
-            "cpu": "exynos2100",
-            "version_code": "561657871"
-        })
-        cl.set_user_agent(
-            "Instagram 315.0.0.38.109 Android (33/13.0; 480dpi; 1080x2400; Samsung; SM-G998B; galaxy-s21-ultra; exynos2100; tr_TR; 561657871)"
-        )
-        return cl
+        # 1. Try Catbox direct uploader
+        try:
+            with open(file_path, "rb") as f:
+                res = requests.post(
+                    "https://catbox.moe/user/api.php",
+                    data={"reqtype": "fileupload"},
+                    files={"fileToUpload": f},
+                    timeout=30
+                )
+                if res.status_code == 200 and res.text.startswith("https://"):
+                    url = res.text.strip()
+                    print(f"  -> Public Direct URL: {url}")
+                    return url
+        except Exception as e:
+            print(f"  -> Catbox upload warning: {e}")
+
+        # 2. Try file.io uploader
+        try:
+            with open(file_path, "rb") as f:
+                res = requests.post(
+                    "https://file.io",
+                    files={"file": f},
+                    params={"expires": "1d"},
+                    timeout=30
+                )
+                data = res.json()
+                if data.get("success") and data.get("link"):
+                    url = data["link"]
+                    print(f"  -> file.io URL: {url}")
+                    return url
+        except Exception as e:
+            print(f"  -> file.io upload warning: {e}")
+
+        # 3. Fallback to GitHub raw URL
+        rel_path = os.path.relpath(file_path, start=os.getcwd()).replace("\\", "/")
+        github_raw = f"https://raw.githubusercontent.com/{self.github_repo}/{self.github_ref}/{rel_path}"
+        print(f"  -> Fallback GitHub Raw URL: {github_raw}")
+        return github_raw
+
+    def publish_via_meta_graph_api(self, slide_paths, day_data=None, video_path=None, caption=""):
+        """Official 100% safe Meta Graph API publishing for Stories and Reels."""
+        print("\n==================================================")
+        print("🚀 PUBLISHING VIA OFFICIAL META INSTAGRAM GRAPH API")
+        print(f"Target Account ID: {self.account_id}")
+        print("==================================================")
+
+        published_story_ids = []
+
+        # 1. Publish Story Slides in Sequence
+        for i, slide_path in enumerate(slide_paths, start=1):
+            print(f"\n[Story Slide {i}/{len(slide_paths)}] Processing {slide_path}...")
+            image_url = self.upload_to_public_url(slide_path)
+            
+            # Create Story Container
+            create_url = f"https://graph.facebook.com/v20.0/{self.account_id}/media"
+            create_payload = {
+                "image_url": image_url,
+                "media_type": "STORIES",
+                "access_token": self.access_token
+            }
+            
+            res = requests.post(create_url, data=create_payload, timeout=20)
+            res_data = res.json()
+            
+            if "error" in res_data:
+                raise Exception(f"Meta Graph API Create Container Error: {res_data['error']}")
+            
+            creation_id = res_data["id"]
+            print(f"  -> Story container created: {creation_id}")
+            
+            time.sleep(3) # Short buffer before publishing container
+            
+            # Publish Story Container
+            pub_url = f"https://graph.facebook.com/v20.0/{self.account_id}/media_publish"
+            pub_payload = {
+                "creation_id": creation_id,
+                "access_token": self.access_token
+            }
+            
+            pub_res = requests.post(pub_url, data=pub_payload, timeout=20)
+            pub_data = pub_res.json()
+            
+            if "error" in pub_data:
+                raise Exception(f"Meta Graph API Publish Error: {pub_data['error']}")
+                
+            story_media_id = pub_data["id"]
+            print(f"  ✅ SUCCESS: Slide {i} is live on Instagram Stories! (Media ID: {story_media_id})")
+            published_story_ids.append(story_media_id)
+            
+            if i < len(slide_paths):
+                time.sleep(4)
+
+        # 2. Publish Reels Video (if requested)
+        reels_media_id = None
+        if video_path and os.path.exists(video_path):
+            print(f"\n[Reels Video] Processing {video_path}...")
+            video_url = self.upload_to_public_url(video_path)
+            
+            create_url = f"https://graph.facebook.com/v20.0/{self.account_id}/media"
+            create_payload = {
+                "video_url": video_url,
+                "media_type": "REELS",
+                "caption": caption,
+                "share_to_feed": True,
+                "access_token": self.access_token
+            }
+            
+            res = requests.post(create_url, data=create_payload, timeout=30)
+            res_data = res.json()
+            if "error" in res_data:
+                print(f"❌ Reels container creation error: {res_data['error']}")
+            else:
+                creation_id = res_data["id"]
+                print(f"  -> Reels container created: {creation_id}. Waiting for processing...")
+                
+                # Poll for processing completion
+                max_polls = 15
+                ready = False
+                for p in range(max_polls):
+                    time.sleep(6)
+                    status_url = f"https://graph.facebook.com/v20.0/{creation_id}"
+                    status_res = requests.get(status_url, params={"fields": "status_code", "access_token": self.access_token})
+                    status_data = status_res.json()
+                    status_code = status_data.get("status_code", "")
+                    print(f"     Status check {p+1}/{max_polls}: {status_code}")
+                    
+                    if status_code == "FINISHED":
+                        ready = True
+                        break
+                    elif status_code == "ERROR":
+                        print("     Reels video encoding error on Meta servers.")
+                        break
+
+                if ready:
+                    pub_url = f"https://graph.facebook.com/v20.0/{self.account_id}/media_publish"
+                    pub_res = requests.post(pub_url, data={"creation_id": creation_id, "access_token": self.access_token})
+                    pub_data = pub_res.json()
+                    if "error" not in pub_data:
+                        reels_media_id = pub_data["id"]
+                        print(f"  ✅ SUCCESS: Reels Video is live! (Media ID: {reels_media_id})")
+                    else:
+                        print(f"❌ Reels publish error: {pub_data['error']}")
+
+        return {
+            "status": "success",
+            "method": "official_meta_graph_api",
+            "story_ids": published_story_ids,
+            "reels_id": reels_media_id
+        }
 
     def build_reels_caption(self, day_data):
         day_num = day_data["day"]
@@ -114,117 +239,6 @@ class InstagramPublisher:
             f"#zihinharitası #ykskampı #mufithocailematematik #riyazihane"
         )
         return caption
-
-    def build_quiz_poll_sticker(self, quiz_data):
-        """Construct an interactive poll/quiz sticker for Slide 3."""
-        if not quiz_data:
-            return None
-            
-        question = quiz_data.get("question", "Günün Sorusu")
-        if len(question) > 60:
-            question = "Günün YKS Sorusu:"
-            
-        options = quiz_data.get("options", [])
-        if not options:
-            return None
-
-        clean_opts = [f"{lbl}) {opt[:25]}" for lbl, opt in zip(["A", "B", "C", "D"], options)]
-        
-        poll = StoryPoll(
-            question=question,
-            options=clean_opts,
-            x=0.5,
-            y=0.58,
-            width=0.86,
-            height=0.36,
-            is_multi_option=True,
-            viewer_can_vote=True
-        )
-        return poll
-
-    def publish_via_instagrapi(self, slide_paths, day_data=None, video_path=None, caption=""):
-        """Publish 3-slide story sequence with human-like delays to prevent spam detection."""
-        cl = self.setup_instagrapi_client()
-        logged_in = False
-        
-        # 1. Load session file
-        if os.path.exists(self.session_file):
-            try:
-                print("Loading session from data/ig_session.json...")
-                cl.load_settings(self.session_file)
-                logged_in = True
-                print("Successfully authenticated via cached session settings!")
-            except Exception as e:
-                print(f"Session file loading error: {e}")
-
-        # 2. Session ID cookie fallback
-        if not logged_in and self.ig_sessionid:
-            try:
-                print("Logging in using IG_SESSIONID cookie...")
-                cl.login_by_sessionid(self.ig_sessionid)
-                logged_in = True
-                print("Session ID login successful!")
-            except Exception as e:
-                print(f"Session ID login failed: {e}")
-
-        if not logged_in:
-            raise Exception("Instagram authentication failed. Please check data/ig_session.json.")
-
-        uploaded_story_ids = []
-        max_retries = 3
-
-        # Prepare Quiz Poll Sticker for Slide 3
-        quiz_poll = None
-        if day_data and "quiz" in day_data:
-            quiz_poll = self.build_quiz_poll_sticker(day_data["quiz"])
-
-        # Upload All 3 Slides in Sequence with Safe Human Delays
-        for i, slide_path in enumerate(slide_paths, start=1):
-            print(f"Uploading Slide {i}/{len(slide_paths)}: {slide_path}...")
-            slide_media = None
-            
-            # Slide 3 gets the interactive quiz poll sticker
-            polls_to_attach = [quiz_poll] if (i == 3 and quiz_poll) else []
-
-            for attempt in range(1, max_retries + 1):
-                try:
-                    # Realistic human pause before uploading (8-14 seconds between slides)
-                    if i > 1:
-                        sleep_time = random.uniform(8.0, 14.0)
-                        print(f"Pacing upload like a human user... waiting {sleep_time:.1f}s")
-                        time.sleep(sleep_time)
-                    else:
-                        time.sleep(3)
-
-                    slide_media = cl.photo_upload_to_story(slide_path, polls=polls_to_attach)
-                    print(f"SUCCESS: Slide {i} published live! Media ID: {slide_media.pk}")
-                    uploaded_story_ids.append(str(slide_media.pk))
-                    break
-                except Exception as e:
-                    print(f"Slide {i} attempt {attempt}/{max_retries} failed ({e}). Retrying in 10s...")
-                    time.sleep(10)
-                    if attempt == max_retries:
-                        raise e
-
-        # Upload Reels Video (if generated)
-        reels_media = None
-        if video_path and os.path.exists(video_path):
-            print(f"Uploading Reels Video to Profile ({video_path})...")
-            for attempt in range(1, max_retries + 1):
-                try:
-                    time.sleep(random.uniform(10.0, 15.0))
-                    reels_media = cl.clip_upload(video_path, caption=caption)
-                    print(f"SUCCESS: Reels Video published live! Media ID: {reels_media.pk}")
-                    break
-                except Exception as e:
-                    print(f"Reels attempt {attempt} failed: {e}")
-                    time.sleep(12)
-
-        return {
-            "status": "success",
-            "story_ids": uploaded_story_ids,
-            "reels_id": str(reels_media.pk) if reels_media else None
-        }
 
     def run_daily_publish(self, publish_video=False):
         state = self.load_state()
@@ -258,10 +272,23 @@ class InstagramPublisher:
 
         # 4. Publish to Instagram
         publish_result = None
-        if os.path.exists(self.session_file) or self.ig_sessionid or self.ig_username:
-            publish_result = self.publish_via_instagrapi(slide_paths, day_data=day_data, video_path=video_path, caption=caption)
+        if self.account_id and self.access_token:
+            # Official Meta Graph API (Safe, permanent, zero password / ban risk)
+            publish_result = self.publish_via_meta_graph_api(
+                slide_paths, day_data=day_data, video_path=video_path, caption=caption
+            )
+        elif os.path.exists(self.session_file) or self.ig_sessionid or self.ig_username:
+            print("Notice: Meta Graph API credentials not found. Using local session fallback...")
+            from instagrapi import Client
+            cl = Client()
+            cl.load_settings(self.session_file)
+            uploaded_ids = []
+            for sp in slide_paths:
+                m = cl.photo_upload_to_story(sp)
+                uploaded_ids.append(str(m.pk))
+            publish_result = {"status": "success", "method": "instagrapi", "story_ids": uploaded_ids}
         else:
-            print("[MOCK / DRY-RUN]: No credentials found.")
+            print("[MOCK / DRY-RUN]: No credentials found. Story images generated in dist/stories/.")
             publish_result = {"status": "mock_success", "day": curr_day}
 
         # 5. Update State
@@ -278,7 +305,7 @@ class InstagramPublisher:
         state["current_day"] = curr_day + 1
         self.save_state(state)
 
-        print(f"SUCCESS: Day {curr_day} finished. Next run will be Day {curr_day + 1}.")
+        print(f"\n✨ SUCCESS: Day {curr_day} finished cleanly. Next run will be Day {curr_day + 1}.")
 
 if __name__ == "__main__":
     import argparse
