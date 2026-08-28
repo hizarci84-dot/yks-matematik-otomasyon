@@ -4,6 +4,7 @@ import json
 import time
 import random
 import requests
+import subprocess
 import traceback
 from datetime import datetime
 
@@ -58,11 +59,35 @@ class InstagramPublisher:
         day_data = next((d for d in days if d["day"] == day_num), None)
         return day_data
 
+    def push_assets_to_github(self):
+        """Pushes rendered slides to GitHub repository so they are instantly accessible via raw.githubusercontent.com."""
+        try:
+            print("🚀 Committing and pushing rendered slides to GitHub CDN...")
+            subprocess.run(["git", "config", "--global", "user.name", "Müfit Hoca Bot"], check=False)
+            subprocess.run(["git", "config", "--global", "user.email", "bot@mufithocailematematik.com"], check=False)
+            subprocess.run(["git", "add", "dist/"], check=False)
+            subprocess.run(["git", "commit", "-m", "chore: upload rendered story assets [skip ci]"], check=False)
+            res = subprocess.run(["git", "push", "origin", self.github_ref], check=False, capture_output=True, text=True)
+            print(f"Git push result: {res.stdout.strip()} {res.stderr.strip()}")
+            time.sleep(3) # Wait for GitHub CDN propagation
+        except Exception as e:
+            print(f"Git push note: {e}")
+
     def upload_to_public_url(self, file_path):
-        """Uploads a local media file to a direct public HTTPS URL for Meta Graph API."""
-        print(f"Uploading {os.path.basename(file_path)} to public hosting for Meta API...")
+        """Returns direct GitHub Raw URL or fallback uploader."""
+        rel_path = os.path.relpath(file_path, start=os.getcwd()).replace("\\", "/")
+        github_raw = f"https://raw.githubusercontent.com/{self.github_repo}/{self.github_ref}/{rel_path}"
         
-        # 1. Try Catbox direct uploader
+        # Verify if GitHub Raw is accessible
+        try:
+            r = requests.get(github_raw, timeout=10)
+            if r.status_code == 200:
+                print(f"  -> GitHub CDN Raw URL verified: {github_raw}")
+                return github_raw
+        except Exception:
+            pass
+
+        # Fallback to Catbox
         try:
             with open(file_path, "rb") as f:
                 res = requests.post(
@@ -73,32 +98,11 @@ class InstagramPublisher:
                 )
                 if res.status_code == 200 and res.text.startswith("https://"):
                     url = res.text.strip()
-                    print(f"  -> Public Direct URL: {url}")
+                    print(f"  -> Fallback Catbox URL: {url}")
                     return url
         except Exception as e:
-            print(f"  -> Catbox upload warning: {e}")
+            print(f"  -> Catbox fallback note: {e}")
 
-        # 2. Try file.io uploader
-        try:
-            with open(file_path, "rb") as f:
-                res = requests.post(
-                    "https://file.io",
-                    files={"file": f},
-                    params={"expires": "1d"},
-                    timeout=30
-                )
-                data = res.json()
-                if data.get("success") and data.get("link"):
-                    url = data["link"]
-                    print(f"  -> file.io URL: {url}")
-                    return url
-        except Exception as e:
-            print(f"  -> file.io upload warning: {e}")
-
-        # 3. Fallback to GitHub raw URL
-        rel_path = os.path.relpath(file_path, start=os.getcwd()).replace("\\", "/")
-        github_raw = f"https://raw.githubusercontent.com/{self.github_repo}/{self.github_ref}/{rel_path}"
-        print(f"  -> Fallback GitHub Raw URL: {github_raw}")
         return github_raw
 
     def publish_via_meta_graph_api(self, slide_paths, day_data=None, video_path=None, caption=""):
@@ -107,6 +111,9 @@ class InstagramPublisher:
         print("🚀 PUBLISHING VIA OFFICIAL META INSTAGRAM GRAPH API")
         print(f"Target Account ID: {self.account_id}")
         print("==================================================")
+
+        # Ensure assets are on GitHub CDN first
+        self.push_assets_to_github()
 
         published_story_ids = []
 
