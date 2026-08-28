@@ -39,6 +39,22 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: 🔍 Gizli Anahtar Kontrolü (Debug Secrets)
+        env:
+          HAS_ACCOUNT_ID: ${{ secrets.INSTAGRAM_ACCOUNT_ID != '' }}
+          HAS_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN != '' }}
+        run: |
+          echo "=================================================="
+          echo "INSTAGRAM_ACCOUNT_ID mevcut mu? : $HAS_ACCOUNT_ID"
+          echo "INSTAGRAM_ACCESS_TOKEN mevcut mu?: $HAS_ACCESS_TOKEN"
+          echo "=================================================="
+          if [ "$HAS_ACCOUNT_ID" != "true" ] || [ "$HAS_ACCESS_TOKEN" != "true" ]; then
+            echo "❌ HATA: GitHub Secrets eksik!"
+            echo "Lütfen GitHub Repository -> Settings -> Secrets and variables -> Actions sayfasında"
+            echo "INSTAGRAM_ACCOUNT_ID ve INSTAGRAM_ACCESS_TOKEN tanımlı olduğundan emin olun."
+            exit 1
+          fi
+
       - name: 🚀 Günlük Hikayeyi Üret ve Instagram'a Gönder
         env:
           INSTAGRAM_ACCOUNT_ID: ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
