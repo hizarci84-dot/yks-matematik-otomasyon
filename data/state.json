@@ -1,7 +1,7 @@
 {
-  "current_day": 13,
+  "current_day": 14,
   "total_days": 97,
-  "last_published_date": "2026-08-28 21:06:26",
+  "last_published_date": "2026-08-29 12:09:21",
   "published_history": [
     {
       "day": 1,
@@ -168,6 +168,21 @@
           "18086477213675712",
           "18345004600270513",
           "17997154644005698"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 13,
+      "title": "Dört İşlem: Sistemleşen Aritmetik",
+      "published_at": "2026-08-29 12:09:21",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18140635003543351",
+          "18190479991399146",
+          "18036205595652812"
         ],
         "reels_id": null
       }
