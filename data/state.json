@@ -1,7 +1,7 @@
 {
-  "current_day": 14,
+  "current_day": 15,
   "total_days": 97,
-  "last_published_date": "2026-08-29 12:09:21",
+  "last_published_date": "2026-08-30 11:05:11",
   "published_history": [
     {
       "day": 1,
@@ -183,6 +183,21 @@
           "18140635003543351",
           "18190479991399146",
           "18036205595652812"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 14,
+      "title": "Bölme İşlemi: Eş Paylaştırma ve Kalan",
+      "published_at": "2026-08-30 11:05:11",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18162398452488748",
+          "17963965422178925",
+          "18016812170867871"
         ],
         "reels_id": null
       }
