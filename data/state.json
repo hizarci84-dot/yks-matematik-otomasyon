@@ -1,7 +1,7 @@
 {
-  "current_day": 15,
+  "current_day": 16,
   "total_days": 97,
-  "last_published_date": "2026-08-30 11:05:11",
+  "last_published_date": "2026-08-31 12:28:01",
   "published_history": [
     {
       "day": 1,
@@ -198,6 +198,21 @@
           "18162398452488748",
           "17963965422178925",
           "18016812170867871"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 15,
+      "title": "Oran ve Orantı: Karşılaştırmanın Dili",
+      "published_at": "2026-08-31 12:28:01",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18170984845451873",
+          "18422484505197547",
+          "18217416712346312"
         ],
         "reels_id": null
       }
