@@ -1,7 +1,7 @@
 {
-  "current_day": 16,
+  "current_day": 17,
   "total_days": 97,
-  "last_published_date": "2026-08-31 12:28:01",
+  "last_published_date": "2026-09-01 10:58:48",
   "published_history": [
     {
       "day": 1,
@@ -213,6 +213,21 @@
           "18170984845451873",
           "18422484505197547",
           "18217416712346312"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 16,
+      "title": "Geometrinin Doğuşu: Yerin Ölçümü",
+      "published_at": "2026-09-01 10:58:48",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "17871574014586181",
+          "18023376548699282",
+          "17881498029502361"
         ],
         "reels_id": null
       }
