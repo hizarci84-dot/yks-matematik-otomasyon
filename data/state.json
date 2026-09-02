@@ -1,7 +1,7 @@
 {
-  "current_day": 17,
+  "current_day": 18,
   "total_days": 97,
-  "last_published_date": "2026-09-01 10:58:48",
+  "last_published_date": "2026-09-02 10:26:44",
   "published_history": [
     {
       "day": 1,
@@ -228,6 +228,21 @@
           "17871574014586181",
           "18023376548699282",
           "17881498029502361"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 17,
+      "title": "Üçgenler: En Temel Rijit Şekil",
+      "published_at": "2026-09-02 10:26:44",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "17946328929293561",
+          "18027504953914330",
+          "17991165057033083"
         ],
         "reels_id": null
       }
