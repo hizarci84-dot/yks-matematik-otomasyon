@@ -1,7 +1,7 @@
 {
-  "current_day": 18,
+  "current_day": 19,
   "total_days": 97,
-  "last_published_date": "2026-09-02 10:26:44",
+  "last_published_date": "2026-09-03 10:34:16",
   "published_history": [
     {
       "day": 1,
@@ -243,6 +243,21 @@
           "17946328929293561",
           "18027504953914330",
           "17991165057033083"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 18,
+      "title": "Pisagor Bağıntısı ve İrrasyonel Kriz",
+      "published_at": "2026-09-03 10:34:16",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18113148083004354",
+          "18136327216714467",
+          "18080675612507196"
         ],
         "reels_id": null
       }
