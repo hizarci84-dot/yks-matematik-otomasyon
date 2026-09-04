@@ -1,7 +1,7 @@
 {
-  "current_day": 19,
+  "current_day": 20,
   "total_days": 97,
-  "last_published_date": "2026-09-03 10:34:16",
+  "last_published_date": "2026-09-04 10:24:04",
   "published_history": [
     {
       "day": 1,
@@ -258,6 +258,21 @@
           "18113148083004354",
           "18136327216714467",
           "18080675612507196"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 19,
+      "title": "Öklid ve İspatlı Geometri",
+      "published_at": "2026-09-04 10:24:04",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "17954796339229172",
+          "18107719472164603",
+          "18459976213142494"
         ],
         "reels_id": null
       }
