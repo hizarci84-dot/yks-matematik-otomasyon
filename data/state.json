@@ -1,7 +1,7 @@
 {
-  "current_day": 20,
+  "current_day": 21,
   "total_days": 97,
-  "last_published_date": "2026-09-04 10:24:04",
+  "last_published_date": "2026-09-05 09:51:11",
   "published_history": [
     {
       "day": 1,
@@ -273,6 +273,21 @@
           "17954796339229172",
           "18107719472164603",
           "18459976213142494"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 20,
+      "title": "Cebirin Doğuşu: Bilinmeyenin Peşinde",
+      "published_at": "2026-09-05 09:51:11",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "17936079750364745",
+          "18093808739119231",
+          "18114078337965311"
         ],
         "reels_id": null
       }
