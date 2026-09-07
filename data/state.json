@@ -1,7 +1,7 @@
 {
-  "current_day": 22,
+  "current_day": 23,
   "total_days": 97,
-  "last_published_date": "2026-09-06 10:07:54",
+  "last_published_date": "2026-09-07 11:22:31",
   "published_history": [
     {
       "day": 1,
@@ -303,6 +303,21 @@
           "18442072324192342",
           "18120077986715487",
           "17952982161239745"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 22,
+      "title": "Birinci Dereceden Denklemler: x'i Yalnız Bırakmak",
+      "published_at": "2026-09-07 11:22:31",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18112172945320073",
+          "17925291777411087",
+          "17944667529326259"
         ],
         "reels_id": null
       }
