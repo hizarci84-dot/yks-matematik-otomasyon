@@ -1,7 +1,7 @@
 {
-  "current_day": 23,
+  "current_day": 24,
   "total_days": 97,
-  "last_published_date": "2026-09-07 11:22:31",
+  "last_published_date": "2026-09-08 10:27:53",
   "published_history": [
     {
       "day": 1,
@@ -318,6 +318,21 @@
           "18112172945320073",
           "17925291777411087",
           "17944667529326259"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 23,
+      "title": "İkinci Dereceden Denklemler: Alan ve Kare",
+      "published_at": "2026-09-08 10:27:53",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18203721139325040",
+          "18161273848495589",
+          "18122798998827458"
         ],
         "reels_id": null
       }
