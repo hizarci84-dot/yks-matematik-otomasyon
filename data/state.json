@@ -1,7 +1,7 @@
 {
-  "current_day": 25,
+  "current_day": 26,
   "total_days": 97,
-  "last_published_date": "2026-09-09 10:38:24",
+  "last_published_date": "2026-09-10 10:25:49",
   "published_history": [
     {
       "day": 1,
@@ -348,6 +348,21 @@
           "18103846766339955",
           "18157921720498904",
           "18065909564746833"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 25,
+      "title": "Denklem, Geometri ve Konikler",
+      "published_at": "2026-09-10 10:25:49",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18141268819580985",
+          "18110694143012833",
+          "18119120335933314"
         ],
         "reels_id": null
       }
