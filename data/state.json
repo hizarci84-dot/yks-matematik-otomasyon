@@ -1,7 +1,7 @@
 {
-  "current_day": 26,
+  "current_day": 27,
   "total_days": 97,
-  "last_published_date": "2026-09-10 10:25:49",
+  "last_published_date": "2026-09-11 10:28:23",
   "published_history": [
     {
       "day": 1,
@@ -363,6 +363,21 @@
           "18141268819580985",
           "18110694143012833",
           "18119120335933314"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 26,
+      "title": "Trigonometrinin Doğuşu: Gökyüzünü Ölçmek",
+      "published_at": "2026-09-11 10:28:23",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18126217417815808",
+          "18149026897491267",
+          "18110148038111658"
         ],
         "reels_id": null
       }
