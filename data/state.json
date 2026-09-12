@@ -1,7 +1,7 @@
 {
-  "current_day": 27,
+  "current_day": 28,
   "total_days": 97,
-  "last_published_date": "2026-09-11 10:28:23",
+  "last_published_date": "2026-09-12 09:57:35",
   "published_history": [
     {
       "day": 1,
@@ -378,6 +378,21 @@
           "18126217417815808",
           "18149026897491267",
           "18110148038111658"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 27,
+      "title": "Trigonometrinin İlk Adımları: Kirişten Orana",
+      "published_at": "2026-09-12 09:57:35",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18086948120244948",
+          "18565553911079099",
+          "18123048377484847"
         ],
         "reels_id": null
       }
