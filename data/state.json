@@ -1,7 +1,7 @@
 {
-  "current_day": 28,
+  "current_day": 29,
   "total_days": 97,
-  "last_published_date": "2026-09-12 09:57:35",
+  "last_published_date": "2026-09-13 10:57:59",
   "published_history": [
     {
       "day": 1,
@@ -393,6 +393,21 @@
           "18086948120244948",
           "18565553911079099",
           "18123048377484847"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 28,
+      "title": "Sinüs, Kosinüs ve Tanjant",
+      "published_at": "2026-09-13 10:57:59",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18196853995337608",
+          "17987228178110484",
+          "18135997786622437"
         ],
         "reels_id": null
       }
