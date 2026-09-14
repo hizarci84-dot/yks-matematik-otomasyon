@@ -1,7 +1,7 @@
 {
-  "current_day": 29,
+  "current_day": 30,
   "total_days": 97,
-  "last_published_date": "2026-09-13 10:57:59",
+  "last_published_date": "2026-09-14 11:32:35",
   "published_history": [
     {
       "day": 1,
@@ -408,6 +408,21 @@
           "18196853995337608",
           "17987228178110484",
           "18135997786622437"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 29,
+      "title": "El-Battânî: Trigonometriyi Bağımsızlaştıran Bilgin",
+      "published_at": "2026-09-14 11:32:35",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18195852901390187",
+          "17911689999462699",
+          "17906758728472858"
         ],
         "reels_id": null
       }
