@@ -1,7 +1,7 @@
 {
-  "current_day": 32,
+  "current_day": 33,
   "total_days": 97,
-  "last_published_date": "2026-09-16 10:42:38",
+  "last_published_date": "2026-09-17 10:50:39",
   "published_history": [
     {
       "day": 1,
@@ -453,6 +453,21 @@
           "18164213920479651",
           "18079134020341915",
           "17888784801455923"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 32,
+      "title": "Köklü Sayılar: Kökü Bulmak",
+      "published_at": "2026-09-17 10:50:39",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18115932742950506",
+          "18449259148127714",
+          "18629744173011387"
         ],
         "reels_id": null
       }
