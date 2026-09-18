@@ -1,7 +1,7 @@
 {
-  "current_day": 33,
+  "current_day": 34,
   "total_days": 97,
-  "last_published_date": "2026-09-17 10:50:39",
+  "last_published_date": "2026-09-18 10:25:52",
   "published_history": [
     {
       "day": 1,
@@ -468,6 +468,21 @@
           "18115932742950506",
           "18449259148127714",
           "18629744173011387"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 33,
+      "title": "Üslü ve Köklü Sayıların Bağı",
+      "published_at": "2026-09-18 10:25:52",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18171134194455869",
+          "18434930233178595",
+          "18013339943949610"
         ],
         "reels_id": null
       }
