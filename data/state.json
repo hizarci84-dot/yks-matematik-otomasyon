@@ -1,7 +1,7 @@
 {
-  "current_day": 34,
+  "current_day": 35,
   "total_days": 97,
-  "last_published_date": "2026-09-18 10:25:52",
+  "last_published_date": "2026-09-19 10:10:05",
   "published_history": [
     {
       "day": 1,
@@ -483,6 +483,21 @@
           "18171134194455869",
           "18434930233178595",
           "18013339943949610"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 34,
+      "title": "Kesirli Üsler: Genişleyen Kuvvet",
+      "published_at": "2026-09-19 10:10:05",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18075737129406546",
+          "17933596767386055",
+          "18460232833140687"
         ],
         "reels_id": null
       }
