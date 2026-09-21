@@ -1,7 +1,7 @@
 {
-  "current_day": 36,
+  "current_day": 37,
   "total_days": 97,
-  "last_published_date": "2026-09-20 10:28:38",
+  "last_published_date": "2026-09-21 11:46:19",
   "published_history": [
     {
       "day": 1,
@@ -513,6 +513,21 @@
           "18073567181459415",
           "18014809622745658",
           "18195368548385950"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 36,
+      "title": "Logaritmaya Açılan Kapı II: Üslü Düşünceden Yeni Dile",
+      "published_at": "2026-09-21 11:46:19",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18393430594164116",
+          "17970150882153746",
+          "18099086264530131"
         ],
         "reels_id": null
       }
