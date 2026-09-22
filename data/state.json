@@ -1,7 +1,7 @@
 {
-  "current_day": 37,
+  "current_day": 38,
   "total_days": 97,
-  "last_published_date": "2026-09-21 11:46:19",
+  "last_published_date": "2026-09-22 10:48:51",
   "published_history": [
     {
       "day": 1,
@@ -528,6 +528,21 @@
           "18393430594164116",
           "17970150882153746",
           "18099086264530131"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 37,
+      "title": "John Napier: Zor Hesapları Kısaltan Fikir",
+      "published_at": "2026-09-22 10:48:51",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18114708518085601",
+          "17973811676941852",
+          "18199914925379623"
         ],
         "reels_id": null
       }
