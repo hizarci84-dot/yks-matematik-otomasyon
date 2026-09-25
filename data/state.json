@@ -1,7 +1,7 @@
 {
-  "current_day": 40,
+  "current_day": 41,
   "total_days": 97,
-  "last_published_date": "2026-09-24 10:58:22",
+  "last_published_date": "2026-09-25 10:59:15",
   "published_history": [
     {
       "day": 1,
@@ -573,6 +573,21 @@
           "17995013367031623",
           "18122209754482118",
           "18022875527873253"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 40,
+      "title": "Logaritma Hayatın Neresinde? Richter, Desibel, pH",
+      "published_at": "2026-09-25 10:59:15",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18142795495510333",
+          "18191994058397642",
+          "17911702896465273"
         ],
         "reels_id": null
       }
