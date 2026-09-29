@@ -1,7 +1,7 @@
 {
-  "current_day": 44,
+  "current_day": 45,
   "total_days": 97,
-  "last_published_date": "2026-09-28 12:41:36",
+  "last_published_date": "2026-09-29 11:59:39",
   "published_history": [
     {
       "day": 1,
@@ -633,6 +633,21 @@
           "18150025435537528",
           "17940454821362022",
           "18076269047418216"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 44,
+      "title": "Koordinat Sistemi: Noktanın Adresi",
+      "published_at": "2026-09-29 11:59:39",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "17910523080543577",
+          "18119892916820633",
+          "17883451968512168"
         ],
         "reels_id": null
       }
