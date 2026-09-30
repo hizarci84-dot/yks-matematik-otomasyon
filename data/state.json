@@ -1,7 +1,7 @@
 {
-  "current_day": 45,
+  "current_day": 46,
   "total_days": 97,
-  "last_published_date": "2026-09-29 11:59:39",
+  "last_published_date": "2026-09-30 11:47:52",
   "published_history": [
     {
       "day": 1,
@@ -648,6 +648,21 @@
           "17910523080543577",
           "18119892916820633",
           "17883451968512168"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 45,
+      "title": "Eğim ve Doğru: Değişimin Geometrik Dili",
+      "published_at": "2026-09-30 11:47:52",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18126061159844661",
+          "18036010601650672",
+          "18096419789354189"
         ],
         "reels_id": null
       }
