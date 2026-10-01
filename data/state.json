@@ -1,7 +1,7 @@
 {
-  "current_day": 46,
+  "current_day": 47,
   "total_days": 97,
-  "last_published_date": "2026-09-30 11:47:52",
+  "last_published_date": "2026-10-01 12:16:44",
   "published_history": [
     {
       "day": 1,
@@ -663,6 +663,21 @@
           "18126061159844661",
           "18036010601650672",
           "18096419789354189"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 46,
+      "title": "Çemberin Denklemi: Şeklin Cebire Dönüşmesi",
+      "published_at": "2026-10-01 12:16:44",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18142484533592148",
+          "17927308350182239",
+          "18028916921879918"
         ],
         "reels_id": null
       }
