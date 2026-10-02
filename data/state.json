@@ -1,7 +1,7 @@
 {
-  "current_day": 47,
+  "current_day": 48,
   "total_days": 97,
-  "last_published_date": "2026-10-01 12:16:44",
+  "last_published_date": "2026-10-02 11:45:56",
   "published_history": [
     {
       "day": 1,
@@ -678,6 +678,21 @@
           "18142484533592148",
           "17927308350182239",
           "18028916921879918"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 47,
+      "title": "Parabolün Analitik Dili: y = ax² + bx + c",
+      "published_at": "2026-10-02 11:45:56",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "17897877018608080",
+          "17924184561201242",
+          "17906954145562941"
         ],
         "reels_id": null
       }
