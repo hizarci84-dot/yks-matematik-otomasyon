@@ -1,7 +1,7 @@
 {
-  "current_day": 49,
+  "current_day": 50,
   "total_days": 97,
-  "last_published_date": "2026-10-03 10:59:01",
+  "last_published_date": "2026-10-04 11:41:16",
   "published_history": [
     {
       "day": 1,
@@ -708,6 +708,21 @@
           "18102061016572246",
           "18114671237110000",
           "18091783673662002"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 49,
+      "title": "Gottfried Wilhelm Leibniz ve 'Fonksiyon' Sözcüğü",
+      "published_at": "2026-10-04 11:41:16",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18247652839309542",
+          "18104092829148988",
+          "18111692320871621"
         ],
         "reels_id": null
       }
