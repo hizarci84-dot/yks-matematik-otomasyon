@@ -1,7 +1,7 @@
 {
-  "current_day": 50,
+  "current_day": 51,
   "total_days": 97,
-  "last_published_date": "2026-10-04 11:41:16",
+  "last_published_date": "2026-10-05 13:22:19",
   "published_history": [
     {
       "day": 1,
@@ -723,6 +723,21 @@
           "18247652839309542",
           "18104092829148988",
           "18111692320871621"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 50,
+      "title": "Leonhard Euler ve f(x) Dili",
+      "published_at": "2026-10-05 13:22:19",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18104215463200154",
+          "18090079274487176",
+          "18645819493042676"
         ],
         "reels_id": null
       }
