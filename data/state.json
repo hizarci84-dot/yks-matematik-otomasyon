@@ -1,7 +1,7 @@
 {
-  "current_day": 51,
+  "current_day": 52,
   "total_days": 97,
-  "last_published_date": "2026-10-05 13:22:19",
+  "last_published_date": "2026-10-06 12:37:39",
   "published_history": [
     {
       "day": 1,
@@ -738,6 +738,21 @@
           "18104215463200154",
           "18090079274487176",
           "18645819493042676"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 51,
+      "title": "Fonksiyon Matematiği Nasıl Değiştirdi?",
+      "published_at": "2026-10-06 12:37:39",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18111087440589700",
+          "17993840048840550",
+          "18128265298699675"
         ],
         "reels_id": null
       }
