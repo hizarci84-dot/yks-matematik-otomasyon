@@ -1,7 +1,7 @@
 {
-  "current_day": 58,
+  "current_day": 59,
   "total_days": 97,
-  "last_published_date": "2026-10-12 14:12:04",
+  "last_published_date": "2026-10-13 13:23:20",
   "published_history": [
     {
       "day": 1,
@@ -843,6 +843,21 @@
           "18127023940868890",
           "18107786726193593",
           "18135576661734439"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 58,
+      "title": "Georg Cantor ve Kümeler: Sonsuzlukların Hiyerarşisi",
+      "published_at": "2026-10-13 13:23:20",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "17999629638032093",
+          "18372228991245726",
+          "17928541548182308"
         ],
         "reels_id": null
       }
