@@ -1,7 +1,7 @@
 {
-  "current_day": 59,
+  "current_day": 60,
   "total_days": 97,
-  "last_published_date": "2026-10-13 13:23:20",
+  "last_published_date": "2026-10-14 11:01:59",
   "published_history": [
     {
       "day": 1,
@@ -858,6 +858,21 @@
           "17999629638032093",
           "18372228991245726",
           "17928541548182308"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 59,
+      "title": "Gottlob Frege ve Sembolik Mantık",
+      "published_at": "2026-10-14 11:01:59",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "17907426924579736",
+          "17939630949367925",
+          "18124641455314053"
         ],
         "reels_id": null
       }
