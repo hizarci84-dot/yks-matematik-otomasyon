@@ -1,7 +1,7 @@
 {
-  "current_day": 60,
+  "current_day": 61,
   "total_days": 97,
-  "last_published_date": "2026-10-14 11:01:59",
+  "last_published_date": "2026-10-15 10:44:41",
   "published_history": [
     {
       "day": 1,
@@ -873,6 +873,21 @@
           "17907426924579736",
           "17939630949367925",
           "18124641455314053"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 60,
+      "title": "Giuseppe Peano: Doğal Sayıların Aksiyomları",
+      "published_at": "2026-10-15 10:44:41",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18065259770787819",
+          "18091517948689184",
+          "18225242758338393"
         ],
         "reels_id": null
       }
