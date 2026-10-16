@@ -1,7 +1,7 @@
 {
-  "current_day": 61,
+  "current_day": 62,
   "total_days": 97,
-  "last_published_date": "2026-10-15 10:44:41",
+  "last_published_date": "2026-10-16 10:31:52",
   "published_history": [
     {
       "day": 1,
@@ -888,6 +888,21 @@
           "18065259770787819",
           "18091517948689184",
           "18225242758338393"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 61,
+      "title": "David Hilbert ve Aksiyomatik Geometri",
+      "published_at": "2026-10-16 10:31:52",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18097746035536272",
+          "18128305609890647",
+          "18179990425436122"
         ],
         "reels_id": null
       }
