@@ -1,7 +1,7 @@
 {
-  "current_day": 62,
+  "current_day": 63,
   "total_days": 97,
-  "last_published_date": "2026-10-16 10:31:52",
+  "last_published_date": "2026-10-17 10:02:22",
   "published_history": [
     {
       "day": 1,
@@ -903,6 +903,21 @@
           "18097746035536272",
           "18128305609890647",
           "18179990425436122"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 62,
+      "title": "Hilbert'in 23 Problemi: 20. Yüzyılın Yol Haritası",
+      "published_at": "2026-10-17 10:02:22",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18193663795397052",
+          "18130831774776234",
+          "18118967158948554"
         ],
         "reels_id": null
       }
