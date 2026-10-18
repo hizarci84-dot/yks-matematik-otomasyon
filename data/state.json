@@ -1,7 +1,7 @@
 {
-  "current_day": 63,
+  "current_day": 64,
   "total_days": 97,
-  "last_published_date": "2026-10-17 10:02:22",
+  "last_published_date": "2026-10-18 10:14:52",
   "published_history": [
     {
       "day": 1,
@@ -918,6 +918,21 @@
           "18193663795397052",
           "18130831774776234",
           "18118967158948554"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 63,
+      "title": "Bertrand Russell ve Küme Paradoksu",
+      "published_at": "2026-10-18 10:14:52",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18130061308691106",
+          "17983543221092079",
+          "17998153806035380"
         ],
         "reels_id": null
       }
