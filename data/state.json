@@ -1,7 +1,7 @@
 {
-  "current_day": 65,
+  "current_day": 66,
   "total_days": 97,
-  "last_published_date": "2026-10-19 11:52:51",
+  "last_published_date": "2026-10-20 10:50:08",
   "published_history": [
     {
       "day": 1,
@@ -948,6 +948,21 @@
           "17975027694149627",
           "18001037388009157",
           "18113203162878221"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 65,
+      "title": "Ernst Zermelo ve ZFC Aksiyomları",
+      "published_at": "2026-10-20 10:50:08",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18117308627025196",
+          "18119587837948238",
+          "17997880242044853"
         ],
         "reels_id": null
       }
