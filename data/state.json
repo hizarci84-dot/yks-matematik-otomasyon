@@ -1,7 +1,7 @@
 {
-  "current_day": 66,
+  "current_day": 67,
   "total_days": 97,
-  "last_published_date": "2026-10-20 10:50:08",
+  "last_published_date": "2026-10-21 11:02:18",
   "published_history": [
     {
       "day": 1,
@@ -963,6 +963,21 @@
           "18117308627025196",
           "18119587837948238",
           "17997880242044853"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 66,
+      "title": "Andrey Kolmogorov ve Aksiyomatik Olasılık",
+      "published_at": "2026-10-21 11:02:18",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18156223348465370",
+          "18465347212188865",
+          "17972331621173120"
         ],
         "reels_id": null
       }
