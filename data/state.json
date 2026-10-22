@@ -1,7 +1,7 @@
 {
-  "current_day": 67,
+  "current_day": 68,
   "total_days": 97,
-  "last_published_date": "2026-10-21 11:02:18",
+  "last_published_date": "2026-10-22 11:00:28",
   "published_history": [
     {
       "day": 1,
@@ -978,6 +978,21 @@
           "18156223348465370",
           "18465347212188865",
           "17972331621173120"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 67,
+      "title": "Alan Turing ve Hesaplanabilirlik",
+      "published_at": "2026-10-22 11:00:28",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "17961373314276595",
+          "18032851913677290",
+          "18145889548585768"
         ],
         "reels_id": null
       }
