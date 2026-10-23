@@ -1,7 +1,7 @@
 {
-  "current_day": 68,
+  "current_day": 69,
   "total_days": 97,
-  "last_published_date": "2026-10-22 11:00:28",
+  "last_published_date": "2026-10-23 10:54:08",
   "published_history": [
     {
       "day": 1,
@@ -993,6 +993,21 @@
           "17961373314276595",
           "18032851913677290",
           "18145889548585768"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 68,
+      "title": "Von Neumann & Morgenstern: Oyun Teorisi",
+      "published_at": "2026-10-23 10:54:08",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "17866549539679532",
+          "18120158833985295",
+          "18108798818363940"
         ],
         "reels_id": null
       }
