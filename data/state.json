@@ -1,7 +1,7 @@
 {
-  "current_day": 69,
+  "current_day": 70,
   "total_days": 97,
-  "last_published_date": "2026-10-23 10:54:08",
+  "last_published_date": "2026-10-24 10:08:21",
   "published_history": [
     {
       "day": 1,
@@ -1008,6 +1008,21 @@
           "17866549539679532",
           "18120158833985295",
           "18108798818363940"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 69,
+      "title": "George Dantzig: Doğrusal Programlama",
+      "published_at": "2026-10-24 10:08:21",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18642190828005220",
+          "17907894297593894",
+          "18023720930715713"
         ],
         "reels_id": null
       }
