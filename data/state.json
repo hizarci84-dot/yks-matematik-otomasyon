@@ -1,7 +1,7 @@
 {
-  "current_day": 70,
+  "current_day": 71,
   "total_days": 97,
-  "last_published_date": "2026-10-24 10:08:21",
+  "last_published_date": "2026-10-25 10:33:45",
   "published_history": [
     {
       "day": 1,
@@ -1023,6 +1023,21 @@
           "18642190828005220",
           "17907894297593894",
           "18023720930715713"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 70,
+      "title": "Claude Shannon: 0 ve 1 ile Değişen Dünya",
+      "published_at": "2026-10-25 10:33:45",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18492712315107351",
+          "18110414651234180",
+          "17955514815268886"
         ],
         "reels_id": null
       }
