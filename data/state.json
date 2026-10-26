@@ -1,7 +1,7 @@
 {
-  "current_day": 71,
+  "current_day": 72,
   "total_days": 97,
-  "last_published_date": "2026-10-25 10:33:45",
+  "last_published_date": "2026-10-26 12:06:59",
   "published_history": [
     {
       "day": 1,
@@ -1038,6 +1038,21 @@
           "18492712315107351",
           "18110414651234180",
           "17955514815268886"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 71,
+      "title": "John Tukey: Veri Sadece Hesaplanmaz, Okunur",
+      "published_at": "2026-10-26 12:06:59",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "17916074808534475",
+          "18087114287329619",
+          "18110108213191773"
         ],
         "reels_id": null
       }
