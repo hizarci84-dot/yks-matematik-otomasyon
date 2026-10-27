@@ -1,7 +1,7 @@
 {
-  "current_day": 72,
+  "current_day": 73,
   "total_days": 97,
-  "last_published_date": "2026-10-26 12:06:59",
+  "last_published_date": "2026-10-27 11:27:44",
   "published_history": [
     {
       "day": 1,
@@ -1053,6 +1053,21 @@
           "17916074808534475",
           "18087114287329619",
           "18110108213191773"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 72,
+      "title": "Benoît Mandelbrot: Doğanın Fraktal Geometrisi",
+      "published_at": "2026-10-27 11:27:44",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18341763799258255",
+          "18068545949618599",
+          "18219429706351021"
         ],
         "reels_id": null
       }
