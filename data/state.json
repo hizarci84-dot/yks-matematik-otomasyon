@@ -1,7 +1,7 @@
 {
-  "current_day": 73,
+  "current_day": 74,
   "total_days": 97,
-  "last_published_date": "2026-10-27 11:27:44",
+  "last_published_date": "2026-10-28 11:59:28",
   "published_history": [
     {
       "day": 1,
@@ -1068,6 +1068,21 @@
           "18341763799258255",
           "18068545949618599",
           "18219429706351021"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 73,
+      "title": "Mitchell Feigenbaum: Kaos Teorisi",
+      "published_at": "2026-10-28 11:59:28",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "17915635227278927",
+          "18641441221007609",
+          "18640800127004764"
         ],
         "reels_id": null
       }
