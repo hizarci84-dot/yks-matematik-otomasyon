@@ -1,7 +1,7 @@
 {
-  "current_day": 74,
+  "current_day": 75,
   "total_days": 97,
-  "last_published_date": "2026-10-28 11:59:28",
+  "last_published_date": "2026-10-29 12:08:50",
   "published_history": [
     {
       "day": 1,
@@ -1083,6 +1083,21 @@
           "17915635227278927",
           "18641441221007609",
           "18640800127004764"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 74,
+      "title": "RSA ve Asal Sayılar: Sayı Teorisinin Güvenliği",
+      "published_at": "2026-10-29 12:08:50",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18106684526356977",
+          "18079948952393260",
+          "18107679221210279"
         ],
         "reels_id": null
       }
