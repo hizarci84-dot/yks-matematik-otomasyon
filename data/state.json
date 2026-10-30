@@ -1,7 +1,7 @@
 {
-  "current_day": 75,
+  "current_day": 76,
   "total_days": 97,
-  "last_published_date": "2026-10-29 12:08:50",
+  "last_published_date": "2026-10-30 12:00:09",
   "published_history": [
     {
       "day": 1,
@@ -1098,6 +1098,21 @@
           "18106684526356977",
           "18079948952393260",
           "18107679221210279"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 75,
+      "title": "Andrew Wiles ve Fermat'nın Son Teoremi",
+      "published_at": "2026-10-30 12:00:09",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "17954621691293485",
+          "18107871164197246",
+          "18436152739198389"
         ],
         "reels_id": null
       }
