@@ -1,7 +1,7 @@
 {
-  "current_day": 76,
+  "current_day": 77,
   "total_days": 97,
-  "last_published_date": "2026-10-30 12:00:09",
+  "last_published_date": "2026-10-31 11:34:28",
   "published_history": [
     {
       "day": 1,
@@ -1113,6 +1113,21 @@
           "17954621691293485",
           "18107871164197246",
           "18436152739198389"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 76,
+      "title": "Matematik Bitti mi? Canlı Bir Evren",
+      "published_at": "2026-10-31 11:34:28",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "17912144625476194",
+          "18377825533213868",
+          "18120937588942454"
         ],
         "reels_id": null
       }
