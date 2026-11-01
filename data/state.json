@@ -1,7 +1,7 @@
 {
-  "current_day": 77,
+  "current_day": 78,
   "total_days": 97,
-  "last_published_date": "2026-10-31 11:34:28",
+  "last_published_date": "2026-11-01 12:31:47",
   "published_history": [
     {
       "day": 1,
@@ -1128,6 +1128,21 @@
           "17912144625476194",
           "18377825533213868",
           "18120937588942454"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 77,
+      "title": "Büyük Bağlantı: Üslü ↔ Köklü ↔ Logaritma",
+      "published_at": "2026-11-01 12:31:47",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18153654208514848",
+          "17936990301408906",
+          "18643540462005653"
         ],
         "reels_id": null
       }
