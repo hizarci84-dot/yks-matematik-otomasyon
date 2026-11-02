@@ -1,7 +1,7 @@
 {
-  "current_day": 78,
+  "current_day": 79,
   "total_days": 97,
-  "last_published_date": "2026-11-01 12:31:47",
+  "last_published_date": "2026-11-02 14:32:46",
   "published_history": [
     {
       "day": 1,
@@ -1143,6 +1143,21 @@
           "18153654208514848",
           "17936990301408906",
           "18643540462005653"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 78,
+      "title": "Büyük Bağlantı: Denklem ↔ Fonksiyon ↔ Grafik",
+      "published_at": "2026-11-02 14:32:46",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18060390491795999",
+          "18134132870504203",
+          "18106193645007552"
         ],
         "reels_id": null
       }
