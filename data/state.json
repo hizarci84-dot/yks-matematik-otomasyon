@@ -1,7 +1,7 @@
 {
-  "current_day": 79,
+  "current_day": 80,
   "total_days": 97,
-  "last_published_date": "2026-11-02 14:32:46",
+  "last_published_date": "2026-11-03 13:29:29",
   "published_history": [
     {
       "day": 1,
@@ -1158,6 +1158,21 @@
           "18060390491795999",
           "18134132870504203",
           "18106193645007552"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 79,
+      "title": "Büyük Bağlantı: Oran ↔ Benzerlik ↔ Trigonometri",
+      "published_at": "2026-11-03 13:29:29",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18133353811868232",
+          "18209013436370785",
+          "18414256222081558"
         ],
         "reels_id": null
       }
