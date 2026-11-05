@@ -1,7 +1,7 @@
 {
-  "current_day": 81,
+  "current_day": 82,
   "total_days": 97,
-  "last_published_date": "2026-11-04 13:40:25",
+  "last_published_date": "2026-11-05 13:52:42",
   "published_history": [
     {
       "day": 1,
@@ -1188,6 +1188,21 @@
           "18167837572509139",
           "17943886035101551",
           "18413980966088946"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 81,
+      "title": "Büyük Bağlantı: Toplam ↔ Alan ↔ İntegral",
+      "published_at": "2026-11-05 13:52:42",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18126431098999409",
+          "18099669053540099",
+          "18025105457720252"
         ],
         "reels_id": null
       }
