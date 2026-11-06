@@ -1,7 +1,7 @@
 {
-  "current_day": 82,
+  "current_day": 83,
   "total_days": 97,
-  "last_published_date": "2026-11-05 13:52:42",
+  "last_published_date": "2026-11-06 13:38:15",
   "published_history": [
     {
       "day": 1,
@@ -1203,6 +1203,21 @@
           "18126431098999409",
           "18099669053540099",
           "18025105457720252"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 82,
+      "title": "Büyük Bağlantı: Kümeler ↔ Fonksiyon ↔ Olasılık",
+      "published_at": "2026-11-06 13:38:15",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18004181420809354",
+          "17956743231039820",
+          "18129725017890664"
         ],
         "reels_id": null
       }
