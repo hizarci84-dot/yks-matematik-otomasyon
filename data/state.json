@@ -1,7 +1,7 @@
 {
-  "current_day": 83,
+  "current_day": 84,
   "total_days": 97,
-  "last_published_date": "2026-11-06 13:38:15",
+  "last_published_date": "2026-11-07 12:18:54",
   "published_history": [
     {
       "day": 1,
@@ -1218,6 +1218,21 @@
           "18004181420809354",
           "17956743231039820",
           "18129725017890664"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 83,
+      "title": "Büyük Bağlantı: Çarpanlara Ayırma ↔ Polinom ↔ Denklem",
+      "published_at": "2026-11-07 12:18:54",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "17999800866044593",
+          "18318508435304204",
+          "18121928794757506"
         ],
         "reels_id": null
       }
