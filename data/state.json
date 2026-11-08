@@ -1,7 +1,7 @@
 {
-  "current_day": 84,
+  "current_day": 85,
   "total_days": 97,
-  "last_published_date": "2026-11-07 12:18:54",
+  "last_published_date": "2026-11-08 12:38:36",
   "published_history": [
     {
       "day": 1,
@@ -1233,6 +1233,21 @@
           "17999800866044593",
           "18318508435304204",
           "18121928794757506"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 84,
+      "title": "Büyük Bağlantı: Mutlak Değer ↔ Uzaklık ↔ Eşitsizlik",
+      "published_at": "2026-11-08 12:38:36",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "17992256117867428",
+          "18122770235079642",
+          "18646270096043850"
         ],
         "reels_id": null
       }
