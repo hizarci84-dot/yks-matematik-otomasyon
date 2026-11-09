@@ -1,7 +1,7 @@
 {
-  "current_day": 85,
+  "current_day": 86,
   "total_days": 97,
-  "last_published_date": "2026-11-08 12:38:36",
+  "last_published_date": "2026-11-09 14:57:02",
   "published_history": [
     {
       "day": 1,
@@ -1248,6 +1248,21 @@
           "17992256117867428",
           "18122770235079642",
           "18646270096043850"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 85,
+      "title": "Büyük Bağlantı: 2. Derece Denklem ↔ Diskriminant ↔ Parabol",
+      "published_at": "2026-11-09 14:57:02",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18167470696493738",
+          "18128919305486799",
+          "17929463292441488"
         ],
         "reels_id": null
       }
