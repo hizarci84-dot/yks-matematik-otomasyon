@@ -1,7 +1,7 @@
 {
-  "current_day": 86,
+  "current_day": 87,
   "total_days": 97,
-  "last_published_date": "2026-11-09 14:57:02",
+  "last_published_date": "2026-11-10 14:09:54",
   "published_history": [
     {
       "day": 1,
@@ -1263,6 +1263,21 @@
           "18167470696493738",
           "18128919305486799",
           "17929463292441488"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 86,
+      "title": "Büyük Bağlantı: Örüntü ↔ Dizi ↔ Fonksiyon",
+      "published_at": "2026-11-10 14:09:54",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18104656061665500",
+          "18138016471737324",
+          "18009468404828949"
         ],
         "reels_id": null
       }
