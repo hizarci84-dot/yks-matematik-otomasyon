@@ -1,7 +1,7 @@
 {
-  "current_day": 87,
+  "current_day": 88,
   "total_days": 97,
-  "last_published_date": "2026-11-10 14:09:54",
+  "last_published_date": "2026-11-11 13:26:11",
   "published_history": [
     {
       "day": 1,
@@ -1278,6 +1278,21 @@
           "18104656061665500",
           "18138016471737324",
           "18009468404828949"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 87,
+      "title": "Büyük Bağlantı: Sayma ↔ Permütasyon ↔ Kombinasyon ↔ Olasılık",
+      "published_at": "2026-11-11 13:26:11",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18109520944966141",
+          "18126718460286089",
+          "17985492086899059"
         ],
         "reels_id": null
       }
