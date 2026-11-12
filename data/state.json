@@ -1,7 +1,7 @@
 {
-  "current_day": 88,
+  "current_day": 89,
   "total_days": 97,
-  "last_published_date": "2026-11-11 13:26:11",
+  "last_published_date": "2026-11-12 14:30:46",
   "published_history": [
     {
       "day": 1,
@@ -1293,6 +1293,21 @@
           "18109520944966141",
           "18126718460286089",
           "17985492086899059"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 88,
+      "title": "Büyük Bağlantı: Çember ↔ Trigonometri ↔ Analitik Geometri",
+      "published_at": "2026-11-12 14:30:46",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18158971345455642",
+          "17998744797028305",
+          "18652248475055972"
         ],
         "reels_id": null
       }
