@@ -1,7 +1,7 @@
 {
-  "current_day": 89,
+  "current_day": 90,
   "total_days": 97,
-  "last_published_date": "2026-11-12 14:30:46",
+  "last_published_date": "2026-11-13 13:47:55",
   "published_history": [
     {
       "day": 1,
@@ -1308,6 +1308,21 @@
           "18158971345455642",
           "17998744797028305",
           "18652248475055972"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 89,
+      "title": "Büyük Bağlantı: Problem ↔ Denklem ↔ Fonksiyon Modelleme",
+      "published_at": "2026-11-13 13:47:55",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "17877841695586012",
+          "18133185685816472",
+          "18415138333092939"
         ],
         "reels_id": null
       }
