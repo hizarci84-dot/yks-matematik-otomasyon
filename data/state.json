@@ -1,7 +1,7 @@
 {
-  "current_day": 93,
+  "current_day": 94,
   "total_days": 97,
-  "last_published_date": "2026-11-16 14:33:45",
+  "last_published_date": "2026-11-17 15:23:47",
   "published_history": [
     {
       "day": 1,
@@ -1368,6 +1368,21 @@
           "18109420244529177",
           "17983541265137654",
           "18289944121295723"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 93,
+      "title": "Fonksiyonların Büyük Ailesi",
+      "published_at": "2026-11-17 15:23:47",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18098885030398958",
+          "18064315622570484",
+          "18050441060820040"
         ],
         "reels_id": null
       }
