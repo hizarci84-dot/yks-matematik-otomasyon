@@ -1,7 +1,7 @@
 {
-  "current_day": 94,
+  "current_day": 95,
   "total_days": 97,
-  "last_published_date": "2026-11-17 15:23:47",
+  "last_published_date": "2026-11-18 14:58:17",
   "published_history": [
     {
       "day": 1,
@@ -1383,6 +1383,21 @@
           "18098885030398958",
           "18064315622570484",
           "18050441060820040"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 94,
+      "title": "Geometrinin Büyük Bağlantı Ağı",
+      "published_at": "2026-11-18 14:58:17",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "17891632011652964",
+          "18114450662193434",
+          "17914176924587198"
         ],
         "reels_id": null
       }
