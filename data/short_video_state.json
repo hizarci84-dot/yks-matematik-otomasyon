@@ -1,0 +1,140 @@
+{
+  "last_published_date": "2026-11-20 12:43:28",
+  "published_history": [
+    {
+      "slug": "357_yillik_hatayi_duzeltmek",
+      "title": "357 Yıllık Hatayı Düzeltmek",
+      "source_file": "357_Yıllık_Hatayı_Düzeltmek.mp4",
+      "sha256": "bf65678930957b6f0235a0bfca6b7b4755c6d47e6e32bc2cce1a7a8493d448bb",
+      "video_path": "dist/stories/short_videos/357_yillik_hatayi_duzeltmek.mp4",
+      "published_at": "2026-11-20 12:43:28",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "17888965614504531"
+        ],
+        "reels_id": null
+      }
+    }
+  ],
+  "queue": [
+    {
+      "slug": "denklemlerin_ardindaki_asil_mantik",
+      "title": "Denklemlerin Ardındaki Asıl Mantık",
+      "source_file": "Denklemlerin_Ardındaki_Asıl_Mantık.mp4",
+      "sha256": "aae2e581b3aa7b84c819afe948953a01624320d432f5e0cac5ff24872dc69ee1",
+      "video_path": "dist/stories/short_videos/denklemlerin_ardindaki_asil_mantik.mp4",
+      "duration": 58.5,
+      "speed": 1.24
+    },
+    {
+      "slug": "geometrik_benzerlik_oklid_bize_ne_ogretmedi",
+      "title": "Geometrik Benzerlik  Öklid Bize Ne Öğretmedi",
+      "source_file": "Geometrik_Benzerlik__Öklid_Bize_Ne_Öğretmedi_.mp4",
+      "sha256": "bd02c17e9838f1b30e598be1553737146aac1595ac3676460ec1f27eb3d10c6a",
+      "video_path": "dist/stories/short_videos/geometrik_benzerlik_oklid_bize_ne_ogretmedi.mp4",
+      "duration": 58.49,
+      "speed": 1.32
+    },
+    {
+      "slug": "iliskisel_anlama_matematik_neden_ezber_degildir",
+      "title": "İlişkisel Anlama  Matematik Neden Ezber Değildir",
+      "source_file": "İlişkisel_Anlama__Matematik_Neden_Ezber_Değildir_.mp4",
+      "sha256": "22eb3926eecbc928cdf64318276f0d2b13bb64f2fbb9f00b437a503e5acbb142",
+      "video_path": "dist/stories/short_videos/iliskisel_anlama_matematik_neden_ezber_degildir.mp4",
+      "duration": 58.49,
+      "speed": 1.18
+    },
+    {
+      "slug": "matematik_neden_sadece_sayilar_degildir",
+      "title": "Matematik Neden Sadece Sayılar Değildir",
+      "source_file": "Matematik_Neden_Sadece_Sayılar_Değildir_.mp4",
+      "sha256": "017027fe960fd444512c3e5d1d2d84c23e1f3ec38bf3ba97f54cb5a459e779b5",
+      "video_path": "dist/stories/short_videos/matematik_neden_sadece_sayilar_degildir.mp4",
+      "duration": 58.5,
+      "speed": 1.28
+    },
+    {
+      "slug": "matematikte_basarinin_yuzde_70_i",
+      "title": "Matematikte Başarının Yüzde 70 i",
+      "source_file": "Matematikte_Başarının_Yüzde_70_i.mp4",
+      "sha256": "4ccb845e95455ff08a1e788c884acb20c0a1c12785dc1bdd9357f15c07f51313",
+      "video_path": "dist/stories/short_videos/matematikte_basarinin_yuzde_70_i.mp4",
+      "duration": 58.48,
+      "speed": 1.27
+    },
+    {
+      "slug": "matematikte_ezber_neden_ise_yaramaz",
+      "title": "Matematikte Ezber Neden İşe Yaramaz",
+      "source_file": "Matematikte_Ezber_Neden_İşe_Yaramaz_.mp4",
+      "sha256": "f3ee80022e7a386089947e0a2f0825e07b93bdae12e390c5acb266b9dddd1d82",
+      "video_path": "dist/stories/short_videos/matematikte_ezber_neden_ise_yaramaz.mp4",
+      "duration": 58.48,
+      "speed": 1.14
+    },
+    {
+      "slug": "matematikte_formuller_neden_en_son_ogretilmeli",
+      "title": "Matematikte Formüller Neden En Son Öğretilmeli",
+      "source_file": "Matematikte_Formüller_Neden_En_Son_Öğretilmeli.mp4",
+      "sha256": "aca35485c9473640401e472fd45001bb2b3ad81561cb9abd32bcdf91a40f6388",
+      "video_path": "dist/stories/short_videos/matematikte_formuller_neden_en_son_ogretilmeli.mp4",
+      "duration": 58.5,
+      "speed": 1.35
+    },
+    {
+      "slug": "matematikte_hata_yapmanin_gizli_gucu",
+      "title": "Matematikte Hata Yapmanın Gizli Gücü",
+      "source_file": "Matematikte_Hata_Yapmanın_Gizli_Gücü.mp4",
+      "sha256": "edd9a65374ab670c83cf44a8a8c39d386318c3f4616013c9777f4fbb96577613",
+      "video_path": "dist/stories/short_videos/matematikte_hata_yapmanin_gizli_gucu.mp4",
+      "duration": 58.48,
+      "speed": 1.25
+    },
+    {
+      "slug": "soyut_matematigin_somut_gucu",
+      "title": "Soyut Matematiğin Somut Gücü",
+      "source_file": "Soyut_Matematiğin_Somut_Gücü.mp4",
+      "sha256": "b5f2e255509ebeec695cfbb49bbef4e2ba7ec9dac8944db5405d95cc169998f3",
+      "video_path": "dist/stories/short_videos/soyut_matematigin_somut_gucu.mp4",
+      "duration": 58.48,
+      "speed": 1.31
+    },
+    {
+      "slug": "tyt_ve_ayt_matematiginin_gercek_mantigi",
+      "title": "TYT ve AYT Matematiğinin Gerçek Mantığı",
+      "source_file": "TYT_ve_AYT_Matematiğinin_Gerçek_Mantığı.mp4",
+      "sha256": "6523a809e49174af838035c229bfeb54ff05df9d0287bd74c0b890027bc308d5",
+      "video_path": "dist/stories/short_videos/tyt_ve_ayt_matematiginin_gercek_mantigi.mp4",
+      "duration": 58.48,
+      "speed": 1.15
+    },
+    {
+      "slug": "tuccarlar_sifiri_avrupa_ya_nasil_ogretti",
+      "title": "Tüccarlar Sıfırı Avrupa ya Nasıl Öğretti",
+      "source_file": "Tüccarlar_Sıfırı_Avrupa_ya_Nasıl_Öğretti_.mp4",
+      "sha256": "4d6b5f5135f34cef6a0ae1170564e01fff2fbc98108927c683b1222396059465",
+      "video_path": "dist/stories/short_videos/tuccarlar_sifiri_avrupa_ya_nasil_ogretti.mp4",
+      "duration": 58.48,
+      "speed": 1.14
+    },
+    {
+      "slug": "verilerle_nasil_dogru_karar_aliriz",
+      "title": "Verilerle Nasıl Doğru Karar Alırız",
+      "source_file": "Verilerle_Nasıl_Doğru_Karar_Alırız_.mp4",
+      "sha256": "c9d3b50bec9f376bc2ac9767813fa7d876f07996364310bfed75cd664b576f28",
+      "video_path": "dist/stories/short_videos/verilerle_nasil_dogru_karar_aliriz.mp4",
+      "duration": 58.49,
+      "speed": 1.32
+    },
+    {
+      "slug": "ogrenci_ogretmenini_neden_asmalidir",
+      "title": "Öğrenci Öğretmenini Neden Aşmalıdır",
+      "source_file": "Öğrenci_Öğretmenini_Neden_Aşmalıdır.mp4",
+      "sha256": "b5a4f7702db8af35688fdcf9b5e86993d02b74656c77a6c5cd98287b0540a6a5",
+      "video_path": "dist/stories/short_videos/ogrenci_ogretmenini_neden_asmalidir.mp4",
+      "duration": 58.5,
+      "speed": 1.32
+    }
+  ]
+}

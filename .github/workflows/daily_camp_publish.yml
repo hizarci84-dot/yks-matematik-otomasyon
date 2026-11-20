@@ -15,6 +15,11 @@ on:
         type: boolean
         required: false
         default: false
+      short_video_next:
+        description: 'Sıradaki Short Videoyu hemen hikayede paylaş (true/false)'
+        type: boolean
+        required: false
+        default: false
 
 permissions:
   contents: write
@@ -63,11 +68,15 @@ jobs:
           GITHUB_REF_NAME: ${{ github.ref_name }}
         run: |
           ARGS=""
-          if [ "${{ inputs.generate_video }}" = "true" ]; then
-            ARGS="$ARGS --video"
-          fi
-          if [ -n "${{ inputs.day_override }}" ]; then
-            ARGS="$ARGS --day ${{ inputs.day_override }}"
+          if [ "${{ inputs.short_video_next }}" = "true" ]; then
+            ARGS="--next-short"
+          else
+            if [ "${{ inputs.generate_video }}" = "true" ]; then
+              ARGS="$ARGS --video"
+            fi
+            if [ -n "${{ inputs.day_override }}" ]; then
+              ARGS="$ARGS --day ${{ inputs.day_override }}"
+            fi
           fi
           python publisher/instagram_publisher.py $ARGS
 
