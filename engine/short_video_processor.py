@@ -342,3 +342,7 @@ if __name__ == "__main__":
             f"Synced queue state: {args.state} "
             f"(published={len(queue_state['published_history'])}, queued={len(queue_state['queue'])})"
         )
+        import sys as _sys
+        _sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+        from engine.youtube_bridge import sync_to_youtube_automation
+        sync_to_youtube_automation(args.state)

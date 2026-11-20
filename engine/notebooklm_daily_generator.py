@@ -29,6 +29,7 @@ from engine.short_video_processor import (
     slugify_filename,
     sync_short_video_queue,
 )
+from engine.youtube_bridge import sync_to_youtube_automation
 
 DEFAULT_NOTEBOOK_ID = "34bae0c9-0e63-4362-8113-38dd95e3ed43"
 RAW_DIR = "hikaye videolari"
@@ -287,11 +288,12 @@ async def generate_and_queue_daily_video(
         await client.artifacts.download_video(notebook_id, raw_path, artifact_id=gen_status.task_id)
         print(f"✅ İndirildi: {raw_path} ({os.path.getsize(raw_path) / (1024*1024):.2f} MB)")
 
-    # 2. Speed up to <=58.5s and sync queue
+    # 2. Speed up to <=58.5s and sync queues (Instagram + YouTube)
     print("\n⚙️ FFmpeg ile <60 sn uyarlaması ve kuyruk güncellemesi yapılıyor...")
     items = process_all_videos(input_dir=RAW_DIR, output_dir=OUTPUT_DIR, target_duration=58.5)
     save_json(MANIFEST_FILE, items)
     queue_state = sync_short_video_queue(items, state_path=SHORT_VIDEO_STATE_FILE)
+    sync_to_youtube_automation(SHORT_VIDEO_STATE_FILE)
 
     # 3. Record generator state & source rotation counts
     usage = gen_state.setdefault("source_usage_counts", {})
