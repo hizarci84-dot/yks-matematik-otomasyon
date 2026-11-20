@@ -356,11 +356,13 @@ if __name__ == "__main__":
     parser.add_argument("--log-file", default="notebooklm_daily_run.log")
     args = parser.parse_args()
 
+    orig_stdout, orig_stderr = sys.stdout, sys.stderr
     log_fp = None
     if args.log_file and not args.dry_run:
         log_fp = open(args.log_file, "a", encoding="utf-8")
-        sys.stdout = _TeeStream(sys.stdout, log_fp)
-        sys.stderr = _TeeStream(sys.stderr, log_fp)
+        log_fp.write(f"\n--- RUN {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ---\n")
+        sys.stdout = _TeeStream(orig_stdout, log_fp)
+        sys.stderr = _TeeStream(orig_stderr, log_fp)
 
     try:
         exit_code = asyncio.run(
@@ -382,5 +384,8 @@ if __name__ == "__main__":
         traceback.print_exc()
         sys.exit(1)
     finally:
+        sys.stdout = orig_stdout
+        sys.stderr = orig_stderr
         if log_fp is not None:
+            log_fp.flush()
             log_fp.close()
