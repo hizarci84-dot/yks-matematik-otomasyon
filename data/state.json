@@ -1,7 +1,7 @@
 {
-  "current_day": 96,
+  "current_day": 97,
   "total_days": 97,
-  "last_published_date": "2026-11-19 15:05:25",
+  "last_published_date": "2026-11-20 14:47:06",
   "published_history": [
     {
       "day": 1,
@@ -1413,6 +1413,21 @@
           "18170624650491782",
           "18647624275040605",
           "18127162760030885"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 96,
+      "title": "TYT-AYT Büyük Bağlantı Haritası",
+      "published_at": "2026-11-20 14:47:06",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18101439977387136",
+          "18115651274613448",
+          "18118917434020919"
         ],
         "reels_id": null
       }
