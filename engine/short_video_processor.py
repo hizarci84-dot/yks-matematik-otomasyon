@@ -6,6 +6,9 @@ import subprocess
 import unicodedata
 
 
+CREATE_NO_WINDOW = getattr(subprocess, "CREATE_NO_WINDOW", 0)
+
+
 TURKISH_CHAR_MAP = str.maketrans({
     "ç": "c", "Ç": "c",
     "ğ": "g", "Ğ": "g",
@@ -86,6 +89,7 @@ def probe_video_info(video_path):
         text=True,
         encoding="utf-8",
         errors="ignore",
+        creationflags=CREATE_NO_WINDOW,
     )
     stderr = res.stderr
 
@@ -179,7 +183,14 @@ def process_video(input_path, output_path, target_duration=58.5, overwrite=False
         output_path,
     ])
 
-    result = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="ignore")
+    result = subprocess.run(
+        cmd,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="ignore",
+        creationflags=CREATE_NO_WINDOW,
+    )
     if result.returncode != 0:
         raise RuntimeError(f"ffmpeg failed for {input_path}:\n{result.stderr[-1000:]}")
 

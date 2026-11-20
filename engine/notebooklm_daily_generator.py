@@ -173,13 +173,14 @@ def safe_raw_filepath(raw_dir, topic_title):
 
 def git_sync_and_push(commit_message):
     """Stage data & processed short videos, commit, rebase onto origin/main, and push."""
+    no_win = getattr(subprocess, "CREATE_NO_WINDOW", 0)
     print("\n🚀 Syncing newly queued video with GitHub (origin/main)...")
-    subprocess.run(["git", "add", "data/", OUTPUT_DIR], check=True)
-    diff_check = subprocess.run(["git", "diff", "--staged", "--quiet"])
+    subprocess.run(["git", "add", "data/", OUTPUT_DIR], check=True, creationflags=no_win)
+    diff_check = subprocess.run(["git", "diff", "--staged", "--quiet"], creationflags=no_win)
     if diff_check.returncode != 0:
-        subprocess.run(["git", "commit", "-m", commit_message], check=True)
-    subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], check=True)
-    subprocess.run(["git", "push", "origin", "main"], check=True)
+        subprocess.run(["git", "commit", "-m", commit_message], check=True, creationflags=no_win)
+    subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], check=True, creationflags=no_win)
+    subprocess.run(["git", "push", "origin", "main"], check=True, creationflags=no_win)
     print("✅ GitHub push succeeded!")
 
 
@@ -198,7 +199,8 @@ async def generate_and_queue_daily_video(
         )
 
     if push and not dry_run:
-        subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], check=False)
+        no_win = getattr(subprocess, "CREATE_NO_WINDOW", 0)
+        subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], check=False, creationflags=no_win)
 
     gen_state = load_json(
         GENERATOR_STATE_FILE,
@@ -339,11 +341,13 @@ class _TeeStream:
         self.log_handle = log_handle
 
     def write(self, data):
-        self.primary.write(data)
+        if self.primary is not None:
+            self.primary.write(data)
         self.log_handle.write(data)
 
     def flush(self):
-        self.primary.flush()
+        if self.primary is not None:
+            self.primary.flush()
         self.log_handle.flush()
 
 
