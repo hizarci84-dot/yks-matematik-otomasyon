@@ -135,6 +135,15 @@
       "video_path": "dist/stories/short_videos/ogrenci_ogretmenini_neden_asmalidir.mp4",
       "duration": 58.5,
       "speed": 1.32
+    },
+    {
+      "slug": "dahilerin_bile_asamadigi_zihinsel_esikler",
+      "title": "Dahilerin Bile Aşamadığı Zihinsel Eşikler",
+      "source_file": "Dahilerin_Bile_Aşamadığı_Zihinsel_Eşikler.mp4",
+      "sha256": "dd815f0baa954837d648c43fb0430377d732326c8dfd7ba9ded2632bd32caeae",
+      "video_path": "dist/stories/short_videos/dahilerin_bile_asamadigi_zihinsel_esikler.mp4",
+      "duration": 58.5,
+      "speed": 1.45
     }
   ]
 }

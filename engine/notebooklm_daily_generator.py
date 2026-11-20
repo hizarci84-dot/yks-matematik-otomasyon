@@ -172,15 +172,13 @@ def safe_raw_filepath(raw_dir, topic_title):
 
 
 def git_sync_and_push(commit_message):
-    """Pull rebase, stage data & processed short videos, commit and push to origin/main."""
+    """Stage data & processed short videos, commit, rebase onto origin/main, and push."""
     print("\n🚀 Syncing newly queued video with GitHub (origin/main)...")
-    subprocess.run(["git", "pull", "--rebase", "origin", "main"], check=True)
     subprocess.run(["git", "add", "data/", OUTPUT_DIR], check=True)
     diff_check = subprocess.run(["git", "diff", "--staged", "--quiet"])
-    if diff_check.returncode == 0:
-        print("No git changes to commit.")
-        return
-    subprocess.run(["git", "commit", "-m", commit_message], check=True)
+    if diff_check.returncode != 0:
+        subprocess.run(["git", "commit", "-m", commit_message], check=True)
+    subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], check=True)
     subprocess.run(["git", "push", "origin", "main"], check=True)
     print("✅ GitHub push succeeded!")
 
@@ -198,6 +196,9 @@ async def generate_and_queue_daily_video(
             f"NotebookLM oturum dosyası bulunamadı: {storage_path}\n"
             "Lütfen önce 'NotebookLM_Giris_Yap.bat' dosyasına çift tıklayarak Google hesabınıza 1 kez giriş yapın."
         )
+
+    if push and not dry_run:
+        subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], check=False)
 
     gen_state = load_json(
         GENERATOR_STATE_FILE,

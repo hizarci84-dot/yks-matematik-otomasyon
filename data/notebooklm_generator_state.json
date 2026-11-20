@@ -1,0 +1,31 @@
+{
+  "last_generated_date": "2026-11-20",
+  "source_usage_counts": {
+    "2a0a3af1-e318-4a1d-b62d-ee63b5085599": 1,
+    "306e11b8-7766-47ed-85b1-e695ee08e18d": 1,
+    "eaee5f38-e370-410a-8fbd-9957a00ce486": 1
+  },
+  "generated_history": [
+    {
+      "date": "2026-11-20",
+      "generated_at": "2026-11-20 14:01:22",
+      "topic_title": "Dahilerin Bile Aşamadığı Zihinsel Eşikler",
+      "planned_title": "Matematikte Takıldığın Yerde Dâhiler de Zorlanmıştı",
+      "artifact_id": "c22a5e41-ba33-4455-98f0-07f51f949b1d",
+      "source_ids": [
+        "2a0a3af1-e318-4a1d-b62d-ee63b5085599",
+        "306e11b8-7766-47ed-85b1-e695ee08e18d",
+        "eaee5f38-e370-410a-8fbd-9957a00ce486"
+      ],
+      "source_titles": [
+        "(PDF) History of Mathematics in Mathematics Education: Recent developments",
+        "HISTORY OF MATHEMATICS IN MATHEMATICS EDUCATION: - Publimath",
+        "History of Mathematics Education - Eolss.net"
+      ],
+      "raw_video_path": "hikaye videolari/Dahilerin_Bile_Aşamadığı_Zihinsel_Eşikler.mp4",
+      "processed_video_path": "dist/stories/short_videos/dahilerin_bile_asamadigi_zihinsel_esikler.mp4",
+      "duration": 58.5,
+      "speed": 1.45
+    }
+  ]
+}
