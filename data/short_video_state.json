@@ -144,6 +144,15 @@
       "video_path": "dist/stories/short_videos/dahilerin_bile_asamadigi_zihinsel_esikler.mp4",
       "duration": 58.5,
       "speed": 1.45
+    },
+    {
+      "slug": "matematik_ogrenmenin_alti_asamasi",
+      "title": "Matematik Öğrenmenin Altı Aşaması",
+      "source_file": "Matematik_Öğrenmenin_Altı_Aşaması.mp4",
+      "sha256": "a0132266737d53921e472a636d5d1cdefadeed64253b360d16fc43a2e0eafc0f",
+      "video_path": "dist/stories/short_videos/matematik_ogrenmenin_alti_asamasi.mp4",
+      "duration": 58.5,
+      "speed": 1.28
     }
   ]
 }

@@ -23,7 +23,7 @@
     "width": 720,
     "height": 1280,
     "size_bytes": 7888841,
-    "skipped_existing": false,
+    "skipped_existing": true,
     "slug": "dahilerin_bile_asamadigi_zihinsel_esikler",
     "source_file": "Dahilerin_Bile_Aşamadığı_Zihinsel_Eşikler.mp4",
     "sha256": "dd815f0baa954837d648c43fb0430377d732326c8dfd7ba9ded2632bd32caeae",
@@ -88,6 +88,21 @@
     "source_file": "Matematik_Neden_Sadece_Sayılar_Değildir_.mp4",
     "sha256": "017027fe960fd444512c3e5d1d2d84c23e1f3ec38bf3ba97f54cb5a459e779b5",
     "title": "Matematik Neden Sadece Sayılar Değildir"
+  },
+  {
+    "input_path": "hikaye videolari/Matematik_Öğrenmenin_Altı_Aşaması.mp4",
+    "output_path": "dist/stories/short_videos/matematik_ogrenmenin_alti_asamasi.mp4",
+    "original_duration": 74.81,
+    "output_duration": 58.5,
+    "speed": 1.2788034188034187,
+    "width": 720,
+    "height": 1280,
+    "size_bytes": 6616637,
+    "skipped_existing": false,
+    "slug": "matematik_ogrenmenin_alti_asamasi",
+    "source_file": "Matematik_Öğrenmenin_Altı_Aşaması.mp4",
+    "sha256": "a0132266737d53921e472a636d5d1cdefadeed64253b360d16fc43a2e0eafc0f",
+    "title": "Matematik Öğrenmenin Altı Aşaması"
   },
   {
     "input_path": "hikaye videolari/Matematikte_Başarının_Yüzde_70_i.mp4",

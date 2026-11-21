@@ -1,9 +1,12 @@
 {
-  "last_generated_date": "2026-11-20",
+  "last_generated_date": "2026-11-21",
   "source_usage_counts": {
     "2a0a3af1-e318-4a1d-b62d-ee63b5085599": 1,
     "306e11b8-7766-47ed-85b1-e695ee08e18d": 1,
-    "eaee5f38-e370-410a-8fbd-9957a00ce486": 1
+    "eaee5f38-e370-410a-8fbd-9957a00ce486": 1,
+    "2d2d556a-2a0a-4d22-bd1f-ea634d36bc3a": 1,
+    "702dff5a-8028-4eed-8fbd-0aa4c28fd80e": 1,
+    "26207921-bae1-4164-a449-c00c4a0b431b": 1
   },
   "generated_history": [
     {
@@ -26,6 +29,27 @@
       "processed_video_path": "dist/stories/short_videos/dahilerin_bile_asamadigi_zihinsel_esikler.mp4",
       "duration": 58.5,
       "speed": 1.45
+    },
+    {
+      "date": "2026-11-21",
+      "generated_at": "2026-11-21 21:12:56",
+      "topic_title": "Matematik Öğrenmenin Altı Aşaması",
+      "planned_title": "Oyun Oynamadan Matematik Öğrenilmez",
+      "artifact_id": "6ef8429b-7f31-4caf-8915-9e4bb18c1982",
+      "source_ids": [
+        "2d2d556a-2a0a-4d22-bd1f-ea634d36bc3a",
+        "702dff5a-8028-4eed-8fbd-0aa4c28fd80e",
+        "26207921-bae1-4164-a449-c00c4a0b431b"
+      ],
+      "source_titles": [
+        "Dienes' Principles and Six Stages of Maths Learning | CTET - ExamAtlas",
+        "Zoltan Paul Dienes: A legacy of educational philosophy and playful learning - PTE Journals",
+        "Remembering Zoltan Dienes, a Maverick of Mathematics Teaching and Learning: Applying the Variability Principles to Teach Algebra"
+      ],
+      "raw_video_path": "hikaye videolari/Matematik_Öğrenmenin_Altı_Aşaması.mp4",
+      "processed_video_path": "dist/stories/short_videos/matematik_ogrenmenin_alti_asamasi.mp4",
+      "duration": 58.5,
+      "speed": 1.28
     }
   ]
 }
