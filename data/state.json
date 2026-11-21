@@ -1,7 +1,7 @@
 {
-  "current_day": 97,
+  "current_day": 98,
   "total_days": 97,
-  "last_published_date": "2026-11-20 14:47:06",
+  "last_published_date": "2026-11-21 14:02:17",
   "published_history": [
     {
       "day": 1,
@@ -1428,6 +1428,21 @@
           "18101439977387136",
           "18115651274613448",
           "18118917434020919"
+        ],
+        "reels_id": null
+      }
+    },
+    {
+      "day": 97,
+      "title": "Büyük Kapanış: Her Yeni Konuda 5 Soru Metodu",
+      "published_at": "2026-11-21 14:02:17",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18111800108272852",
+          "18123515867059645",
+          "18033156185880195"
         ],
         "reels_id": null
       }
