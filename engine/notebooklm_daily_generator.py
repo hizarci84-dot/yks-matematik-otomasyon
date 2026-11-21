@@ -22,7 +22,7 @@ from notebooklm import (
     SourceStatus,
     VideoFormat,
 )
-from notebooklm.paths import get_storage_path
+from notebooklm.paths import get_storage_path, master_token_path_for
 
 from engine.short_video_processor import (
     process_all_videos,
@@ -192,7 +192,12 @@ async def generate_and_queue_daily_video(
     wait_timeout=900.0,
 ):
     storage_path = get_storage_path()
-    if not os.environ.get("NOTEBOOKLM_AUTH_JSON") and not os.path.exists(storage_path):
+    master_path = master_token_path_for(storage_path)
+    if (
+        not os.environ.get("NOTEBOOKLM_AUTH_JSON")
+        and not os.path.exists(storage_path)
+        and not os.path.exists(master_path)
+    ):
         raise AuthError(
             f"NotebookLM oturum dosyası bulunamadı: {storage_path}\n"
             "Lütfen önce 'NotebookLM_Giris_Yap.bat' dosyasına çift tıklayarak Google hesabınıza 1 kez giriş yapın."
