@@ -1,12 +1,15 @@
 {
-  "last_generated_date": "2026-11-21",
+  "last_generated_date": "2026-11-22",
   "source_usage_counts": {
     "2a0a3af1-e318-4a1d-b62d-ee63b5085599": 1,
     "306e11b8-7766-47ed-85b1-e695ee08e18d": 1,
     "eaee5f38-e370-410a-8fbd-9957a00ce486": 1,
     "2d2d556a-2a0a-4d22-bd1f-ea634d36bc3a": 1,
     "702dff5a-8028-4eed-8fbd-0aa4c28fd80e": 1,
-    "26207921-bae1-4164-a449-c00c4a0b431b": 1
+    "26207921-bae1-4164-a449-c00c4a0b431b": 1,
+    "7e87d29b-41a5-42c2-882f-5e02f49833c0": 1,
+    "12e84435-0a8d-4ba0-a5d2-9b71b0e39926": 1,
+    "4bc8b3ed-ab41-4779-aaa1-246fe6865d1c": 1
   },
   "generated_history": [
     {
@@ -50,6 +53,27 @@
       "processed_video_path": "dist/stories/short_videos/matematik_ogrenmenin_alti_asamasi.mp4",
       "duration": 58.5,
       "speed": 1.28
+    },
+    {
+      "date": "2026-11-22",
+      "generated_at": "2026-11-22 08:11:41",
+      "topic_title": "Yeni Nesil Sorularda Neden Takılıyorsun?",
+      "planned_title": "Matematiksel Düşünmenin Omurgası: MAB Nedir?",
+      "artifact_id": "165ae8af-02ee-4a38-9dff-714f98674f50",
+      "source_ids": [
+        "7e87d29b-41a5-42c2-882f-5e02f49833c0",
+        "12e84435-0a8d-4ba0-a5d2-9b71b0e39926",
+        "4bc8b3ed-ab41-4779-aaa1-246fe6865d1c"
+      ],
+      "source_titles": [
+        "Matematik Alan Becerileri (MAB) - Türkiye Yüzyılı Maarif Modeli",
+        "MAARİF MODELİ - Öğretim Programları",
+        "Okuryazarlık Becerileri - Türkiye Yüzyılı Maarif Modeli"
+      ],
+      "raw_video_path": "hikaye videolari/Yeni_Nesil_Sorularda_Neden_Takılıyorsun_.mp4",
+      "processed_video_path": "dist/stories/short_videos/yeni_nesil_sorularda_neden_takiliyorsun.mp4",
+      "duration": 58.48,
+      "speed": 1.14
     }
   ]
 }

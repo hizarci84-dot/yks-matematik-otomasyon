@@ -153,6 +153,15 @@
       "video_path": "dist/stories/short_videos/matematik_ogrenmenin_alti_asamasi.mp4",
       "duration": 58.5,
       "speed": 1.28
+    },
+    {
+      "slug": "yeni_nesil_sorularda_neden_takiliyorsun",
+      "title": "Yeni Nesil Sorularda Neden Takılıyorsun",
+      "source_file": "Yeni_Nesil_Sorularda_Neden_Takılıyorsun_.mp4",
+      "sha256": "35304fcd636643375aa0a9d12a0e5e9ac57eef340144b31d0a0fa31e2ceb7b51",
+      "video_path": "dist/stories/short_videos/yeni_nesil_sorularda_neden_takiliyorsun.mp4",
+      "duration": 58.48,
+      "speed": 1.14
     }
   ]
 }

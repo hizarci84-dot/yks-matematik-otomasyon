@@ -98,7 +98,7 @@
     "width": 720,
     "height": 1280,
     "size_bytes": 6616637,
-    "skipped_existing": false,
+    "skipped_existing": true,
     "slug": "matematik_ogrenmenin_alti_asamasi",
     "source_file": "Matematik_Öğrenmenin_Altı_Aşaması.mp4",
     "sha256": "a0132266737d53921e472a636d5d1cdefadeed64253b360d16fc43a2e0eafc0f",
@@ -223,6 +223,21 @@
     "source_file": "Verilerle_Nasıl_Doğru_Karar_Alırız_.mp4",
     "sha256": "c9d3b50bec9f376bc2ac9767813fa7d876f07996364310bfed75cd664b576f28",
     "title": "Verilerle Nasıl Doğru Karar Alırız"
+  },
+  {
+    "input_path": "hikaye videolari/Yeni_Nesil_Sorularda_Neden_Takılıyorsun_.mp4",
+    "output_path": "dist/stories/short_videos/yeni_nesil_sorularda_neden_takiliyorsun.mp4",
+    "original_duration": 66.46,
+    "output_duration": 58.48,
+    "speed": 1.1360683760683759,
+    "width": 720,
+    "height": 1280,
+    "size_bytes": 5128751,
+    "skipped_existing": false,
+    "slug": "yeni_nesil_sorularda_neden_takiliyorsun",
+    "source_file": "Yeni_Nesil_Sorularda_Neden_Takılıyorsun_.mp4",
+    "sha256": "35304fcd636643375aa0a9d12a0e5e9ac57eef340144b31d0a0fa31e2ceb7b51",
+    "title": "Yeni Nesil Sorularda Neden Takılıyorsun"
   },
   {
     "input_path": "hikaye videolari/Öğrenci_Öğretmenini_Neden_Aşmalıdır.mp4",
