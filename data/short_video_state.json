@@ -1,5 +1,5 @@
 {
-  "last_published_date": "2026-11-20 12:43:28",
+  "last_published_date": "2026-11-22 13:56:13",
   "published_history": [
     {
       "slug": "357_yillik_hatayi_duzeltmek",
@@ -16,18 +16,26 @@
         ],
         "reels_id": null
       }
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "denklemlerin_ardindaki_asil_mantik",
       "title": "Denklemlerin Ardındaki Asıl Mantık",
       "source_file": "Denklemlerin_Ardındaki_Asıl_Mantık.mp4",
       "sha256": "aae2e581b3aa7b84c819afe948953a01624320d432f5e0cac5ff24872dc69ee1",
       "video_path": "dist/stories/short_videos/denklemlerin_ardindaki_asil_mantik.mp4",
-      "duration": 58.5,
-      "speed": 1.24
-    },
+      "published_at": "2026-11-22 13:56:13",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "17918792913480213"
+        ],
+        "video_url": "https://raw.githubusercontent.com/hizarci84-dot/yks-matematik-otomasyon/main/dist/stories/short_videos/denklemlerin_ardindaki_asil_mantik.mp4",
+        "reels_id": null
+      }
+    }
+  ],
+  "queue": [
     {
       "slug": "geometrik_benzerlik_oklid_bize_ne_ogretmedi",
       "title": "Geometrik Benzerlik  Öklid Bize Ne Öğretmedi",
