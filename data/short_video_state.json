@@ -1,5 +1,5 @@
 {
-  "last_published_date": "2026-11-22 13:56:13",
+  "last_published_date": "2026-11-23 17:08:51",
   "published_history": [
     {
       "slug": "357_yillik_hatayi_duzeltmek",
@@ -33,18 +33,26 @@
         "video_url": "https://raw.githubusercontent.com/hizarci84-dot/yks-matematik-otomasyon/main/dist/stories/short_videos/denklemlerin_ardindaki_asil_mantik.mp4",
         "reels_id": null
       }
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "geometrik_benzerlik_oklid_bize_ne_ogretmedi",
       "title": "Geometrik Benzerlik  Öklid Bize Ne Öğretmedi",
       "source_file": "Geometrik_Benzerlik__Öklid_Bize_Ne_Öğretmedi_.mp4",
       "sha256": "bd02c17e9838f1b30e598be1553737146aac1595ac3676460ec1f27eb3d10c6a",
       "video_path": "dist/stories/short_videos/geometrik_benzerlik_oklid_bize_ne_ogretmedi.mp4",
-      "duration": 58.49,
-      "speed": 1.32
-    },
+      "published_at": "2026-11-23 17:08:51",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18073283744507285"
+        ],
+        "video_url": "https://raw.githubusercontent.com/hizarci84-dot/yks-matematik-otomasyon/main/dist/stories/short_videos/geometrik_benzerlik_oklid_bize_ne_ogretmedi.mp4",
+        "reels_id": null
+      }
+    }
+  ],
+  "queue": [
     {
       "slug": "iliskisel_anlama_matematik_neden_ezber_degildir",
       "title": "İlişkisel Anlama  Matematik Neden Ezber Değildir",
