@@ -1,15 +1,17 @@
 {
-  "last_generated_date": "2026-11-22",
+  "last_generated_date": "2026-11-23",
   "source_usage_counts": {
     "2a0a3af1-e318-4a1d-b62d-ee63b5085599": 1,
     "306e11b8-7766-47ed-85b1-e695ee08e18d": 1,
     "eaee5f38-e370-410a-8fbd-9957a00ce486": 1,
     "2d2d556a-2a0a-4d22-bd1f-ea634d36bc3a": 1,
     "702dff5a-8028-4eed-8fbd-0aa4c28fd80e": 1,
-    "26207921-bae1-4164-a449-c00c4a0b431b": 1,
+    "26207921-bae1-4164-a449-c00c4a0b431b": 2,
     "7e87d29b-41a5-42c2-882f-5e02f49833c0": 1,
     "12e84435-0a8d-4ba0-a5d2-9b71b0e39926": 1,
-    "4bc8b3ed-ab41-4779-aaa1-246fe6865d1c": 1
+    "4bc8b3ed-ab41-4779-aaa1-246fe6865d1c": 1,
+    "883cce4b-aec6-4275-8df7-e50343e62505": 1,
+    "17eb8a57-1764-486b-bc37-0e0a4b4a4b4c": 1
   },
   "generated_history": [
     {
@@ -74,6 +76,27 @@
       "processed_video_path": "dist/stories/short_videos/yeni_nesil_sorularda_neden_takiliyorsun.mp4",
       "duration": 58.48,
       "speed": 1.14
+    },
+    {
+      "date": "2026-11-23",
+      "generated_at": "2026-11-23 08:22:27",
+      "topic_title": "Sorular Değişince Neden Donup Kalıyorsun?",
+      "planned_title": "Aynı Formül Neden Farklı Soruda İşe Yaramaz?",
+      "artifact_id": "661d4482-b8e5-4c6e-8ef5-eb043ecd460e",
+      "source_ids": [
+        "883cce4b-aec6-4275-8df7-e50343e62505",
+        "26207921-bae1-4164-a449-c00c4a0b431b",
+        "17eb8a57-1764-486b-bc37-0e0a4b4a4b4c"
+      ],
+      "source_titles": [
+        "STUDENTS WORKING WITHIN AND BETWEEN REPRESENTATIONS: AN APPLICATION OF DIENES'S VARIABILITY PRINCIPLES - FOR THE LEARNING OF MATHEMATICS",
+        "Remembering Zoltan Dienes, a Maverick of Mathematics Teaching and Learning: Applying the Variability Principles to Teach Algebra",
+        "Zoltan paul dienes | PPTX - Slideshare"
+      ],
+      "raw_video_path": "hikaye videolari/Sorular_Değişince_Neden_Donup_Kalıyorsun_.mp4",
+      "processed_video_path": "dist/stories/short_videos/sorular_degisince_neden_donup_kaliyorsun.mp4",
+      "duration": 58.5,
+      "speed": 1.32
     }
   ]
 }

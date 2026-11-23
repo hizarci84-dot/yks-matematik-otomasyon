@@ -210,6 +210,15 @@
       "video_path": "dist/stories/short_videos/yeni_nesil_sorularda_neden_takiliyorsun.mp4",
       "duration": 58.48,
       "speed": 1.14
+    },
+    {
+      "slug": "sorular_degisince_neden_donup_kaliyorsun",
+      "title": "Sorular Değişince Neden Donup Kalıyorsun",
+      "source_file": "Sorular_Değişince_Neden_Donup_Kalıyorsun_.mp4",
+      "sha256": "a1227f8d73c6900019a44958435ce2d5b4b7abb935adbdcb398534e29381de0f",
+      "video_path": "dist/stories/short_videos/sorular_degisince_neden_donup_kaliyorsun.mp4",
+      "duration": 58.5,
+      "speed": 1.32
     }
   ]
 }

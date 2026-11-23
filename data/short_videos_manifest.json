@@ -165,6 +165,21 @@
     "title": "Matematikte Hata Yapmanın Gizli Gücü"
   },
   {
+    "input_path": "hikaye videolari/Sorular_Değişince_Neden_Donup_Kalıyorsun_.mp4",
+    "output_path": "dist/stories/short_videos/sorular_degisince_neden_donup_kaliyorsun.mp4",
+    "original_duration": 77.39,
+    "output_duration": 58.5,
+    "speed": 1.3229059829059828,
+    "width": 720,
+    "height": 1280,
+    "size_bytes": 5857477,
+    "skipped_existing": false,
+    "slug": "sorular_degisince_neden_donup_kaliyorsun",
+    "source_file": "Sorular_Değişince_Neden_Donup_Kalıyorsun_.mp4",
+    "sha256": "a1227f8d73c6900019a44958435ce2d5b4b7abb935adbdcb398534e29381de0f",
+    "title": "Sorular Değişince Neden Donup Kalıyorsun"
+  },
+  {
     "input_path": "hikaye videolari/Soyut_Matematiğin_Somut_Gücü.mp4",
     "output_path": "dist/stories/short_videos/soyut_matematigin_somut_gucu.mp4",
     "original_duration": 76.83,
@@ -233,7 +248,7 @@
     "width": 720,
     "height": 1280,
     "size_bytes": 5128751,
-    "skipped_existing": false,
+    "skipped_existing": true,
     "slug": "yeni_nesil_sorularda_neden_takiliyorsun",
     "source_file": "Yeni_Nesil_Sorularda_Neden_Takılıyorsun_.mp4",
     "sha256": "35304fcd636643375aa0a9d12a0e5e9ac57eef340144b31d0a0fa31e2ceb7b51",
