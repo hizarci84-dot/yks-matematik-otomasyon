@@ -1,5 +1,5 @@
 {
-  "last_published_date": "2026-11-23 17:08:51",
+  "last_published_date": "2026-11-24 16:52:34",
   "published_history": [
     {
       "slug": "357_yillik_hatayi_duzeltmek",
@@ -50,18 +50,26 @@
         "video_url": "https://raw.githubusercontent.com/hizarci84-dot/yks-matematik-otomasyon/main/dist/stories/short_videos/geometrik_benzerlik_oklid_bize_ne_ogretmedi.mp4",
         "reels_id": null
       }
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "iliskisel_anlama_matematik_neden_ezber_degildir",
       "title": "İlişkisel Anlama  Matematik Neden Ezber Değildir",
       "source_file": "İlişkisel_Anlama__Matematik_Neden_Ezber_Değildir_.mp4",
       "sha256": "22eb3926eecbc928cdf64318276f0d2b13bb64f2fbb9f00b437a503e5acbb142",
       "video_path": "dist/stories/short_videos/iliskisel_anlama_matematik_neden_ezber_degildir.mp4",
-      "duration": 58.49,
-      "speed": 1.18
-    },
+      "published_at": "2026-11-24 16:52:34",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18132177610922600"
+        ],
+        "video_url": "https://raw.githubusercontent.com/hizarci84-dot/yks-matematik-otomasyon/main/dist/stories/short_videos/iliskisel_anlama_matematik_neden_ezber_degildir.mp4",
+        "reels_id": null
+      }
+    }
+  ],
+  "queue": [
     {
       "slug": "matematik_neden_sadece_sayilar_degildir",
       "title": "Matematik Neden Sadece Sayılar Değildir",
