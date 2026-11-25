@@ -1,5 +1,5 @@
 {
-  "last_published_date": "2026-11-24 16:52:34",
+  "last_published_date": "2026-11-25 16:41:31",
   "published_history": [
     {
       "slug": "357_yillik_hatayi_duzeltmek",
@@ -67,18 +67,26 @@
         "video_url": "https://raw.githubusercontent.com/hizarci84-dot/yks-matematik-otomasyon/main/dist/stories/short_videos/iliskisel_anlama_matematik_neden_ezber_degildir.mp4",
         "reels_id": null
       }
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "matematik_neden_sadece_sayilar_degildir",
       "title": "Matematik Neden Sadece Sayılar Değildir",
       "source_file": "Matematik_Neden_Sadece_Sayılar_Değildir_.mp4",
       "sha256": "017027fe960fd444512c3e5d1d2d84c23e1f3ec38bf3ba97f54cb5a459e779b5",
       "video_path": "dist/stories/short_videos/matematik_neden_sadece_sayilar_degildir.mp4",
-      "duration": 58.5,
-      "speed": 1.28
-    },
+      "published_at": "2026-11-25 16:41:31",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18383100388214166"
+        ],
+        "video_url": "https://raw.githubusercontent.com/hizarci84-dot/yks-matematik-otomasyon/main/dist/stories/short_videos/matematik_neden_sadece_sayilar_degildir.mp4",
+        "reels_id": null
+      }
+    }
+  ],
+  "queue": [
     {
       "slug": "matematikte_basarinin_yuzde_70_i",
       "title": "Matematikte Başarının Yüzde 70 i",
