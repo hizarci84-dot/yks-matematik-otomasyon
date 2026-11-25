@@ -173,7 +173,7 @@
     "width": 720,
     "height": 1280,
     "size_bytes": 5857477,
-    "skipped_existing": false,
+    "skipped_existing": true,
     "slug": "sorular_degisince_neden_donup_kaliyorsun",
     "source_file": "Sorular_Değişince_Neden_Donup_Kalıyorsun_.mp4",
     "sha256": "a1227f8d73c6900019a44958435ce2d5b4b7abb935adbdcb398534e29381de0f",
@@ -193,6 +193,21 @@
     "source_file": "Soyut_Matematiğin_Somut_Gücü.mp4",
     "sha256": "b5f2e255509ebeec695cfbb49bbef4e2ba7ec9dac8944db5405d95cc169998f3",
     "title": "Soyut Matematiğin Somut Gücü"
+  },
+  {
+    "input_path": "hikaye videolari/Sputnik_Şoku_Matematik_Eğitimini_Nasıl_Altüst_Etti.mp4",
+    "output_path": "dist/stories/short_videos/sputnik_soku_matematik_egitimini_nasil_altust_etti.mp4",
+    "original_duration": 82.62,
+    "output_duration": 58.5,
+    "speed": 1.4123076923076925,
+    "width": 720,
+    "height": 1280,
+    "size_bytes": 7420832,
+    "skipped_existing": false,
+    "slug": "sputnik_soku_matematik_egitimini_nasil_altust_etti",
+    "source_file": "Sputnik_Şoku_Matematik_Eğitimini_Nasıl_Altüst_Etti.mp4",
+    "sha256": "ee0c0bf3a658fc09eb55a863275d6f878935aff6f032803bf6a841b63850ab03",
+    "title": "Sputnik Şoku Matematik Eğitimini Nasıl Altüst Etti"
   },
   {
     "input_path": "hikaye videolari/TYT_ve_AYT_Matematiğinin_Gerçek_Mantığı.mp4",

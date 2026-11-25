@@ -1,5 +1,5 @@
 {
-  "last_generated_date": "2026-11-23",
+  "last_generated_date": "2026-11-25",
   "source_usage_counts": {
     "2a0a3af1-e318-4a1d-b62d-ee63b5085599": 1,
     "306e11b8-7766-47ed-85b1-e695ee08e18d": 1,
@@ -11,7 +11,10 @@
     "12e84435-0a8d-4ba0-a5d2-9b71b0e39926": 1,
     "4bc8b3ed-ab41-4779-aaa1-246fe6865d1c": 1,
     "883cce4b-aec6-4275-8df7-e50343e62505": 1,
-    "17eb8a57-1764-486b-bc37-0e0a4b4a4b4c": 1
+    "17eb8a57-1764-486b-bc37-0e0a4b4a4b4c": 1,
+    "0a0aafb3-109e-43b2-90e2-545c821e3aeb": 1,
+    "05944ea3-532e-4f47-91a0-5fcd1f42a725": 1,
+    "5c31171e-6069-412b-a460-9ec1a7b88998": 1
   },
   "generated_history": [
     {
@@ -97,6 +100,27 @@
       "processed_video_path": "dist/stories/short_videos/sorular_degisince_neden_donup_kaliyorsun.mp4",
       "duration": 58.5,
       "speed": 1.32
+    },
+    {
+      "date": "2026-11-25",
+      "generated_at": "2026-11-25 10:38:48",
+      "topic_title": "Sputnik Şoku Matematik Eğitimini Nasıl Altüst Etti",
+      "planned_title": "Sputnik Şoku: Matematik Bir Gecede Nasıl Değişti?",
+      "artifact_id": "d93e9c48-7c7d-4150-9a77-5a3fa2b96dfa",
+      "source_ids": [
+        "0a0aafb3-109e-43b2-90e2-545c821e3aeb",
+        "05944ea3-532e-4f47-91a0-5fcd1f42a725",
+        "5c31171e-6069-412b-a460-9ec1a7b88998"
+      ],
+      "source_titles": [
+        "Math Education Timeline | A Dash of Research",
+        "Mathematics education timeline text version - Cambridge Assessment",
+        "NCTM 100 Timeline - National Council of Teachers of Mathematics"
+      ],
+      "raw_video_path": "hikaye videolari/Sputnik_Şoku_Matematik_Eğitimini_Nasıl_Altüst_Etti.mp4",
+      "processed_video_path": "dist/stories/short_videos/sputnik_soku_matematik_egitimini_nasil_altust_etti.mp4",
+      "duration": 58.5,
+      "speed": 1.41
     }
   ]
 }

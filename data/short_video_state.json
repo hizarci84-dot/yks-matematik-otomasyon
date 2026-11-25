@@ -219,6 +219,15 @@
       "video_path": "dist/stories/short_videos/sorular_degisince_neden_donup_kaliyorsun.mp4",
       "duration": 58.5,
       "speed": 1.32
+    },
+    {
+      "slug": "sputnik_soku_matematik_egitimini_nasil_altust_etti",
+      "title": "Sputnik Şoku Matematik Eğitimini Nasıl Altüst Etti",
+      "source_file": "Sputnik_Şoku_Matematik_Eğitimini_Nasıl_Altüst_Etti.mp4",
+      "sha256": "ee0c0bf3a658fc09eb55a863275d6f878935aff6f032803bf6a841b63850ab03",
+      "video_path": "dist/stories/short_videos/sputnik_soku_matematik_egitimini_nasil_altust_etti.mp4",
+      "duration": 58.5,
+      "speed": 1.41
     }
   ]
 }
