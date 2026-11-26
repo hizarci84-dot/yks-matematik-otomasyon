@@ -1,5 +1,5 @@
 {
-  "last_published_date": "2026-11-25 16:41:31",
+  "last_published_date": "2026-11-26 16:14:47",
   "published_history": [
     {
       "slug": "357_yillik_hatayi_duzeltmek",
@@ -84,18 +84,26 @@
         "video_url": "https://raw.githubusercontent.com/hizarci84-dot/yks-matematik-otomasyon/main/dist/stories/short_videos/matematik_neden_sadece_sayilar_degildir.mp4",
         "reels_id": null
       }
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "matematikte_basarinin_yuzde_70_i",
       "title": "Matematikte Başarının Yüzde 70 i",
       "source_file": "Matematikte_Başarının_Yüzde_70_i.mp4",
       "sha256": "4ccb845e95455ff08a1e788c884acb20c0a1c12785dc1bdd9357f15c07f51313",
       "video_path": "dist/stories/short_videos/matematikte_basarinin_yuzde_70_i.mp4",
-      "duration": 58.48,
-      "speed": 1.27
-    },
+      "published_at": "2026-11-26 16:14:47",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18075851408787592"
+        ],
+        "video_url": "https://raw.githubusercontent.com/hizarci84-dot/yks-matematik-otomasyon/main/dist/stories/short_videos/matematikte_basarinin_yuzde_70_i.mp4",
+        "reels_id": null
+      }
+    }
+  ],
+  "queue": [
     {
       "slug": "matematikte_ezber_neden_ise_yaramaz",
       "title": "Matematikte Ezber Neden İşe Yaramaz",
