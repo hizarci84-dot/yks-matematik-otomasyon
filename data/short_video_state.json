@@ -1,5 +1,5 @@
 {
-  "last_published_date": "2026-11-26 16:14:47",
+  "last_published_date": "2026-11-27 15:59:22",
   "published_history": [
     {
       "slug": "357_yillik_hatayi_duzeltmek",
@@ -101,18 +101,26 @@
         "video_url": "https://raw.githubusercontent.com/hizarci84-dot/yks-matematik-otomasyon/main/dist/stories/short_videos/matematikte_basarinin_yuzde_70_i.mp4",
         "reels_id": null
       }
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "matematikte_ezber_neden_ise_yaramaz",
       "title": "Matematikte Ezber Neden İşe Yaramaz",
       "source_file": "Matematikte_Ezber_Neden_İşe_Yaramaz_.mp4",
       "sha256": "f3ee80022e7a386089947e0a2f0825e07b93bdae12e390c5acb266b9dddd1d82",
       "video_path": "dist/stories/short_videos/matematikte_ezber_neden_ise_yaramaz.mp4",
-      "duration": 58.48,
-      "speed": 1.14
-    },
+      "published_at": "2026-11-27 15:59:22",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18143086801643087"
+        ],
+        "video_url": "https://raw.githubusercontent.com/hizarci84-dot/yks-matematik-otomasyon/main/dist/stories/short_videos/matematikte_ezber_neden_ise_yaramaz.mp4",
+        "reels_id": null
+      }
+    }
+  ],
+  "queue": [
     {
       "slug": "matematikte_formuller_neden_en_son_ogretilmeli",
       "title": "Matematikte Formüller Neden En Son Öğretilmeli",
