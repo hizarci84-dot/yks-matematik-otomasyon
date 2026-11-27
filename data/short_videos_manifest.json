@@ -203,7 +203,7 @@
     "width": 720,
     "height": 1280,
     "size_bytes": 7420832,
-    "skipped_existing": false,
+    "skipped_existing": true,
     "slug": "sputnik_soku_matematik_egitimini_nasil_altust_etti",
     "source_file": "Sputnik_Şoku_Matematik_Eğitimini_Nasıl_Altüst_Etti.mp4",
     "sha256": "ee0c0bf3a658fc09eb55a863275d6f878935aff6f032803bf6a841b63850ab03",
@@ -283,5 +283,20 @@
     "source_file": "Öğrenci_Öğretmenini_Neden_Aşmalıdır.mp4",
     "sha256": "b5a4f7702db8af35688fdcf9b5e86993d02b74656c77a6c5cd98287b0540a6a5",
     "title": "Öğrenci Öğretmenini Neden Aşmalıdır"
+  },
+  {
+    "input_path": "hikaye videolari/Üniversite_Matematiğinde_Neden_Duvara_Tosluyoruz_.mp4",
+    "output_path": "dist/stories/short_videos/universite_matematiginde_neden_duvara_tosluyoruz.mp4",
+    "original_duration": 70.98,
+    "output_duration": 58.5,
+    "speed": 1.2133333333333334,
+    "width": 720,
+    "height": 1280,
+    "size_bytes": 7540966,
+    "skipped_existing": false,
+    "slug": "universite_matematiginde_neden_duvara_tosluyoruz",
+    "source_file": "Üniversite_Matematiğinde_Neden_Duvara_Tosluyoruz_.mp4",
+    "sha256": "37ba90cb7355c96e64be56ef69304d367c3460d7d1bf0965a1567c000aa75abe",
+    "title": "Üniversite Matematiğinde Neden Duvara Tosluyoruz"
   }
 ]

@@ -228,6 +228,15 @@
       "video_path": "dist/stories/short_videos/sputnik_soku_matematik_egitimini_nasil_altust_etti.mp4",
       "duration": 58.5,
       "speed": 1.41
+    },
+    {
+      "slug": "universite_matematiginde_neden_duvara_tosluyoruz",
+      "title": "Üniversite Matematiğinde Neden Duvara Tosluyoruz",
+      "source_file": "Üniversite_Matematiğinde_Neden_Duvara_Tosluyoruz_.mp4",
+      "sha256": "37ba90cb7355c96e64be56ef69304d367c3460d7d1bf0965a1567c000aa75abe",
+      "video_path": "dist/stories/short_videos/universite_matematiginde_neden_duvara_tosluyoruz.mp4",
+      "duration": 58.5,
+      "speed": 1.21
     }
   ]
 }

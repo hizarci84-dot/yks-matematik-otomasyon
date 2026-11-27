@@ -1,5 +1,5 @@
 {
-  "last_generated_date": "2026-11-25",
+  "last_generated_date": "2026-11-27",
   "source_usage_counts": {
     "2a0a3af1-e318-4a1d-b62d-ee63b5085599": 1,
     "306e11b8-7766-47ed-85b1-e695ee08e18d": 1,
@@ -14,7 +14,10 @@
     "17eb8a57-1764-486b-bc37-0e0a4b4a4b4c": 1,
     "0a0aafb3-109e-43b2-90e2-545c821e3aeb": 1,
     "05944ea3-532e-4f47-91a0-5fcd1f42a725": 1,
-    "5c31171e-6069-412b-a460-9ec1a7b88998": 1
+    "5c31171e-6069-412b-a460-9ec1a7b88998": 1,
+    "efbdd5ce-7215-415f-a6b3-101e16432e3c": 1,
+    "1d1b3b3a-7aa3-4c60-bfa2-551290f4f0c2": 1,
+    "8f663bd5-5038-4723-bb16-1144540b8405": 1
   },
   "generated_history": [
     {
@@ -121,6 +124,27 @@
       "processed_video_path": "dist/stories/short_videos/sputnik_soku_matematik_egitimini_nasil_altust_etti.mp4",
       "duration": 58.5,
       "speed": 1.41
+    },
+    {
+      "date": "2026-11-27",
+      "generated_at": "2026-11-27 10:29:35",
+      "topic_title": "Üniversite Matematiğinde Neden Duvara Tosluyoruz?",
+      "planned_title": "Lise Matematiği Üniversitede Neden İşe Yaramaz?",
+      "artifact_id": "ac38dac2-952e-4c7b-840e-94cfd518d115",
+      "source_ids": [
+        "efbdd5ce-7215-415f-a6b3-101e16432e3c",
+        "1d1b3b3a-7aa3-4c60-bfa2-551290f4f0c2",
+        "8f663bd5-5038-4723-bb16-1144540b8405"
+      ],
+      "source_titles": [
+        "Strengthening school-university continuity in mathematics education through digitalized STEM approaches: a mixed-methods exploratory study - Frontiers",
+        "Reimagining High School Mathematics: A Bold New Vision for 21st Century Education",
+        "Framework for Equitable Opportunities to Learn in STEM - Institute of Education Sciences"
+      ],
+      "raw_video_path": "hikaye videolari/Üniversite_Matematiğinde_Neden_Duvara_Tosluyoruz_.mp4",
+      "processed_video_path": "dist/stories/short_videos/universite_matematiginde_neden_duvara_tosluyoruz.mp4",
+      "duration": 58.5,
+      "speed": 1.21
     }
   ]
 }
