@@ -1,5 +1,5 @@
 {
-  "last_generated_date": "2026-11-27",
+  "last_generated_date": "2026-11-28",
   "source_usage_counts": {
     "2a0a3af1-e318-4a1d-b62d-ee63b5085599": 1,
     "306e11b8-7766-47ed-85b1-e695ee08e18d": 1,
@@ -17,7 +17,10 @@
     "5c31171e-6069-412b-a460-9ec1a7b88998": 1,
     "efbdd5ce-7215-415f-a6b3-101e16432e3c": 1,
     "1d1b3b3a-7aa3-4c60-bfa2-551290f4f0c2": 1,
-    "8f663bd5-5038-4723-bb16-1144540b8405": 1
+    "8f663bd5-5038-4723-bb16-1144540b8405": 1,
+    "67f10212-d7ef-4040-9e60-68f5af007d0b": 1,
+    "a278d2fd-c188-4565-aa9e-17a4a27b7c51": 1,
+    "2b15b622-b580-4dec-a15c-1373e617a10a": 1
   },
   "generated_history": [
     {
@@ -145,6 +148,27 @@
       "processed_video_path": "dist/stories/short_videos/universite_matematiginde_neden_duvara_tosluyoruz.mp4",
       "duration": 58.5,
       "speed": 1.21
+    },
+    {
+      "date": "2026-11-28",
+      "generated_at": "2026-11-28 11:22:10",
+      "topic_title": "Bir Milyon Doları Reddeden Deha",
+      "planned_title": "1 Milyon Doları Reddeden Matematikçi: Perelman",
+      "artifact_id": "7eaede61-86d5-457c-bb0a-65ee82eeb792",
+      "source_ids": [
+        "67f10212-d7ef-4040-9e60-68f5af007d0b",
+        "a278d2fd-c188-4565-aa9e-17a4a27b7c51",
+        "2b15b622-b580-4dec-a15c-1373e617a10a"
+      ],
+      "source_titles": [
+        "matematik ve eğitim.pdf",
+        "okumalık.pdf",
+        "matematik araştırma.pdf"
+      ],
+      "raw_video_path": "hikaye videolari/Bir_Milyon_Doları_Reddeden_Deha.mp4",
+      "processed_video_path": "dist/stories/short_videos/bir_milyon_dolari_reddeden_deha.mp4",
+      "duration": 58.48,
+      "speed": 1.28
     }
   ]
 }

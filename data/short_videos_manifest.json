@@ -15,6 +15,21 @@
     "title": "357 Yıllık Hatayı Düzeltmek"
   },
   {
+    "input_path": "hikaye videolari/Bir_Milyon_Doları_Reddeden_Deha.mp4",
+    "output_path": "dist/stories/short_videos/bir_milyon_dolari_reddeden_deha.mp4",
+    "original_duration": 74.7,
+    "output_duration": 58.48,
+    "speed": 1.276923076923077,
+    "width": 720,
+    "height": 1280,
+    "size_bytes": 5243603,
+    "skipped_existing": false,
+    "slug": "bir_milyon_dolari_reddeden_deha",
+    "source_file": "Bir_Milyon_Doları_Reddeden_Deha.mp4",
+    "sha256": "bf8047e3c0876adcfc2ac781127c009d500fea71f7e80bf698f2ef289096067c",
+    "title": "Bir Milyon Doları Reddeden Deha"
+  },
+  {
     "input_path": "hikaye videolari/Dahilerin_Bile_Aşamadığı_Zihinsel_Eşikler.mp4",
     "output_path": "dist/stories/short_videos/dahilerin_bile_asamadigi_zihinsel_esikler.mp4",
     "original_duration": 84.89,
@@ -293,7 +308,7 @@
     "width": 720,
     "height": 1280,
     "size_bytes": 7540966,
-    "skipped_existing": false,
+    "skipped_existing": true,
     "slug": "universite_matematiginde_neden_duvara_tosluyoruz",
     "source_file": "Üniversite_Matematiğinde_Neden_Duvara_Tosluyoruz_.mp4",
     "sha256": "37ba90cb7355c96e64be56ef69304d367c3460d7d1bf0965a1567c000aa75abe",

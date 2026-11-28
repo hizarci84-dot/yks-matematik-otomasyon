@@ -237,6 +237,15 @@
       "video_path": "dist/stories/short_videos/universite_matematiginde_neden_duvara_tosluyoruz.mp4",
       "duration": 58.5,
       "speed": 1.21
+    },
+    {
+      "slug": "bir_milyon_dolari_reddeden_deha",
+      "title": "Bir Milyon Doları Reddeden Deha",
+      "source_file": "Bir_Milyon_Doları_Reddeden_Deha.mp4",
+      "sha256": "bf8047e3c0876adcfc2ac781127c009d500fea71f7e80bf698f2ef289096067c",
+      "video_path": "dist/stories/short_videos/bir_milyon_dolari_reddeden_deha.mp4",
+      "duration": 58.48,
+      "speed": 1.28
     }
   ]
 }
