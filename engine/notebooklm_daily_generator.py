@@ -2,6 +2,7 @@ import os
 import re
 import sys
 import json
+import time
 import asyncio
 import subprocess
 from datetime import datetime
@@ -171,17 +172,44 @@ def safe_raw_filepath(raw_dir, topic_title):
     return candidate
 
 
-def git_sync_and_push(commit_message):
-    """Stage data & processed short videos, commit, rebase onto origin/main, and push."""
+def _run_git(args, check=True):
+    """Run git silently while capturing stdout/stderr for reliable pythonw logging."""
     no_win = getattr(subprocess, "CREATE_NO_WINDOW", 0)
+    res = subprocess.run(
+        ["git", *args],
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        creationflags=no_win,
+    )
+    if check and res.returncode != 0:
+        detail = (res.stderr or res.stdout or "").strip()
+        raise RuntimeError(f"git {' '.join(args)} failed (exit {res.returncode}): {detail}")
+    return res
+
+
+def git_sync_and_push(commit_message):
+    """Stage data & processed short videos, commit, rebase onto origin/main, and push with retries."""
     print("\n🚀 Syncing newly queued video with GitHub (origin/main)...")
-    subprocess.run(["git", "add", "data/", OUTPUT_DIR], check=True, creationflags=no_win)
-    diff_check = subprocess.run(["git", "diff", "--staged", "--quiet"], creationflags=no_win)
+    _run_git(["add", "data/", OUTPUT_DIR])
+    diff_check = _run_git(["diff", "--staged", "--quiet"], check=False)
     if diff_check.returncode != 0:
-        subprocess.run(["git", "commit", "-m", commit_message], check=True, creationflags=no_win)
-    subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], check=True, creationflags=no_win)
-    subprocess.run(["git", "push", "origin", "main"], check=True, creationflags=no_win)
-    print("✅ GitHub push succeeded!")
+        _run_git(["commit", "-m", commit_message])
+
+    last_err = None
+    for attempt in range(1, 4):
+        try:
+            _run_git(["pull", "--rebase", "--autostash", "origin", "main"])
+            _run_git(["-c", "http.postBuffer=524288000", "push", "origin", "main"])
+            print("✅ GitHub push succeeded!")
+            return
+        except Exception as e:
+            last_err = e
+            print(f"⚠️ Git sync attempt {attempt}/3 failed: {e}")
+            if attempt < 3:
+                time.sleep(5)
+    raise last_err
 
 
 async def generate_and_queue_daily_video(
