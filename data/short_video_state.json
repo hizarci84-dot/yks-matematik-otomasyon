@@ -1,5 +1,5 @@
 {
-  "last_published_date": "2026-11-27 15:59:22",
+  "last_published_date": "2026-11-28 14:56:47",
   "published_history": [
     {
       "slug": "357_yillik_hatayi_duzeltmek",
@@ -118,18 +118,26 @@
         "video_url": "https://raw.githubusercontent.com/hizarci84-dot/yks-matematik-otomasyon/main/dist/stories/short_videos/matematikte_ezber_neden_ise_yaramaz.mp4",
         "reels_id": null
       }
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "matematikte_formuller_neden_en_son_ogretilmeli",
       "title": "Matematikte Formüller Neden En Son Öğretilmeli",
       "source_file": "Matematikte_Formüller_Neden_En_Son_Öğretilmeli.mp4",
       "sha256": "aca35485c9473640401e472fd45001bb2b3ad81561cb9abd32bcdf91a40f6388",
       "video_path": "dist/stories/short_videos/matematikte_formuller_neden_en_son_ogretilmeli.mp4",
-      "duration": 58.5,
-      "speed": 1.35
-    },
+      "published_at": "2026-11-28 14:56:47",
+      "result": {
+        "status": "success",
+        "method": "official_meta_graph_api",
+        "story_ids": [
+          "18015288341977282"
+        ],
+        "video_url": "https://raw.githubusercontent.com/hizarci84-dot/yks-matematik-otomasyon/main/dist/stories/short_videos/matematikte_formuller_neden_en_son_ogretilmeli.mp4",
+        "reels_id": null
+      }
+    }
+  ],
+  "queue": [
     {
       "slug": "matematikte_hata_yapmanin_gizli_gucu",
       "title": "Matematikte Hata Yapmanın Gizli Gücü",
